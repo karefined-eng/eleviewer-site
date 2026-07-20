@@ -1,4 +1,5 @@
 import type { Metadata, Viewport } from "next"
+import { Analytics } from "@vercel/analytics/next"
 import { Geist, Geist_Mono } from "next/font/google"
 import "./globals.css"
 
@@ -9,31 +10,42 @@ const geistMono = Geist_Mono({
 })
 
 export const metadata: Metadata = {
-  title: "EleViewer — Every file your professor throws at you. One free app.",
+  title: "EleViewer — Free Windows document viewer for PDFs, DOCX, XLSX, Markdown",
   description:
-    "EleViewer is a free, open-source study workspace for Windows. Open and edit DOCX, XLSX, PDF (with text-to-speech), Markdown, and TXT in one lightweight 250 MB app. No install. No account. No cost.",
+    "EleViewer is a free, portable Windows study workspace for students and professionals. Open DOCX, XLSX, PDF, Markdown, and TXT in one lightweight app with PDF text-to-speech, file vault, session restore, and no account required.",
   keywords: [
     "EleViewer",
     "free document viewer",
-    "open source",
-    "student tools",
-    "PDF text to speech",
-    "DOCX viewer",
+    "Windows document viewer",
+    "portable PDF reader",
+    "open source DOCX viewer",
     "XLSX viewer",
-    "markdown editor",
-    "Windows",
+    "markdown notes editor",
+    "PDF text to speech",
+    "student study app",
+    "lightweight file viewer",
+    "offline document reader",
+    "Windows 10/11 app",
   ],
   openGraph: {
-    title: "EleViewer — The free study workspace for Windows",
+    title: "EleViewer — Free Windows document viewer & study workspace",
     description:
-      "Open DOCX, XLSX, PDF, Markdown, and TXT in one lightweight free app. Open source, forever.",
+      "Open DOCX, XLSX, PDF, Markdown, and TXT in one lightweight Windows app with PDF text-to-speech, file vault, and session restore.",
     type: "website",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "EleViewer — Free Windows document viewer & study workspace",
+    description:
+      "Open DOCX, XLSX, PDF, Markdown, and TXT in one lightweight Windows app with PDF text-to-speech, file vault, and session restore.",
   },
 }
 
 export const viewport: Viewport = {
   themeColor: "#131313",
 }
+
+import { StructuredData } from "@/components/structured-data"
 
 export default function RootLayout({
   children,
@@ -45,7 +57,11 @@ export default function RootLayout({
       lang="en"
       className={`bg-background ${geistSans.variable} ${geistMono.variable}`}
     >
-      <body className="font-sans">{children}</body>
+      <body className="font-sans">
+        {children}
+        <StructuredData />
+        <Analytics />
+      </body>
     </html>
   )
 }
