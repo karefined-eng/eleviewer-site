@@ -11,7 +11,7 @@ const geistMono = Geist_Mono({
 export const metadata: Metadata = {
   title: "EleViewer — Every file your professor throws at you. One free app.",
   description:
-    "EleViewer is a free, open-source study workspace for Windows. Open and edit DOCX, XLSX, PDF (with text-to-speech), Markdown, and TXT in one lightweight 16 MB app. No install. No account. No cost.",
+    "EleViewer is a free, open-source study workspace for Windows. Open and edit DOCX, XLSX, PDF (with text-to-speech), Markdown, and TXT in one lightweight 250 MB app. No install. No account. No cost.",
   keywords: [
     "EleViewer",
     "free document viewer",
