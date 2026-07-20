@@ -10,9 +10,13 @@ const geistMono = Geist_Mono({
 })
 
 export const metadata: Metadata = {
+  metadataBase: new URL("https://eleviewer.vercel.app"),
   title: "EleViewer — Free Windows document viewer for PDFs, DOCX, XLSX, Markdown",
   description:
     "EleViewer is a free, portable Windows study workspace for students and professionals. Open DOCX, XLSX, PDF, Markdown, and TXT in one lightweight app with PDF text-to-speech, file vault, session restore, and no account required.",
+  alternates: {
+    canonical: "https://eleviewer.vercel.app/",
+  },
   keywords: [
     "EleViewer",
     "free document viewer",
