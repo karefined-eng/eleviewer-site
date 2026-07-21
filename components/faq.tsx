@@ -1,5 +1,10 @@
 const faqs = [
   {
+    question: "Can I browse the web inside EleViewer?",
+    answer:
+      "Yes. Press Ctrl+T to open the built-in web browser panel and browse side-by-side with your documents. Tabs and URLs persist between sessions.",
+  },
+  {
     question: "Is EleViewer truly free and open source?",
     answer:
       "Yes. EleViewer is free to download and use, MIT licensed, portable, and does not require an account or installation.",
