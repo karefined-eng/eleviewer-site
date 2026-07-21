@@ -9,7 +9,7 @@ const principles = [
   },
   {
     icon: HardDrive,
-    title: "16 MB, portable",
+    title: "Single-file, portable",
     body: "One .exe. Runs from a USB stick or a locked-down lab machine.",
   },
   {
