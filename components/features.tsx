@@ -5,6 +5,8 @@ import {
   History,
   Bookmark,
   Globe,
+  Search,
+  Save,
 } from "lucide-react"
 
 const features = [
@@ -38,6 +40,16 @@ const features = [
     title: "Built-in web panel",
     body: "Open a browser side-by-side with your notes using Ctrl+T. Reference the web without switching windows.",
   },
+  {
+    icon: Search,
+    title: "Find & replace",
+    body: "Ctrl+F to find, Ctrl+H to replace — across any open document. Works in every text-based format EleViewer supports.",
+  },
+  {
+    icon: Save,
+    title: "Autosave",
+    body: "Background saving kicks in automatically so you never lose work. Configurable interval in settings.",
+  },
 ]
 
 export function Features() {
@@ -55,7 +67,7 @@ export function Features() {
           and nothing that slows an old laptop down.
         </p>
       </div>
-      <div className="grid gap-px overflow-hidden rounded-xl border border-border bg-border sm:grid-cols-2 lg:grid-cols-3">
+      <div className="grid gap-px overflow-hidden rounded-xl border border-border bg-border sm:grid-cols-2 lg:grid-cols-4">
         {features.map((f) => (
           <div key={f.title} className="flex flex-col gap-3 bg-panel p-6">
             <f.icon className="h-5 w-5 text-accent" aria-hidden="true" />

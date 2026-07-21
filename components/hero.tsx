@@ -15,9 +15,10 @@ export function Hero() {
           Every file your professor throws at you. One free app.
         </h1>
         <p className="mx-auto mt-5 max-w-xl text-pretty text-[15px] leading-relaxed text-muted-foreground">
-          EleViewer opens and edits DOCX, XLSX, PDF, Markdown, and TXT in one
-          lightweight study workspace — with text-to-speech for PDFs, a file
-          vault, and session restore. 16 MB. No install. No account. No cost.
+          EleViewer opens and edits DOCX, XLSX, PDF, Markdown, CSV, HTML, and
+          TXT in one lightweight study workspace — with text-to-speech for PDFs,
+          a file vault, find &amp; replace, autosave, and session restore. No
+          install. No account. No cost.
         </p>
         <div className="mt-8 flex flex-col items-center justify-center gap-3 sm:flex-row">
           <a

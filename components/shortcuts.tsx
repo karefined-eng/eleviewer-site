@@ -1,12 +1,19 @@
 import type { ReactNode } from 'react'
 
 const shortcuts = [
+  { keys: ["Ctrl", "N"], action: "Create a new file" },
+  { keys: ["Ctrl", "O"], action: "Open a file from disk" },
+  { keys: ["Ctrl", "S"], action: "Save the current file" },
+  { keys: ["Ctrl", "W"], action: "Close the current tab" },
+  { keys: ["Ctrl", "F"], action: "Find in the current document" },
+  { keys: ["Ctrl", "H"], action: "Find and replace" },
   { keys: ["Ctrl", "Q"], action: "Quick switcher — fuzzy search your files" },
   { keys: ["Alt", "V"], action: "Toggle the vault sidebar" },
   { keys: ["Ctrl", "T"], action: "Open the web browser panel" },
   { keys: ["Ctrl", "D"], action: "Bookmark the current PDF page" },
   { keys: ["Ctrl", "Shift", "T"], action: "Reopen a closed tab" },
   { keys: ["Ctrl", "Alt", "B"], action: "Toggle the bookmarks panel" },
+  { keys: ["Alt", "S"], action: "Open settings" },
 ]
 
 function Kbd({ children }: { children?: ReactNode }) {
@@ -30,7 +37,7 @@ export function Shortcuts() {
               Built for hands that never leave the keyboard
             </h2>
             <p className="mt-4 text-pretty text-[15px] leading-relaxed text-muted-foreground">
-              Every core action has a shortcut. Learn six of them and EleViewer
+              Every core action has a shortcut. Learn a handful and EleViewer
               starts to feel less like an app and more like a reflex.
             </p>
           </div>

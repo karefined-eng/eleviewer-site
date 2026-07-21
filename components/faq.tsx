@@ -7,7 +7,7 @@ const faqs = [
   {
     question: "What file types can EleViewer open?",
     answer:
-      "EleViewer opens DOCX, XLSX, PDF, Markdown, and TXT files in one lightweight Windows app.",
+      "EleViewer opens DOCX, XLSX, PDF, Markdown, CSV, HTML, and TXT files in one lightweight Windows app.",
   },
   {
     question: "Does EleViewer support PDF text-to-speech?",

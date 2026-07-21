@@ -10,7 +10,7 @@ export function UseCases() {
             One free Windows document viewer for every student file type
           </h2>
           <p className="mt-4 text-pretty text-[15px] leading-relaxed text-muted-foreground">
-            EleViewer is a portable study workspace for Windows 10 and 11. Open DOCX, XLSX, PDF, Markdown, and TXT files without installing extra software, and use PDF text-to-speech, bookmarks, and session restore to stay focused.
+            EleViewer is a portable study workspace for Windows 10 and 11. Open DOCX, XLSX, PDF, Markdown, CSV, HTML, and TXT files without installing extra software, and use PDF text-to-speech, bookmarks, and session restore to stay focused.
           </p>
         </div>
 
@@ -18,7 +18,7 @@ export function UseCases() {
           <div className="rounded-3xl border border-border bg-background p-6">
             <h3 className="text-sm font-semibold text-foreground">Free Windows document viewer</h3>
             <p className="mt-2 text-sm leading-relaxed text-muted-foreground">
-              A lightweight portable app for opening and editing DOCX, XLSX, PDF, Markdown, and TXT on Windows.
+              A lightweight portable app for opening and editing DOCX, XLSX, PDF, Markdown, CSV, HTML, and TXT on Windows.
             </p>
           </div>
           <div className="rounded-3xl border border-border bg-background p-6">

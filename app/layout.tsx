@@ -13,7 +13,7 @@ export const metadata: Metadata = {
   metadataBase: new URL("https://eleviewer.vercel.app"),
   title: "EleViewer — Free Windows document viewer for PDFs, DOCX, XLSX, Markdown",
   description:
-    "EleViewer is a free, portable Windows study workspace for students and professionals. Open DOCX, XLSX, PDF, Markdown, and TXT in one lightweight app with PDF text-to-speech, file vault, session restore, and no account required.",
+    "EleViewer is a free, portable Windows study workspace for students and professionals. Open DOCX, XLSX, PDF, Markdown, CSV, HTML, and TXT in one lightweight app with PDF text-to-speech, find and replace, autosave, file vault, session restore, and no account required.",
   alternates: {
     canonical: "https://eleviewer.vercel.app/",
   },
@@ -24,8 +24,11 @@ export const metadata: Metadata = {
     "portable PDF reader",
     "open source DOCX viewer",
     "XLSX viewer",
+    "CSV viewer",
+    "HTML viewer",
     "markdown notes editor",
     "PDF text to speech",
+    "find and replace",
     "student study app",
     "lightweight file viewer",
     "offline document reader",
@@ -34,14 +37,14 @@ export const metadata: Metadata = {
   openGraph: {
     title: "EleViewer — Free Windows document viewer & study workspace",
     description:
-      "Open DOCX, XLSX, PDF, Markdown, and TXT in one lightweight Windows app with PDF text-to-speech, file vault, and session restore.",
+      "Open DOCX, XLSX, PDF, Markdown, CSV, HTML, and TXT in one lightweight Windows app with PDF text-to-speech, file vault, and session restore.",
     type: "website",
   },
   twitter: {
     card: "summary_large_image",
     title: "EleViewer — Free Windows document viewer & study workspace",
     description:
-      "Open DOCX, XLSX, PDF, Markdown, and TXT in one lightweight Windows app with PDF text-to-speech, file vault, and session restore.",
+      "Open DOCX, XLSX, PDF, Markdown, CSV, HTML, and TXT in one lightweight Windows app with PDF text-to-speech, file vault, and session restore.",
   },
 }
 

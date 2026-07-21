@@ -3,13 +3,15 @@ const formats = [
   { ext: ".xlsx", label: "Excel spreadsheets" },
   { ext: ".pdf", label: "PDFs with read-aloud" },
   { ext: ".md", label: "Markdown notes" },
+  { ext: ".csv", label: "CSV spreadsheets" },
+  { ext: ".html", label: "HTML pages" },
   { ext: ".txt", label: "Plain text" },
 ]
 
 export function Formats() {
   return (
     <section className="mx-auto max-w-5xl px-5 py-16 sm:py-24">
-      <div className="grid grid-cols-2 gap-px overflow-hidden rounded-xl border border-border bg-border sm:grid-cols-5">
+      <div className="grid grid-cols-2 gap-px overflow-hidden rounded-xl border border-border bg-border sm:grid-cols-4">
         {formats.map((f) => (
           <div
             key={f.ext}
