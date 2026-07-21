@@ -69,6 +69,7 @@ export const metadata: Metadata = {
 
 export const viewport: Viewport = {
   themeColor: "#131313",
+  colorScheme: "dark",
 }
 
 import { StructuredData } from "@/components/structured-data"

@@ -5,10 +5,22 @@ export function StructuredData() {
       {
         "@type": "SoftwareApplication",
         "name": "EleViewer",
+        "url": "https://eleviewer.vercel.app/",
+        "image": "https://eleviewer.vercel.app/opengraph-image",
         "operatingSystem": "Windows 10, Windows 11",
         "applicationCategory": "OfficeApplication",
         "description": "EleViewer is a free open-source portable Windows document viewer that opens DOCX, XLSX, PDF, Markdown, CSV, HTML, and TXT with PDF text-to-speech, find and replace, autosave, file vault, and session restore.",
         "softwareVersion": "1.1.0",
+        "author": {
+          "@type": "Organization",
+          "name": "Karefined",
+          "url": "https://github.com/karefined-eng"
+        },
+        "publisher": {
+          "@type": "Organization",
+          "name": "Karefined",
+          "url": "https://github.com/karefined-eng"
+        },
         "offers": {
           "@type": "Offer",
           "price": "0",
