@@ -1,5 +1,5 @@
 import { Download } from "lucide-react"
-import { RELEASES_URL, ISSUES_URL } from "@/lib/links"
+import { DOWNLOAD_URL, ISSUES_URL } from "@/lib/links"
 
 export function DownloadCta() {
   return (
@@ -14,7 +14,7 @@ export function DownloadCta() {
         </p>
         <div className="mt-8 flex justify-center">
           <a
-            href={RELEASES_URL}
+            href={DOWNLOAD_URL}
             target="_blank"
             rel="noreferrer"
             className="flex h-12 items-center gap-2 rounded-lg bg-primary px-8 text-sm font-medium text-primary-foreground transition-opacity hover:opacity-90"

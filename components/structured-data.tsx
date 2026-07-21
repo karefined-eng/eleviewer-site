@@ -27,7 +27,7 @@ export function StructuredData() {
           "priceCurrency": "USD",
           "url": "https://github.com/karefined-eng/eleviewer/releases"
         },
-        "downloadUrl": "https://github.com/karefined-eng/eleviewer/releases",
+        "downloadUrl": "https://github.com/karefined-eng/eleviewer/releases/latest/download/EleViewer.exe",
         "keywords": "free windows document viewer, portable pdf reader windows, open source document viewer, DOCX viewer for Windows, XLSX viewer windows, CSV viewer windows, HTML viewer windows, markdown editor windows, pdf text to speech, find and replace, built-in web browser, single instance"
       },
       {

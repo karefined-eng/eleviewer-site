@@ -20,14 +20,14 @@ export function SiteHeader() {
   }, [isMenuOpen])
 
   return (
-    <header className="sticky top-0 z-50 border-b border-border bg-background/80 backdrop-blur-md">
+    <header className="sticky top-0 z-40 w-full border-b border-border bg-background/80 backdrop-blur-md">
       <div className="mx-auto flex h-14 max-w-5xl items-center justify-between px-5">
         <Link href="/" aria-label="EleViewer home">
           <Logo />
         </Link>
         <nav
           aria-label="Main navigation"
-          className="hidden items-center gap-6 text-[13px] text-muted-foreground md:flex"
+          className="hidden items-center gap-6 text-sm font-medium text-muted-foreground md:flex"
         >
           <a
             href="#features"
@@ -47,6 +47,9 @@ export function SiteHeader() {
           >
             Open Source
           </a>
+          <a href="#faq" className="transition-colors hover:text-foreground">
+            FAQ
+          </a>
         </nav>
         <div className="flex items-center gap-2">
           <a
@@ -60,7 +63,7 @@ export function SiteHeader() {
             <ExternalLink className="ml-1 h-3 w-3" />
           </a>
           <a
-            href={RELEASES_URL}
+            href={DOWNLOAD_URL}
             target="_blank"
             rel="noreferrer"
             className="flex h-8 items-center gap-1.5 rounded-md bg-primary px-3 text-[13px] font-medium text-primary-foreground transition-opacity hover:opacity-90"

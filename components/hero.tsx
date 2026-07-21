@@ -1,7 +1,7 @@
 import { Download } from "lucide-react"
 import { GitHubIcon } from "./github-icon"
 import { AppMockup } from "./app-mockup"
-import { GITHUB_URL, RELEASES_URL } from "@/lib/links"
+import { GITHUB_URL, DOWNLOAD_URL } from "@/lib/links"
 
 export function Hero() {
   return (
@@ -22,7 +22,7 @@ export function Hero() {
         </p>
         <div className="mt-8 flex flex-col items-center justify-center gap-3 sm:flex-row">
           <a
-            href={RELEASES_URL}
+            href={DOWNLOAD_URL}
             target="_blank"
             rel="noreferrer"
             className="flex h-11 items-center gap-2 rounded-lg bg-primary px-6 text-sm font-medium text-primary-foreground transition-opacity hover:opacity-90"
