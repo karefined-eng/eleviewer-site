@@ -12,11 +12,26 @@ const geistMono = Geist_Mono({
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://eleviewer.vercel.app"),
-  title: "EleViewer — Free Windows document viewer for PDFs, DOCX, XLSX, Markdown",
+  title: "EleViewer — Free Windows Document Viewer & Study Workspace",
   description:
-    "EleViewer is a free, portable Windows study workspace for students and professionals. Open DOCX, XLSX, PDF, Markdown, CSV, HTML, and TXT in one lightweight app with PDF text-to-speech, find and replace, autosave, file vault, session restore, and no account required.",
+    "EleViewer is a free, portable Windows study workspace. Open DOCX, XLSX, PDF, Markdown, CSV, HTML, and TXT in one lightweight app with PDF text-to-speech, built-in web browser, find & replace, autosave, and file vault.",
+  applicationName: "EleViewer",
+  authors: [{ name: "Elevon (ka.refined)", url: "https://github.com/karefined-eng" }],
+  creator: "ka.refined",
+  publisher: "Karefined",
   alternates: {
     canonical: "https://eleviewer.vercel.app/",
+  },
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      "max-video-preview": -1,
+      "max-image-preview": "large",
+      "max-snippet": -1,
+    },
   },
   icons: {
     icon: [
@@ -31,21 +46,26 @@ export const metadata: Metadata = {
     "Windows document viewer",
     "portable PDF reader",
     "open source DOCX viewer",
+    "free Word viewer",
     "XLSX viewer",
+    "free Excel viewer",
     "CSV viewer",
     "HTML viewer",
     "markdown notes editor",
     "PDF text to speech",
+    "PDF read aloud",
     "find and replace",
+    "built-in web browser panel",
+    "single instance document viewer",
     "student study app",
     "lightweight file viewer",
     "offline document reader",
     "Windows 10/11 app",
   ],
   openGraph: {
-    title: "EleViewer — Free Windows document viewer & study workspace",
+    title: "EleViewer — Free Windows Document Viewer & Study Workspace",
     description:
-      "Open DOCX, XLSX, PDF, Markdown, CSV, HTML, and TXT in one lightweight Windows app with PDF text-to-speech, file vault, and session restore.",
+      "Open DOCX, XLSX, PDF, Markdown, CSV, HTML, and TXT in one lightweight Windows app with PDF text-to-speech, web browser, file vault, and session restore.",
     url: "https://eleviewer.vercel.app",
     siteName: "EleViewer",
     locale: "en_US",
@@ -61,9 +81,9 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "EleViewer — Free Windows document viewer & study workspace",
+    title: "EleViewer — Free Windows Document Viewer & Study Workspace",
     description:
-      "Open DOCX, XLSX, PDF, Markdown, CSV, HTML, and TXT in one lightweight Windows app with PDF text-to-speech, file vault, and session restore.",
+      "Open DOCX, XLSX, PDF, Markdown, CSV, HTML, and TXT in one lightweight Windows app with PDF text-to-speech, web browser, file vault, and session restore.",
     images: ["/opengraph-image"],
   },
 }
