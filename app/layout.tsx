@@ -17,6 +17,13 @@ export const metadata: Metadata = {
   alternates: {
     canonical: "https://eleviewer.vercel.app/",
   },
+  icons: {
+    icon: [
+      { url: "/favicon.ico", sizes: "any" },
+      { url: "/icon.png", type: "image/png" },
+    ],
+    apple: [{ url: "/apple-icon.png", type: "image/png" }],
+  },
   keywords: [
     "EleViewer",
     "free document viewer",
@@ -38,13 +45,25 @@ export const metadata: Metadata = {
     title: "EleViewer — Free Windows document viewer & study workspace",
     description:
       "Open DOCX, XLSX, PDF, Markdown, CSV, HTML, and TXT in one lightweight Windows app with PDF text-to-speech, file vault, and session restore.",
+    url: "https://eleviewer.vercel.app",
+    siteName: "EleViewer",
+    locale: "en_US",
     type: "website",
+    images: [
+      {
+        url: "/opengraph-image",
+        width: 1200,
+        height: 630,
+        alt: "EleViewer — Free Windows Document Viewer & Study Workspace",
+      },
+    ],
   },
   twitter: {
     card: "summary_large_image",
     title: "EleViewer — Free Windows document viewer & study workspace",
     description:
       "Open DOCX, XLSX, PDF, Markdown, CSV, HTML, and TXT in one lightweight Windows app with PDF text-to-speech, file vault, and session restore.",
+    images: ["/opengraph-image"],
   },
 }
 
