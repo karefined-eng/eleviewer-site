@@ -8,10 +8,10 @@ export default function ReviewPage() {
       <main className="mx-auto max-w-3xl px-5 py-24 sm:py-32">
         <div className="text-center">
           <h1 className="text-balance text-3xl font-semibold tracking-tight text-foreground sm:text-4xl mb-4">
-            Leave a Review 🌟
+            What do you think of EleViewer? 💭
           </h1>
           <p className="text-muted-foreground mb-8 text-[15px] leading-relaxed max-w-xl mx-auto">
-            Has EleViewer helped you study better? We'd love to hear your story! Your testimonials help us grow and reach more students.
+            We rely entirely on word of mouth from students like you. Whether you love it or have ideas to improve it, we'd love to hear your story!
           </p>
           
           <div className="bg-panel border border-border rounded-xl p-8 max-w-lg mx-auto text-center shadow-lg">
