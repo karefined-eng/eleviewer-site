@@ -6,7 +6,7 @@ import { Download, X, ExternalLink } from "lucide-react"
 import { Logo } from "./logo"
 import { GitHubIcon } from "./github-icon"
 import { MenuIcon } from "./menu-icon"
-import { GITHUB_URL, RELEASES_URL } from "@/lib/links"
+import { GITHUB_URL, DOWNLOAD_URL } from "@/lib/links"
 
 export function SiteHeader() {
   const [isMenuOpen, setIsMenuOpen] = useState(false)

@@ -1,5 +1,5 @@
 import { Scale, HardDrive, ShieldOff, GitFork } from "lucide-react"
-import { GITHUB_URL, LICENSE_URL } from "@/lib/links"
+import { GITHUB_PROFILE_URL, GITHUB_URL, LICENSE_URL } from "@/lib/links"
 
 const principles = [
   {
@@ -35,7 +35,15 @@ export function OpenSource() {
           Free because someone&apos;s free software got us here
         </h2>
         <p className="mt-4 text-pretty text-[15px] leading-relaxed text-muted-foreground">
-          EleViewer exists because open-source tools made its creator&apos;s
+          EleViewer exists because open-source tools made its{" "}
+          <a
+            href={GITHUB_PROFILE_URL}
+            target="_blank"
+            rel="noreferrer"
+            className="text-foreground underline underline-offset-4 transition-colors hover:text-accent"
+          >
+            creator&apos;s
+          </a>{" "}
           education possible. It will never cost money, show ads, or collect
           your data. If it helps you, star it, share it, or contribute.
         </p>

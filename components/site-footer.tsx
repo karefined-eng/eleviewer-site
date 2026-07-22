@@ -8,7 +8,7 @@ export function SiteFooter() {
         <div className="flex flex-col gap-2">
           <Logo />
           <p className="text-xs text-muted-foreground">
-            Built by Elevon (ka.refined) in Accra, Ghana. Free forever.
+            Built by karefined-eng. Free forever.
           </p>
         </div>
         <nav
