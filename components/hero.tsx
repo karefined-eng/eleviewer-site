@@ -12,9 +12,12 @@ export function Hero() {
           Free &amp; open source · Windows 10/11
         </p>
         <h1 className="text-balance text-4xl font-semibold tracking-tight text-foreground sm:text-5xl">
-          Every file your professor throws at you. One free app.
+          The Lightweight Open Source Study Workspace for Windows
         </h1>
-        <p className="mx-auto mt-5 max-w-xl text-pretty text-[15px] leading-relaxed text-muted-foreground">
+        <h2 className="mx-auto mt-5 max-w-xl text-pretty text-lg font-medium text-foreground">
+          Every file your professor throws at you. One free app.
+        </h2>
+        <p className="mx-auto mt-4 max-w-xl text-pretty text-[15px] leading-relaxed text-muted-foreground">
           EleViewer opens and edits DOCX, XLSX, PDF, Markdown, CSV, HTML, and
           TXT in one lightweight study workspace — with text-to-speech for PDFs,
           a file vault, find &amp; replace, autosave, and session restore. No
