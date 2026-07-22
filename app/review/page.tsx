@@ -13,7 +13,7 @@ export default function ReviewPage() {
           <p className="text-muted-foreground mb-8 text-[15px] leading-relaxed max-w-xl mx-auto">
             We rely entirely on word of mouth from students like you. Whether you love it or have ideas to improve it, we'd love to hear your story!
           </p>
-          
+
           <div className="bg-panel border border-border rounded-xl p-8 max-w-lg mx-auto text-center shadow-lg">
             <h2 className="text-lg font-medium text-foreground mb-2">Share Your Experience</h2>
             <p className="text-sm text-muted-foreground mb-6">
