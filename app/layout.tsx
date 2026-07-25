@@ -120,7 +120,7 @@ export default function RootLayout({
         >
           <a
             href="#main-content"
-            className="sr-only focus:not-sr-only focus:absolute focus:top-0 focus:left-0 focus:z-[100] focus:bg-background focus:p-4 focus:text-foreground"
+            className="absolute left-0 top-0 -translate-y-full p-4 bg-background text-foreground z-[100] transition-transform focus:translate-y-0"
           >
             Skip to main content
           </a>

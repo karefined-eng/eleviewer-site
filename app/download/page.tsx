@@ -16,7 +16,7 @@ export default function DownloadPage() {
   return (
     <div className="flex min-h-screen flex-col bg-background text-foreground">
       <SiteHeader />
-      <main className="flex-1">
+      <main id="main-content" className="flex-1">
         <section className="mx-auto max-w-4xl px-5 py-16 sm:py-24">
           <div className="mx-auto max-w-2xl text-center">
             <p className="mb-4 inline-flex items-center gap-2 rounded-full border border-border bg-panel px-3 py-1 font-mono text-[11px] text-accent">
@@ -50,7 +50,7 @@ export default function DownloadPage() {
             </div>
 
             <div className="mt-6 mx-auto max-w-md rounded-lg border border-amber-500/20 bg-amber-500/5 p-4 text-left">
-              <p className="text-xs text-amber-200/90 leading-relaxed">
+              <p className="text-xs text-[#856404] dark:text-amber-200/90 leading-relaxed">
                 ⚠️ <strong>Windows SmartScreen Notice:</strong> Windows may display an "Unknown Publisher" warning because this portable binary is open source and un-signed. Click <strong>"More info"</strong> and then <strong>"Run anyway"</strong>.{" "}
                 <a
                   href={GITHUB_URL}
@@ -70,7 +70,7 @@ export default function DownloadPage() {
                 <HardDrive className="h-5 w-5 text-accent" />
                 System Requirements
               </h2>
-              <ul className="mt-4 space-y-2 text-xs text-muted-foreground">
+              <ul className="mt-4 space-y-2 text-xs text-[#595959] dark:text-muted-foreground">
                 <li className="flex items-center gap-2">
                   <CheckCircle className="h-3.5 w-3.5 text-emerald-400" />
                   <span>Windows 10 or 11 (64-bit)</span>
