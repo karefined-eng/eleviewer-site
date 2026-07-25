@@ -12,22 +12,20 @@ export function Hero() {
           Free &amp; open source · Windows 10/11
         </p>
         <h1 className="text-balance text-4xl font-semibold tracking-tight text-foreground sm:text-5xl">
-          The Lightweight Open Source Study Workspace for Windows
+          EleViewer — Free Windows Document Viewer &amp; Study Workspace
         </h1>
         <h2 className="mx-auto mt-5 max-w-xl text-pretty text-lg font-medium text-foreground">
-          Every file your professor throws at you. One free app.
+          The open source study workspace for every file your professor throws at you.
         </h2>
         <p className="mx-auto mt-4 max-w-xl text-pretty text-[15px] leading-relaxed text-muted-foreground">
           EleViewer opens and edits DOCX, XLSX, PDF, Markdown, CSV, HTML, and
-          TXT in one lightweight study workspace — with text-to-speech for PDFs,
+          TXT in one portable study workspace — with text-to-speech for Windows,
           a file vault, find &amp; replace, autosave, and session restore. No
           install. No account. No cost.
         </p>
         <div className="mt-8 flex flex-col items-center justify-center gap-3 sm:flex-row">
           <a
-            href={DOWNLOAD_URL}
-            target="_blank"
-            rel="noreferrer"
+            href="/download"
             className="flex h-11 items-center gap-2 rounded-lg bg-primary px-6 text-sm font-medium text-primary-foreground transition-opacity hover:opacity-90"
           >
             <Download className="h-4 w-4" />
@@ -37,12 +35,24 @@ export function Hero() {
             href={GITHUB_URL}
             target="_blank"
             rel="noreferrer"
-            className="flex h-11 items-center gap-2 rounded-lg border border-border bg-panel px-6 text-sm font-medium text-foreground transition-colors hover:bg-panel-2"
+            className="flex h-11 items-center gap-2 rounded-lg border border-border text-foreground transition-colors hover:border-muted-foreground hover:bg-panel"
           >
             <GitHubIcon className="h-4 w-4" />
             View on GitHub
           </a>
         </div>
+        <p className="mt-3 text-xs text-muted-foreground">
+          Windows may show a SmartScreen warning — click <strong>"More info"</strong> then{" "}
+          <strong>"Run anyway"</strong>. EleViewer is open source and MIT licensed.{" "}
+          <a
+            href="https://github.com/karefined-eng/eleviewer"
+            className="underline hover:text-foreground transition-colors"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            Verify the source code.
+          </a>
+        </p>
         <p className="mt-4 font-mono text-[11px] text-muted-foreground">
           MIT licensed · portable .exe · no telemetry
         </p>

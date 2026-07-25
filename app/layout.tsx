@@ -14,7 +14,7 @@ export const metadata: Metadata = {
   metadataBase: new URL("https://eleviewer.vercel.app"),
   title: "EleViewer — Free Windows Document Viewer & Study Workspace",
   description:
-    "EleViewer is a free, portable Windows study workspace. Open DOCX, XLSX, PDF, Markdown, CSV, HTML, and TXT in one lightweight app with PDF text-to-speech, built-in web browser, find & replace, autosave, and file vault.",
+    "EleViewer is a free, portable Windows study workspace. Open DOCX, XLSX, PDF, Markdown, CSV, HTML, and TXT in one portable app with PDF text-to-speech for Windows, built-in web browser, find & replace, autosave, and file vault.",
   applicationName: "EleViewer",
   authors: [{ name: "Elevon (ka.refined)", url: "https://github.com/karefined-eng" }],
   creator: "ka.refined",
@@ -58,14 +58,14 @@ export const metadata: Metadata = {
     "built-in web browser panel",
     "single instance document viewer",
     "student study app",
-    "lightweight file viewer",
+    "portable file viewer",
     "offline document reader",
     "Windows 10/11 app",
   ],
   openGraph: {
     title: "EleViewer — Free Windows Document Viewer & Study Workspace",
     description:
-      "Open DOCX, XLSX, PDF, Markdown, CSV, HTML, and TXT in one lightweight Windows app with PDF text-to-speech, web browser, file vault, and session restore.",
+      "Open DOCX, XLSX, PDF, Markdown, CSV, HTML, and TXT in one portable Windows app with PDF text-to-speech for Windows, web browser, file vault, and session restore.",
     url: "https://eleviewer.vercel.app",
     siteName: "EleViewer",
     locale: "en_US",
@@ -83,7 +83,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "EleViewer — Free Windows Document Viewer & Study Workspace",
     description:
-      "Open DOCX, XLSX, PDF, Markdown, CSV, HTML, and TXT in one lightweight Windows app with PDF text-to-speech, web browser, file vault, and session restore.",
+      "Open DOCX, XLSX, PDF, Markdown, CSV, HTML, and TXT in one portable Windows app with PDF text-to-speech for Windows, web browser, file vault, and session restore.",
     images: ["/opengraph-image"],
   },
 }

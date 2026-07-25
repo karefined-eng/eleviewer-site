@@ -63,13 +63,11 @@ export function SiteHeader() {
             <ExternalLink className="ml-1 h-3 w-3" />
           </a>
           <a
-            href={DOWNLOAD_URL}
-            target="_blank"
-            rel="noreferrer"
+            href="/download"
             className="flex h-8 items-center gap-1.5 rounded-md bg-primary px-3 text-[13px] font-medium text-primary-foreground transition-opacity hover:opacity-90"
           >
             <Download className="h-3.5 w-3.5" />
-            Download <ExternalLink className="ml-1 h-3 w-3" />
+            Download
           </a>
           <button
             type="button"

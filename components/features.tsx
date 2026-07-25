@@ -13,7 +13,7 @@ const features = [
   {
     icon: Volume2,
     title: "PDFs that read to you",
-    body: "Native text-to-speech turns any lecture slide or reading into audio. Study while you commute, cook, or rest your eyes.",
+    body: "Native Windows text-to-speech turns any lecture slide or reading into audio. (Windows 10/11 only)",
   },
   {
     icon: FolderTree,
@@ -28,7 +28,7 @@ const features = [
   {
     icon: History,
     title: "Session restore",
-    body: "Close your laptop mid-study session. Reopen EleViewer and every tab comes back exactly where you left it.",
+    body: "Close your laptop mid-study session. Reopen EleViewer and every tab comes back — files, order, and active tab restored automatically.",
   },
   {
     icon: Bookmark,

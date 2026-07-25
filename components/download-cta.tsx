@@ -12,16 +12,26 @@ export function DownloadCta() {
           One portable .exe for Windows 10/11. Download, double-click, and
           every course file just opens.
         </p>
-        <div className="mt-8 flex justify-center">
+        <div className="mt-8 flex flex-col items-center justify-center">
           <a
-            href={DOWNLOAD_URL}
-            target="_blank"
-            rel="noreferrer"
+            href="/download"
             className="flex h-12 items-center gap-2 rounded-lg bg-primary px-8 text-sm font-medium text-primary-foreground transition-opacity hover:opacity-90"
           >
             <Download className="h-4 w-4" />
             Download EleViewer for Windows
           </a>
+          <p className="mt-3 max-w-md text-center text-xs text-muted-foreground">
+            Windows may show a SmartScreen warning — click <strong>"More info"</strong> then{" "}
+            <strong>"Run anyway"</strong>. EleViewer is open source and MIT licensed.{" "}
+            <a
+              href="https://github.com/karefined-eng/eleviewer"
+              className="underline hover:text-foreground transition-colors"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              Verify the source code.
+            </a>
+          </p>
         </div>
         <p className="mt-4 font-mono text-[11px] text-muted-foreground">
           Something broken?{" "}

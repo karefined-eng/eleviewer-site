@@ -46,9 +46,7 @@ export function NightlyExplainer() {
 
             <div className="mt-8 flex flex-wrap items-center gap-4">
               <a
-                href="https://chat.whatsapp.com/FeofuieK0Ae51KdUZEvwTQ"
-                target="_blank"
-                rel="noopener noreferrer"
+                href="/community"
                 className="inline-flex items-center gap-2 rounded-lg bg-emerald-600 px-5 py-3 font-mono text-sm font-semibold text-white transition-all hover:bg-emerald-500 hover:shadow-lg hover:shadow-emerald-600/20"
               >
                 Join Nightly Insiders on WhatsApp

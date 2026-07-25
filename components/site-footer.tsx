@@ -47,6 +47,12 @@ export function SiteFooter() {
           >
             MIT License
           </a>
+          <a
+            href="/privacy"
+            className="transition-colors hover:text-foreground"
+          >
+            Privacy
+          </a>
         </nav>
       </div>
     </footer>
