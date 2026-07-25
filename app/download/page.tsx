@@ -7,7 +7,10 @@ import { DOWNLOAD_URL, GITHUB_URL } from "@/lib/links"
 export const metadata: Metadata = {
   title: "Download EleViewer — Free Windows Document Viewer & Study Workspace",
   description:
-    "Download EleViewer for Windows 10 and 11. Single portable .exe requiring no installation, no account, and zero telemetry.",
+    "Download EleViewer for Windows 10 and 11. A free, portable .exe that opens DOCX without Word, XLSX without Excel, PPTX without PowerPoint, PDF with text-to-speech, Markdown, CSV, and HTML. No installation, no account, zero telemetry.",
+  alternates: {
+    canonical: "https://eleviewer.vercel.app/download",
+  },
 }
 
 export default function DownloadPage() {

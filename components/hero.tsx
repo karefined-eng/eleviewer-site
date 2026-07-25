@@ -1,6 +1,7 @@
 import { Download } from "lucide-react"
 import { GitHubIcon } from "./github-icon"
 import { InteractiveDemo } from "./interactive-demo"
+import { MobileReminder } from "./mobile-reminder"
 import { GITHUB_URL, DOWNLOAD_URL } from "@/lib/links"
 
 export function Hero() {
@@ -18,12 +19,15 @@ export function Hero() {
           The open source study workspace for every file your professor throws at you.
         </h2>
         <p className="mx-auto mt-4 max-w-xl text-pretty text-[15px] leading-relaxed text-muted-foreground">
-          EleViewer opens and edits DOCX, XLSX, PDF, Markdown, CSV, HTML, and
-          TXT in one portable study workspace — with text-to-speech for Windows,
-          a file vault, find &amp; replace, autosave, and session restore. No
-          install. No account. No cost.
+          Open and edit DOCX, XLSX, PPTX, PDF, Markdown, CSV, HTML, and TXT
+          without Microsoft Office — in one portable .exe with text-to-speech,
+          a file vault, find &amp; replace, autosave, built-in web browser,
+          and session restore. No install. No account. No cost.
         </p>
-        <div className="mt-8 flex flex-col items-center justify-center gap-3 sm:flex-row">
+
+        <MobileReminder />
+
+        <div className="mt-8 hidden sm:flex flex-col items-center justify-center gap-3 sm:flex-row">
           <a
             href="/download"
             className="flex h-11 items-center gap-2 rounded-lg bg-primary px-6 text-sm font-medium text-primary-foreground transition-opacity hover:opacity-90"

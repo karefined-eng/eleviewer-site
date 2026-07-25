@@ -37,24 +37,24 @@ export function SiteHeader() {
             Live Demo
           </Link>
           <a
-            href="#features"
+            href="/#features"
             className="transition-colors hover:text-foreground"
           >
             Features
           </a>
           <a
-            href="#shortcuts"
+            href="/#shortcuts"
             className="transition-colors hover:text-foreground"
           >
             Shortcuts
           </a>
           <a
-            href="#open-source"
+            href="/#open-source"
             className="transition-colors hover:text-foreground"
           >
             Open Source
           </a>
-          <a href="#faq" className="transition-colors hover:text-foreground">
+          <a href="/#faq" className="transition-colors hover:text-foreground">
             FAQ
           </a>
         </nav>
@@ -119,21 +119,21 @@ export function SiteHeader() {
                 Live Demo
               </Link>
               <a
-                href="#features"
+                href="/#features"
                 className="w-full rounded-md p-3 transition-colors hover:bg-panel"
                 onClick={() => setIsMenuOpen(false)}
               >
                 Features
               </a>
               <a
-                href="#shortcuts"
+                href="/#shortcuts"
                 className="w-full rounded-md p-3 transition-colors hover:bg-panel"
                 onClick={() => setIsMenuOpen(false)}
               >
                 Shortcuts
               </a>
               <a
-                href="#open-source"
+                href="/#open-source"
                 className="w-full rounded-md p-3 transition-colors hover:bg-panel"
                 onClick={() => setIsMenuOpen(false)}
               >

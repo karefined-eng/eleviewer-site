@@ -1,5 +1,30 @@
 const faqs = [
   {
+    question: "How do I open a DOCX file without Microsoft Word?",
+    answer:
+      "Download EleViewer — it opens Word documents (.docx) for free with no Microsoft Office required. Just drag the file onto EleViewer or use Ctrl+O to open it. It's a single portable .exe — no installation, no sign-up.",
+  },
+  {
+    question: "How do I open an XLSX spreadsheet without Excel?",
+    answer:
+      "EleViewer opens Excel spreadsheets (.xlsx) for free. It renders your data in a clean table view with column headers and formatting preserved. No Microsoft Office, no LibreOffice — just download the .exe and open your files.",
+  },
+  {
+    question: "Is there a free PowerPoint viewer for Windows?",
+    answer:
+      "Yes. Microsoft discontinued its official PowerPoint Viewer, but EleViewer opens .pptx presentations for free on Windows 10 and 11. Slides display with text, images, and formatting in a clean slide-by-slide view with text-to-speech support.",
+  },
+  {
+    question: "How can I read a PDF aloud on Windows for free?",
+    answer:
+      "EleViewer has built-in PDF text-to-speech using the Windows speech engine (SAPI). Press F9 to toggle the TTS bar, choose a voice, and listen to any PDF page read aloud — hands-free. Works 100% offline.",
+  },
+  {
+    question: "What is the best free alternative to Microsoft Word Viewer?",
+    answer:
+      "EleViewer replaces the discontinued Microsoft Word Viewer, Excel Viewer, and PowerPoint Viewer in one portable app. It opens DOCX, XLSX, PPTX, PDF, Markdown, CSV, HTML, and TXT — no install required.",
+  },
+  {
     question: "Can I browse the web inside EleViewer?",
     answer:
       "Yes. Press Ctrl+T to open the built-in web browser panel and browse side-by-side with your documents. Tabs and URLs persist between sessions.",
@@ -12,7 +37,7 @@ const faqs = [
   {
     question: "What file types can EleViewer open?",
     answer:
-      "EleViewer opens DOCX, XLSX, PDF, Markdown, CSV, HTML, and TXT files.",
+      "EleViewer opens DOCX, XLSX, PPTX, PDF, Markdown, CSV, HTML, and TXT files.",
   },
   {
     question: "Does EleViewer support PDF text-to-speech?",
@@ -25,14 +50,9 @@ const faqs = [
       "Yes. EleViewer runs fully locally on Windows 10 and 11 without an internet connection.",
   },
   {
-    question: "How do I open a DOCX file without Microsoft Word?",
-    answer:
-      "Download EleViewer — it opens Word documents (.docx) for free with no Microsoft Office required. Just drag the file onto EleViewer or use Ctrl+O to open it.",
-  },
-  {
     question: "Is there a free portable PDF reader for Windows with no install?",
     answer:
-      "Yes — EleViewer is a portable .exe that opens PDFs, DOCX, XLSX, Markdown, and more with no installation. Run it directly from a USB drive or a shared lab computer.",
+      "Yes — EleViewer is a portable .exe that opens PDFs, DOCX, XLSX, PPTX, Markdown, and more with no installation. Run it directly from a USB drive or a shared lab computer.",
   },
   {
     question: "Can EleViewer run on a school or university computer without admin rights?",
@@ -63,6 +83,11 @@ const faqs = [
     question: "Is EleViewer safe to download? Will it trigger antivirus warnings?",
     answer:
       "EleViewer is fully open source (MIT licensed) — you can read every line of code on GitHub. Windows may show a SmartScreen warning because the app is not yet code-signed. Click 'More info' then 'Run anyway' to proceed. The source code is publicly auditable at github.com/karefined-eng/eleviewer.",
+  },
+  {
+    question: "Is EleViewer a good alternative to Sumatra PDF?",
+    answer:
+      "Both are free and portable. The key difference: Sumatra only opens PDFs and ebooks, while EleViewer also opens DOCX, XLSX, PPTX, CSV, HTML, and Markdown — plus it has text-to-speech, a file vault, find & replace, and a built-in web browser.",
   },
 ]
 
