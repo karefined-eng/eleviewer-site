@@ -189,7 +189,7 @@ export function AppMockup() {
                 Abstract — Final Essay Draft
               </h3>
               <p className="text-[11px] text-[#ccc]">
-                This study evaluates portable desktop environments designed for high-density document workflows in academic and research settings...
+                This study evaluates portable desktop environments designed for students reading long lectures, essays, and notes on Windows laptops...
               </p>
               <div className="mt-3 flex items-center gap-2 text-[10px] text-emerald-400 font-sans">
                 <CheckCircle2 className="h-3 w-3" />

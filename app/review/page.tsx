@@ -19,7 +19,7 @@ export default function ReviewPage() {
       case "Bug Report":
         return "1. What you clicked...\n2. What you expected to happen...\n3. What actually happened..."
       case "Feature Request":
-        return "Describe the study workflow or document format you want to streamline..."
+        return "Tell us what you're trying to do or what study feature you wish EleViewer had..."
       case "General Feedback":
         return "Tell us how EleViewer fits into your study routine or lab sessions..."
     }
@@ -40,7 +40,7 @@ export default function ReviewPage() {
         body: JSON.stringify({
           type: category,
           description,
-          version: "Web Intake",
+          version: "Web Form",
           os_name: "Web Browser",
           platform: typeof window !== "undefined" ? window.navigator.userAgent : "Unknown",
         }),
@@ -69,7 +69,7 @@ export default function ReviewPage() {
       <main className="flex-1 mx-auto max-w-3xl px-5 py-16 sm:py-24 w-full">
         <div className="text-center max-w-2xl mx-auto mb-12">
           <p className="mb-4 inline-flex items-center gap-2 rounded-full border border-border bg-panel px-3 py-1 font-mono text-xs font-medium text-muted-foreground uppercase tracking-wider">
-            Direct Developer Intake
+            Direct Developer Inbox
           </p>
           <h1 className="text-balance text-3xl font-bold tracking-tight text-foreground sm:text-4xl mb-4">
             Is there something you wish EleViewer could do?

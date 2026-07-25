@@ -34,7 +34,7 @@ const textContents = {
   md: "Cell Respiration — Week 4. Glycolysis happens in the cytoplasm and produces 2 ATP net. Key stages: Glycolysis to pyruvate. Krebs cycle to NADH, FADH2. Electron transport chain to approximately 34 ATP. Exam tip: Know exactly where each stage occurs in the cell.",
   pdf: "Lecture 04 - Molecular Biology, Page 12. 4.2 ATP Synthase Mechanics. The rotary engine mechanism of F1F0 ATP Synthase couples proton translocation across the inner mitochondrial membrane directly to conformational changes in catalytic subunits.",
   xlsx: "Sheet 1 — Lab Measurements. Sample S-101 at 37.5 degrees celsius, rate 4.22, status Valid. Sample S-102 at 38.0 degrees celsius, rate 5.10, status Valid. Sample S-103 at 41.2 degrees celsius, rate 1.04, status Warning.",
-  docx: "Abstract — Final Essay Draft. This study evaluates portable desktop environments designed for high-density document workflows in academic and research settings."
+  docx: "Abstract — Final Essay Draft. This study evaluates portable desktop environments designed for students reading long lectures, essays, and notes on Windows laptops."
 }
 
 export function InteractiveDemo() {
@@ -228,7 +228,7 @@ export function InteractiveDemo() {
                 Abstract — Final Essay Draft
               </h3>
               <p className="text-[11px] text-[#ccc]">
-                This study evaluates portable desktop environments designed for high-density document workflows in academic and research settings...
+                This study evaluates portable desktop environments designed for students reading long lectures, essays, and notes on Windows laptops...
               </p>
               <div className="mt-3 flex items-center gap-2 text-[10px] text-emerald-400 font-sans">
                 <CheckCircle2 className="h-3 w-3" />

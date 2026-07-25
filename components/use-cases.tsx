@@ -4,7 +4,7 @@ export function UseCases() {
       <div className="rounded-3xl border border-border bg-panel p-8 shadow-sm">
         <div className="max-w-3xl">
           <p className="mb-3 font-mono text-xs uppercase tracking-widest text-accent">
-            Built for Windows study workflows
+            Built for Windows study sessions
           </p>
           <h2 className="text-balance text-3xl font-semibold tracking-tight text-foreground">
             One free Windows document viewer for every student file type
@@ -30,7 +30,7 @@ export function UseCases() {
           <div className="rounded-3xl border border-border bg-background p-6">
             <h3 className="text-sm font-semibold text-foreground">Open source and portable</h3>
             <p className="mt-2 text-sm leading-relaxed text-muted-foreground">
-              No account, no telemetry, and no installer. Keep your files local and your workflow fast.
+              No account, no telemetry, and no installer. Keep your files local and your laptop running fast.
             </p>
           </div>
           <div className="rounded-3xl border border-border bg-background p-6">
