@@ -88,7 +88,7 @@ export function SiteHeader() {
         </div>
       </div>
       {isMenuOpen && (
-        <div className="fixed inset-0 z-50 bg-background/95 backdrop-blur-md">
+        <div className="fixed inset-0 z-[100] h-screen w-screen bg-background dark:bg-[#131313] overflow-y-auto">
           <div className="mx-auto max-w-5xl px-5">
             <div className="flex h-14 items-center justify-between">
               <Link

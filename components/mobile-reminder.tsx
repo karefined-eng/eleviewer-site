@@ -8,7 +8,7 @@ export function MobileReminder() {
 
   useEffect(() => {
     // Check if the Web Share API is available on the current device
-    if (typeof navigator !== "undefined" && navigator.share) {
+    if (typeof navigator !== "undefined" && typeof navigator.share === "function") {
       setCanShare(true)
     }
   }, [])
