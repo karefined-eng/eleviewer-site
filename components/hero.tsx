@@ -8,7 +8,7 @@ export function Hero() {
   return (
     <section className="mx-auto max-w-5xl px-5 pt-16 sm:pt-24">
       <div className="mx-auto max-w-2xl text-center">
-        <p className="mb-5 inline-flex items-center gap-2 rounded-full border border-border bg-panel px-3 py-1 font-mono text-[11px] text-muted-foreground">
+        <p className="mb-5 inline-flex items-center gap-2 rounded-full border border-border bg-panel px-3 py-1 font-mono text-xs font-medium text-muted-foreground uppercase tracking-wider">
           <span className="h-1.5 w-1.5 rounded-full bg-accent" />
           Free &amp; open source · Windows 10/11
         </p>
@@ -30,7 +30,7 @@ export function Hero() {
         <div className="mt-8 hidden sm:flex flex-col items-center justify-center gap-3 sm:flex-row">
           <a
             href="/download"
-            className="flex h-11 items-center gap-2 rounded-lg bg-primary px-6 text-sm font-medium text-primary-foreground transition-opacity hover:opacity-90"
+            className="flex h-11 items-center justify-center gap-2 rounded-lg bg-primary px-6 text-sm font-medium text-primary-foreground transition-opacity hover:opacity-90"
           >
             <Download className="h-4 w-4" />
             Download for Windows
@@ -39,25 +39,28 @@ export function Hero() {
             href={GITHUB_URL}
             target="_blank"
             rel="noreferrer"
-            className="flex h-11 items-center gap-2 rounded-lg border border-border text-foreground transition-colors hover:border-muted-foreground hover:bg-panel"
+            className="flex h-11 items-center justify-center gap-2 rounded-lg border border-border bg-transparent px-6 text-sm font-medium text-foreground transition-colors hover:bg-panel"
           >
             <GitHubIcon className="h-4 w-4" />
             View on GitHub
           </a>
         </div>
-        <p className="mt-3 text-xs text-muted-foreground">
-          Windows may show a SmartScreen warning — click <strong>"More info"</strong> then{" "}
-          <strong>"Run anyway"</strong>. EleViewer is open source and GPLv3 licensed.{" "}
-          <a
-            href="https://github.com/karefined-eng/eleviewer"
-            className="underline hover:text-foreground transition-colors"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Verify the source code.
-          </a>
-        </p>
-        <p className="mt-4 font-mono text-[11px] text-muted-foreground">
+
+        <div className="mt-6 mx-auto max-w-md rounded-lg border border-border bg-panel/50 p-4 text-left font-mono text-xs text-muted-foreground leading-relaxed">
+          <p className="leading-relaxed">
+            <span className="font-semibold text-foreground">ℹ️ SmartScreen Notice:</span> Windows may show an "Unknown Publisher" warning because this portable binary is open source and un-signed. Click <strong>"More info"</strong> and then <strong>"Run anyway"</strong>.{" "}
+            <a
+              href="https://github.com/karefined-eng/eleviewer"
+              className="underline hover:text-foreground transition-colors"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              Verify source code on GitHub.
+            </a>
+          </p>
+        </div>
+
+        <p className="mt-4 font-mono text-xs text-muted-foreground">
           GPLv3 licensed · portable .exe · no telemetry
         </p>
       </div>

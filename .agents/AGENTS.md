@@ -1,0 +1,12 @@
+# EleViewer Web Project Rules
+
+## Mandatory UI Design System Enforcement
+Before creating or modifying any web component in `eleviewer-site`, you MUST read and strictly adhere to `eleviewer-site/DESIGN.md`.
+
+### Key Constraints:
+1. **No Ad-Hoc Color Palettes:** Do NOT invent Tailwind color utility classes like `rose-500`, `amber-500`, `emerald-500`, `purple-500`, or `green-500` for badges, icon containers, alerts, or buttons. Stick strictly to monochromatic and accent tokens (`bg-panel`, `border-border`, `text-muted-foreground`, `bg-accent/10`, `text-accent`, `bg-primary`, `text-primary-foreground`).
+2. **No Hardcoded Hex Colors:** Do NOT use hardcoded hex strings (e.g., `#856404`, `#595959`) in `.tsx` files.
+3. **Canonical Components:**
+   - All notices, security warnings, and SmartScreen disclaimers MUST use the canonical `notice-box` pattern defined in `DESIGN.md`.
+   - All primary CTAs (Download, Join Insiders, Push to Laptop) MUST use the canonical `button-primary` styling (`h-11 px-6 bg-primary text-primary-foreground rounded-lg font-medium hover:opacity-90`).
+   - All category tags and status pills MUST use the canonical `status-pill` styling (`rounded-full border border-border bg-panel px-3 py-1 font-mono text-xs text-muted-foreground`).

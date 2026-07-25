@@ -8,8 +8,8 @@ export function NightlyExplainer() {
           <div className="absolute top-0 right-0 -translate-y-12 translate-x-12 w-64 h-64 bg-accent/10 rounded-full blur-3xl pointer-events-none" />
 
           <div className="max-w-3xl">
-            <span className="inline-flex items-center gap-1.5 rounded-full border border-accent/30 bg-accent/10 px-3 py-1 text-xs font-mono font-semibold text-accent mb-4">
-              🚀 COMMUNITY PROGRAM
+            <span className="inline-flex items-center gap-2 rounded-full border border-border bg-panel px-3 py-1 font-mono text-xs font-medium text-muted-foreground uppercase tracking-wider mb-4">
+              🚀 Community Program
             </span>
             <h2 className="text-3xl font-bold tracking-tight text-foreground sm:text-4xl">
               What is <span className="text-accent">Nightly Insiders</span>?
@@ -20,7 +20,7 @@ export function NightlyExplainer() {
 
             <div className="mt-8 grid gap-6 sm:grid-cols-3">
               <div className="flex flex-col gap-2 rounded-lg border border-border/60 bg-background/60 p-4">
-                <div className="flex h-8 w-8 items-center justify-center rounded-md bg-accent/10 text-accent">
+                <div className="flex h-8 w-8 items-center justify-center rounded-md border border-border/60 bg-panel text-foreground">
                   <Zap className="h-4 w-4" />
                 </div>
                 <h3 className="font-semibold text-sm text-foreground">Early Access</h3>
@@ -28,7 +28,7 @@ export function NightlyExplainer() {
               </div>
 
               <div className="flex flex-col gap-2 rounded-lg border border-border/60 bg-background/60 p-4">
-                <div className="flex h-8 w-8 items-center justify-center rounded-md bg-emerald-500/10 text-emerald-400">
+                <div className="flex h-8 w-8 items-center justify-center rounded-md border border-border/60 bg-panel text-foreground">
                   <Vote className="h-4 w-4" />
                 </div>
                 <h3 className="font-semibold text-sm text-foreground">Feature Voting</h3>
@@ -36,7 +36,7 @@ export function NightlyExplainer() {
               </div>
 
               <div className="flex flex-col gap-2 rounded-lg border border-border/60 bg-background/60 p-4">
-                <div className="flex h-8 w-8 items-center justify-center rounded-md bg-purple-500/10 text-purple-400">
+                <div className="flex h-8 w-8 items-center justify-center rounded-md border border-border/60 bg-panel text-foreground">
                   <MessageSquare className="h-4 w-4" />
                 </div>
                 <h3 className="font-semibold text-sm text-foreground">Direct Access</h3>
@@ -47,7 +47,7 @@ export function NightlyExplainer() {
             <div className="mt-8 flex flex-wrap items-center gap-4">
               <a
                 href="/community"
-                className="inline-flex items-center gap-2 rounded-lg bg-emerald-600 px-5 py-3 font-mono text-sm font-semibold text-white transition-all hover:bg-emerald-500 hover:shadow-lg hover:shadow-emerald-600/20"
+                className="flex h-11 items-center justify-center gap-2 rounded-lg bg-primary px-6 text-sm font-medium text-primary-foreground transition-opacity hover:opacity-90 shadow-sm"
               >
                 Join Nightly Insiders on WhatsApp
                 <ArrowRight className="h-4 w-4" />

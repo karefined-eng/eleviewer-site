@@ -15,25 +15,26 @@ export function DownloadCta() {
         <div className="mt-8 flex flex-col items-center justify-center">
           <a
             href="/download"
-            className="flex h-12 items-center gap-2 rounded-lg bg-primary px-8 text-sm font-medium text-primary-foreground transition-opacity hover:opacity-90"
+            className="flex h-11 items-center justify-center gap-2 rounded-lg bg-primary px-6 text-sm font-medium text-primary-foreground transition-opacity hover:opacity-90 shadow-sm"
           >
             <Download className="h-4 w-4" />
             Download EleViewer for Windows
           </a>
-          <p className="mt-3 max-w-md text-center text-xs text-muted-foreground">
-            Windows may show a SmartScreen warning — click <strong>"More info"</strong> then{" "}
-            <strong>"Run anyway"</strong>. EleViewer is open source and GPLv3 licensed.{" "}
-            <a
-              href="https://github.com/karefined-eng/eleviewer"
-              className="underline hover:text-foreground transition-colors"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              Verify the source code.
-            </a>
-          </p>
+          <div className="mt-6 mx-auto max-w-md rounded-lg border border-border bg-panel/50 p-4 text-left font-mono text-xs text-muted-foreground leading-relaxed">
+            <p className="leading-relaxed">
+              <span className="font-semibold text-foreground">ℹ️ SmartScreen Notice:</span> Windows may show an "Unknown Publisher" warning because this portable binary is open source and un-signed. Click <strong>"More info"</strong> and then <strong>"Run anyway"</strong>.{" "}
+              <a
+                href="https://github.com/karefined-eng/eleviewer"
+                className="underline hover:text-foreground transition-colors"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                Verify source code on GitHub.
+              </a>
+            </p>
+          </div>
         </div>
-        <p className="mt-4 font-mono text-[11px] text-muted-foreground">
+        <p className="mt-4 font-mono text-xs text-muted-foreground">
           Something broken?{" "}
           <a
             href={ISSUES_URL}

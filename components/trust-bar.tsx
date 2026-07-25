@@ -18,7 +18,7 @@ export function TrustBar() {
         <div className="grid grid-cols-1 gap-4 sm:grid-cols-2 md:grid-cols-4 md:gap-6">
           <div className="flex flex-col gap-2 rounded-lg border border-border/50 bg-background/50 p-3 shadow-sm transition-transform hover:-translate-y-0.5">
             <div className="flex items-center gap-3">
-              <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-md bg-accent/10 text-accent">
+              <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-md border border-border/60 bg-panel text-foreground">
                 <Terminal className="h-5 w-5" />
               </div>
               <div>
@@ -33,14 +33,14 @@ export function TrustBar() {
                 className="flex items-center gap-1 text-[10px] text-accent hover:underline"
                 aria-label="Copy winget command"
               >
-                {copied ? <Check className="h-3 w-3 text-emerald-400" /> : <Copy className="h-3 w-3" />}
+                {copied ? <Check className="h-3 w-3 text-accent" /> : <Copy className="h-3 w-3" />}
                 {copied ? "Copied" : "Copy"}
               </button>
             </div>
           </div>
 
           <div className="flex items-center gap-3 rounded-lg border border-border/50 bg-background/50 p-3 shadow-sm transition-transform hover:-translate-y-0.5">
-            <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-md bg-emerald-500/10 text-emerald-400">
+            <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-md border border-border/60 bg-panel text-foreground">
               <ShieldCheck className="h-5 w-5" />
             </div>
             <div>
@@ -50,7 +50,7 @@ export function TrustBar() {
           </div>
 
           <div className="flex items-center gap-3 rounded-lg border border-border/50 bg-background/50 p-3 shadow-sm transition-transform hover:-translate-y-0.5">
-            <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-md bg-purple-500/10 text-purple-400">
+            <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-md border border-border/60 bg-panel text-foreground">
               <Users className="h-5 w-5" />
             </div>
             <div>
@@ -60,7 +60,7 @@ export function TrustBar() {
           </div>
 
           <div className="flex items-center gap-3 rounded-lg border border-border/50 bg-background/50 p-3 shadow-sm transition-transform hover:-translate-y-0.5">
-            <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-md bg-amber-500/10 text-amber-400">
+            <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-md border border-border/60 bg-panel text-foreground">
               <Sparkles className="h-5 w-5" />
             </div>
             <div>
