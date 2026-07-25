@@ -16,8 +16,8 @@ export const metadata: Metadata = {
   description:
     "EleViewer is a free, portable Windows study workspace. Open DOCX, XLSX, PDF, Markdown, CSV, HTML, and TXT in one portable app with PDF text-to-speech for Windows, built-in web browser, find & replace, autosave, and file vault.",
   applicationName: "EleViewer",
-  authors: [{ name: "Elevon (ka.refined)", url: "https://github.com/karefined-eng" }],
-  creator: "ka.refined",
+  authors: [{ name: "karefined-eng", url: "https://github.com/karefined-eng" }],
+  creator: "karefined-eng",
   publisher: "Karefined",
   alternates: {
     canonical: "https://eleviewer.vercel.app/",

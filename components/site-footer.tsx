@@ -8,7 +8,7 @@ export function SiteFooter() {
         <div className="flex flex-col gap-2">
           <Logo />
           <p className="text-xs text-muted-foreground">
-            Built by karefined-eng. Free forever.
+            Built by <a href="https://github.com/karefined-eng" target="_blank" rel="noreferrer" className="underline hover:text-foreground transition-colors">karefined-eng</a>. Free forever.
           </p>
         </div>
         <nav
@@ -45,7 +45,7 @@ export function SiteFooter() {
             rel="noreferrer"
             className="transition-colors hover:text-foreground"
           >
-            MIT License
+            GPLv3 License
           </a>
           <a
             href="/privacy"
