@@ -5,13 +5,28 @@ import { useState, useEffect } from "react"
 
 export function MobileReminder() {
   const [canShare, setCanShare] = useState(false)
+  const [isMobileDevice, setIsMobileDevice] = useState(false)
 
   useEffect(() => {
-    // Check if the Web Share API is available on the current device
-    if (typeof navigator !== "undefined" && typeof navigator.share === "function") {
-      setCanShare(true)
+    // 1. Strict User-Agent detection: only show on actual mobile devices (iPhone, Android, iPad, etc.)
+    // This ensures desktop users NEVER see this component, even if they resize their browser window.
+    if (typeof navigator !== "undefined") {
+      const mobileCheck = /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(
+        navigator.userAgent
+      )
+      setIsMobileDevice(mobileCheck)
+
+      // 2. Check if the Web Share API is available on this mobile device
+      if (typeof navigator.share === "function") {
+        setCanShare(true)
+      }
     }
   }, [])
+
+  // If not browsing on a verified mobile device, render nothing!
+  if (!isMobileDevice) {
+    return null
+  }
 
   const handleShare = async () => {
     try {
@@ -26,7 +41,7 @@ export function MobileReminder() {
   }
 
   return (
-    <div className="mx-auto mt-8 block max-w-sm sm:hidden rounded-xl border border-border bg-panel p-5 text-left shadow-sm">
+    <div className="mx-auto mt-8 block max-w-sm rounded-xl border border-border bg-panel p-5 text-left shadow-sm">
       <div className="mb-3 inline-flex items-center gap-2 rounded-full border border-border bg-panel px-3 py-1 font-mono text-xs font-medium text-muted-foreground uppercase tracking-wider">
         💡 Desktop App Only
       </div>

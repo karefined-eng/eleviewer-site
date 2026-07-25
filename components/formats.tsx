@@ -1,6 +1,7 @@
 const formats = [
   { ext: ".docx", label: "Word documents" },
   { ext: ".xlsx", label: "Excel spreadsheets" },
+  { ext: ".pptx", label: "PowerPoint slides" },
   { ext: ".pdf", label: "PDFs with read-aloud" },
   { ext: ".md", label: "Markdown notes" },
   { ext: ".csv", label: "CSV spreadsheets" },

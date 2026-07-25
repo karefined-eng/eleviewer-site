@@ -2,6 +2,7 @@
 
 import Link from "next/link"
 import { useState, useEffect } from "react"
+import { usePathname } from "next/navigation"
 import { Download, X, ExternalLink } from "lucide-react"
 import { Logo } from "./logo"
 import { GitHubIcon } from "./github-icon"
@@ -11,6 +12,7 @@ import { GITHUB_URL, DOWNLOAD_URL } from "@/lib/links"
 
 export function SiteHeader() {
   const [isMenuOpen, setIsMenuOpen] = useState(false)
+  const pathname = usePathname()
 
   useEffect(() => {
     if (isMenuOpen) {
@@ -20,6 +22,15 @@ export function SiteHeader() {
     }
   }, [isMenuOpen])
 
+  const getLinkClass = (path: string) => {
+    const isActive = pathname === path
+    return `transition-colors ${
+      isActive
+        ? "text-accent font-semibold"
+        : "text-muted-foreground hover:text-foreground"
+    }`
+  }
+
   return (
     <header className="sticky top-0 z-40 w-full border-b border-border bg-background/80 backdrop-blur-md">
       <div className="mx-auto flex h-14 max-w-5xl items-center justify-between px-5">
@@ -28,33 +39,36 @@ export function SiteHeader() {
         </Link>
         <nav
           aria-label="Main navigation"
-          className="hidden items-center gap-6 text-sm font-medium text-muted-foreground md:flex"
+          className="hidden items-center gap-6 text-sm font-medium md:flex"
         >
-          <Link
-            href="/demo"
-            className="transition-colors hover:text-foreground text-accent font-semibold"
-          >
+          <Link href="/demo" className={getLinkClass("/demo")}>
             Live Demo
+          </Link>
+          <Link href="/review" className={getLinkClass("/review")}>
+            Feedback Hub
           </Link>
           <a
             href="/#features"
-            className="transition-colors hover:text-foreground"
+            className="text-muted-foreground transition-colors hover:text-foreground"
           >
             Features
           </a>
           <a
             href="/#shortcuts"
-            className="transition-colors hover:text-foreground"
+            className="text-muted-foreground transition-colors hover:text-foreground"
           >
             Shortcuts
           </a>
           <a
             href="/#open-source"
-            className="transition-colors hover:text-foreground"
+            className="text-muted-foreground transition-colors hover:text-foreground"
           >
             Open Source
           </a>
-          <a href="/#faq" className="transition-colors hover:text-foreground">
+          <a
+            href="/#faq"
+            className="text-muted-foreground transition-colors hover:text-foreground"
+          >
             FAQ
           </a>
         </nav>
@@ -70,13 +84,17 @@ export function SiteHeader() {
             <GitHubIcon className="h-4 w-4" />
             <ExternalLink className="ml-1 h-3 w-3" />
           </a>
-          <a
+          <Link
             href="/download"
-            className="flex h-8 items-center gap-1.5 rounded-md bg-primary px-3 text-[13px] font-medium text-primary-foreground transition-opacity hover:opacity-90"
+            className={`flex h-8 items-center gap-1.5 rounded-md px-3 text-[13px] font-medium transition-opacity hover:opacity-90 ${
+              pathname === "/download"
+                ? "bg-accent text-accent-foreground font-semibold"
+                : "bg-primary text-primary-foreground"
+            }`}
           >
             <Download className="h-3.5 w-3.5" />
             Download
-          </a>
+          </Link>
           <button
             type="button"
             className="flex h-8 w-8 items-center justify-center rounded-md text-muted-foreground transition-colors hover:bg-panel hover:text-foreground md:hidden"
@@ -113,10 +131,21 @@ export function SiteHeader() {
             >
               <Link
                 href="/demo"
-                className="w-full rounded-md p-3 transition-colors hover:bg-panel text-accent font-semibold"
+                className={`w-full rounded-md p-3 transition-colors hover:bg-panel ${
+                  pathname === "/demo" ? "text-accent font-semibold" : ""
+                }`}
                 onClick={() => setIsMenuOpen(false)}
               >
                 Live Demo
+              </Link>
+              <Link
+                href="/review"
+                className={`w-full rounded-md p-3 transition-colors hover:bg-panel ${
+                  pathname === "/review" ? "text-accent font-semibold" : ""
+                }`}
+                onClick={() => setIsMenuOpen(false)}
+              >
+                Feedback Hub
               </Link>
               <a
                 href="/#features"
