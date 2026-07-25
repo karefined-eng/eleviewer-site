@@ -36,7 +36,7 @@ export function MobileReminder() {
       <p className="mb-5 text-sm leading-relaxed text-muted-foreground">
         EleViewer is a lightweight, portable workspace for your PC. Send the link to your laptop now to try it out later.
       </p>
-      
+
       <div className="flex flex-col gap-3">
         {canShare && (
           <button
@@ -47,14 +47,13 @@ export function MobileReminder() {
             Push to my Laptop / Devices
           </button>
         )}
-        
+
         <a
           href="mailto:?subject=⚡️ Download EleViewer on your PC/Laptop&body=Hey! You opened this link while on mobile to download EleViewer later on your computer.%0A%0A📥 Desktop Download Link: https://eleviewer.vercel.app%0A%0A🛸 Core Workspace Features:%0A- 100% Free & Open-Source under GNU GPLv3%0A- Read PDF, Word, Excel, and Markdown side-by-side%0A- Portable .exe (No installation or system admin permissions required)"
-          className={`flex h-11 w-full items-center justify-center gap-2 rounded-lg text-sm font-medium transition-colors ${
-            !canShare 
-              ? 'bg-primary text-primary-foreground hover:opacity-90' 
+          className={`flex h-11 w-full items-center justify-center gap-2 rounded-lg text-sm font-medium transition-colors ${!canShare
+              ? 'bg-primary text-primary-foreground hover:opacity-90'
               : 'border border-border bg-transparent text-foreground hover:bg-panel'
-          }`}
+            }`}
         >
           <Mail className="h-4 w-4" />
           Email the Link to Myself
