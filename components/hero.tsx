@@ -1,6 +1,6 @@
 import { Download } from "lucide-react"
 import { GitHubIcon } from "./github-icon"
-import { AppMockup } from "./app-mockup"
+import { InteractiveDemo } from "./interactive-demo"
 import { GITHUB_URL, DOWNLOAD_URL } from "@/lib/links"
 
 export function Hero() {
@@ -59,7 +59,7 @@ export function Hero() {
       </div>
 
       <div className="mt-14 sm:mt-20">
-        <AppMockup />
+        <InteractiveDemo />
       </div>
     </section>
   )

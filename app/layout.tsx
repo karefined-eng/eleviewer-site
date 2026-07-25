@@ -89,11 +89,16 @@ export const metadata: Metadata = {
 }
 
 export const viewport: Viewport = {
-  themeColor: "#131313",
-  colorScheme: "dark",
+  themeColor: [
+    { media: "(prefers-color-scheme: light)", color: "#ffffff" },
+    { media: "(prefers-color-scheme: dark)", color: "#131313" },
+  ],
+  colorScheme: "dark light",
 }
 
 import { StructuredData } from "@/components/structured-data"
+import { ThemeProvider } from "@/components/theme-provider"
+import { ScrollToTop } from "@/components/scroll-to-top"
 
 export default function RootLayout({
   children,
@@ -104,12 +109,27 @@ export default function RootLayout({
     <html
       lang="en"
       className={`bg-background ${geistSans.variable} ${geistMono.variable}`}
+      suppressHydrationWarning
     >
       <body className="font-sans">
-        {children}
-        <StructuredData />
-        <Analytics />
-        <SpeedInsights />
+        <ThemeProvider
+          attribute="class"
+          defaultTheme="system"
+          enableSystem
+          disableTransitionOnChange
+        >
+          <a
+            href="#main-content"
+            className="sr-only focus:not-sr-only focus:absolute focus:top-0 focus:left-0 focus:z-[100] focus:bg-background focus:p-4 focus:text-foreground"
+          >
+            Skip to main content
+          </a>
+          {children}
+          <ScrollToTop />
+          <StructuredData />
+          <Analytics />
+          <SpeedInsights />
+        </ThemeProvider>
       </body>
     </html>
   )

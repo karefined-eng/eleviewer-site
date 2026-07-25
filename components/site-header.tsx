@@ -6,6 +6,7 @@ import { Download, X, ExternalLink } from "lucide-react"
 import { Logo } from "./logo"
 import { GitHubIcon } from "./github-icon"
 import { MenuIcon } from "./menu-icon"
+import { ThemeToggle } from "./theme-toggle"
 import { GITHUB_URL, DOWNLOAD_URL } from "@/lib/links"
 
 export function SiteHeader() {
@@ -29,6 +30,12 @@ export function SiteHeader() {
           aria-label="Main navigation"
           className="hidden items-center gap-6 text-sm font-medium text-muted-foreground md:flex"
         >
+          <Link
+            href="/demo"
+            className="transition-colors hover:text-foreground text-accent font-semibold"
+          >
+            Live Demo
+          </Link>
           <a
             href="#features"
             className="transition-colors hover:text-foreground"
@@ -52,6 +59,7 @@ export function SiteHeader() {
           </a>
         </nav>
         <div className="flex items-center gap-2">
+          <ThemeToggle />
           <a
             href={GITHUB_URL}
             target="_blank"
@@ -103,6 +111,13 @@ export function SiteHeader() {
               aria-label="Mobile navigation"
               className="mt-8 flex flex-col items-center gap-6 text-center text-lg font-medium"
             >
+              <Link
+                href="/demo"
+                className="w-full rounded-md p-3 transition-colors hover:bg-panel text-accent font-semibold"
+                onClick={() => setIsMenuOpen(false)}
+              >
+                Live Demo
+              </Link>
               <a
                 href="#features"
                 className="w-full rounded-md p-3 transition-colors hover:bg-panel"

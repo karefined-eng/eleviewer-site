@@ -22,6 +22,21 @@
 }
 
 :root {
+  --background: #ffffff;
+  --foreground: #0c0c0c;
+  --panel: #f4f4f5;
+  --panel-2: #e4e4e7;
+  --border: #e4e4e7;
+  --muted: #f4f4f5;
+  --muted-foreground: #71717a;
+  --accent: #006adc;
+  --accent-foreground: #ffffff;
+  --primary: #0c0c0c;
+  --primary-foreground: #ffffff;
+  --radius: 0.5rem;
+}
+
+.dark {
   --background: #131313;
   --foreground: #f2f2f0;
   --panel: #1c1c1c;
@@ -33,7 +48,6 @@
   --accent-foreground: #0c1826;
   --primary: #f2f2f0;
   --primary-foreground: #131313;
-  --radius: 0.5rem;
 }
 
 body.no-scroll {
