@@ -61,7 +61,7 @@ export default function PrivacyPage() {
                   rel="noreferrer"
                   className="text-accent underline"
                 >
-                  MIT License
+                  GNU GPLv3 License
                 </a>
                 . You can audit every line of source code directly on{" "}
                 <a

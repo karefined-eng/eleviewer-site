@@ -32,7 +32,7 @@ const faqs = [
   {
     question: "Is EleViewer truly free and open source?",
     answer:
-      "Yes. EleViewer is free, MIT licensed, portable, and requires no account or installation.",
+      "Yes. EleViewer is free, GPLv3 licensed, portable, and requires no account or installation.",
   },
   {
     question: "What file types can EleViewer open?",
@@ -82,7 +82,7 @@ const faqs = [
   {
     question: "Is EleViewer safe to download? Will it trigger antivirus warnings?",
     answer:
-      "EleViewer is fully open source (MIT licensed) — you can read every line of code on GitHub. Windows may show a SmartScreen warning because the app is not yet code-signed. Click 'More info' then 'Run anyway' to proceed. The source code is publicly auditable at github.com/karefined-eng/eleviewer.",
+      "EleViewer is fully open source (GPLv3 licensed) — you can read every line of code on GitHub. Windows may show a SmartScreen warning because the app is not yet code-signed. Click 'More info' then 'Run anyway' to proceed. The source code is publicly auditable at github.com/karefined-eng/eleviewer.",
   },
   {
     question: "Is EleViewer a good alternative to Sumatra PDF?",

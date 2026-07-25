@@ -139,6 +139,13 @@ export function SiteHeader() {
               >
                 Open Source
               </a>
+              <a
+                href="/#faq"
+                className="w-full rounded-md p-3 transition-colors hover:bg-panel"
+                onClick={() => setIsMenuOpen(false)}
+              >
+                FAQ
+              </a>
             </nav>
           </div>
         </div>

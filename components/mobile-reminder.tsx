@@ -49,7 +49,7 @@ export function MobileReminder() {
         )}
         
         <a
-          href="mailto:?subject=⚡️ Download EleViewer on your PC/Laptop&body=Hey! You opened this link while on mobile to download EleViewer later on your computer.%0A%0A📥 Desktop Download Link: https://eleviewer.vercel.app%0A%0A🛸 Core Workspace Features:%0A- 100% Free & Open-Source under MIT%0A- Read PDF, Word, Excel, and Markdown side-by-side%0A- Portable .exe (No installation or system admin permissions required)"
+          href="mailto:?subject=⚡️ Download EleViewer on your PC/Laptop&body=Hey! You opened this link while on mobile to download EleViewer later on your computer.%0A%0A📥 Desktop Download Link: https://eleviewer.vercel.app%0A%0A🛸 Core Workspace Features:%0A- 100% Free & Open-Source under GNU GPLv3%0A- Read PDF, Word, Excel, and Markdown side-by-side%0A- Portable .exe (No installation or system admin permissions required)"
           className={`flex w-full items-center justify-center gap-2 rounded-lg border px-4 py-3 font-medium transition-colors ${
             !canShare 
               ? 'bg-primary text-primary-foreground border-transparent hover:bg-primary/90' 

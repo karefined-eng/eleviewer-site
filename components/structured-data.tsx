@@ -122,7 +122,7 @@ export function StructuredData() {
             "name": "Is EleViewer truly free and open source?",
             "acceptedAnswer": {
               "@type": "Answer",
-              "text": "Yes. EleViewer is free, MIT licensed, portable, and requires no account or installation."
+              "text": "Yes. EleViewer is free, GPLv3 licensed, portable, and requires no account or installation."
             }
           },
           {
@@ -202,7 +202,7 @@ export function StructuredData() {
             "name": "Is EleViewer safe to download? Will it trigger antivirus warnings?",
             "acceptedAnswer": {
               "@type": "Answer",
-              "text": "EleViewer is fully open source (MIT licensed) — you can read every line of code on GitHub. Click 'More info' then 'Run anyway' if Windows SmartScreen appears."
+              "text": "EleViewer is fully open source (GPLv3 licensed) — you can read every line of code on GitHub. Click 'More info' then 'Run anyway' if Windows SmartScreen appears."
             }
           },
           {

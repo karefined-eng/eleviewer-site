@@ -22,7 +22,7 @@ export function DownloadCta() {
           </a>
           <p className="mt-3 max-w-md text-center text-xs text-muted-foreground">
             Windows may show a SmartScreen warning — click <strong>"More info"</strong> then{" "}
-            <strong>"Run anyway"</strong>. EleViewer is open source and MIT licensed.{" "}
+            <strong>"Run anyway"</strong>. EleViewer is open source and GPLv3 licensed.{" "}
             <a
               href="https://github.com/karefined-eng/eleviewer"
               className="underline hover:text-foreground transition-colors"

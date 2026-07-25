@@ -47,7 +47,7 @@ export function Hero() {
         </div>
         <p className="mt-3 text-xs text-muted-foreground">
           Windows may show a SmartScreen warning — click <strong>"More info"</strong> then{" "}
-          <strong>"Run anyway"</strong>. EleViewer is open source and MIT licensed.{" "}
+          <strong>"Run anyway"</strong>. EleViewer is open source and GPLv3 licensed.{" "}
           <a
             href="https://github.com/karefined-eng/eleviewer"
             className="underline hover:text-foreground transition-colors"
@@ -58,7 +58,7 @@ export function Hero() {
           </a>
         </p>
         <p className="mt-4 font-mono text-[11px] text-muted-foreground">
-          MIT licensed · portable .exe · no telemetry
+          GPLv3 licensed · portable .exe · no telemetry
         </p>
       </div>
 

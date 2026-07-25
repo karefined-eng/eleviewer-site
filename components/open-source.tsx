@@ -4,7 +4,7 @@ import { GITHUB_PROFILE_URL, GITHUB_URL, LICENSE_URL } from "@/lib/links"
 const principles = [
   {
     icon: Scale,
-    title: "MIT licensed",
+    title: "GPLv3 licensed",
     body: "Use it, fork it, ship it in your own project. No strings.",
   },
   {
@@ -67,7 +67,7 @@ export function OpenSource() {
           rel="noreferrer"
           className="text-accent underline-offset-4 hover:underline"
         >
-          MIT license
+          GNU GPLv3 license
         </a>{" "}
         or browse the{" "}
         <a
