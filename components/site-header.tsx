@@ -23,7 +23,7 @@ export function SiteHeader() {
   }, [isMenuOpen])
 
   const getLinkClass = (path: string) => {
-    const isActive = pathname === path
+    const isActive = pathname === path || (path === "/docs" && pathname?.startsWith("/docs"))
     return `transition-colors ${
       isActive
         ? "text-accent font-semibold"
@@ -41,6 +41,9 @@ export function SiteHeader() {
           aria-label="Main navigation"
           className="hidden items-center gap-6 text-sm font-medium md:flex"
         >
+          <Link href="/docs" className={getLinkClass("/docs")}>
+            Docs
+          </Link>
           <Link href="/demo" className={getLinkClass("/demo")}>
             Live Demo
           </Link>
@@ -137,6 +140,15 @@ export function SiteHeader() {
                 onClick={() => setIsMenuOpen(false)}
               >
                 Live Demo
+              </Link>
+              <Link
+                href="/docs"
+                className={`w-full rounded-md p-3 transition-colors hover:bg-panel ${
+                  pathname?.startsWith("/docs") ? "text-accent font-semibold" : ""
+                }`}
+                onClick={() => setIsMenuOpen(false)}
+              >
+                Docs
               </Link>
               <Link
                 href="/review"

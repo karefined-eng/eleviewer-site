@@ -16,6 +16,12 @@ export function SiteFooter() {
           className="flex flex-wrap gap-x-6 gap-y-2 text-[13px] text-muted-foreground"
         >
           <a
+            href="/docs"
+            className="transition-colors hover:text-foreground"
+          >
+            Documentation
+          </a>
+          <a
             href={GITHUB_URL}
             target="_blank"
             rel="noreferrer"
