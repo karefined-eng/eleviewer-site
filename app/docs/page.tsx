@@ -4,8 +4,8 @@ import { ArrowRight, BookOpen, Download, Terminal, Shield, Keyboard, FileText } 
 import { DOWNLOAD_URL } from "@/lib/links";
 
 export const metadata = {
-  title: "Documentation & Reference Manual | EleViewer",
-  description: "Explore exhaustive technical documentation, keyboard reflexes, and workstation guides for the EleViewer local study workspace.",
+  title: "Free Windows Document Reader & Technical Manual | EleViewer",
+  description: "Explore comprehensive technical documentation, keyboard shortcuts, and offline reading guides for EleViewer on Windows 10/11.",
 };
 
 export default function DocsOverviewPage() {
@@ -29,13 +29,13 @@ export default function DocsOverviewPage() {
       {/* Page Header */}
       <div className="flex flex-col items-start gap-4 border-b border-border pb-8">
         <span className="inline-flex items-center gap-2 rounded-full border border-border bg-panel px-3 py-1 font-mono text-xs font-medium text-muted-foreground uppercase tracking-wider">
-          Official Reference Portal
+          Windows Document Reader & Study Tool
         </span>
         <h1 className="text-3xl font-bold tracking-tight text-foreground sm:text-4xl">
-          Sovereignty Workstation Documentation
+          Free Offline Document Reader & Technical Manual
         </h1>
         <p className="text-base text-muted-foreground leading-relaxed max-w-2xl">
-          Explore self-contained technical documentation for reading, editing, and indexing academic coursework locally on Windows. Built for high velocity, zero telemetry, and absolute data sovereignty.
+          Explore comprehensive technical documentation for reading, editing, and indexing PDF, DOCX, PPTX, XLSX, and Markdown files locally on Windows 10/11. Built for lightning-fast performance, universal text-to-speech, zero telemetry, and 100% offline privacy.
         </p>
         <div className="flex flex-wrap items-center gap-4 pt-2">
           <Link
@@ -105,7 +105,7 @@ export default function DocsOverviewPage() {
           ℹ️ Offline Compatibility Notice
         </span>
         <p>
-          This exact reference documentation is bundled natively inside every EleViewer desktop release. When working offline without an internet connection, press <kbd className="rounded border border-border bg-background px-1.5 py-0.5 text-[11px] font-semibold text-foreground">F1</kbd> or navigate to <strong className="text-foreground">Help → Getting Started Guide</strong> in the workstation top bar to access these technical manuals locally.
+          This exact reference documentation is bundled natively inside every EleViewer desktop release. When working offline without an internet connection, press <kbd className="rounded border border-border bg-background px-1.5 py-0.5 text-[11px] font-semibold text-foreground">F1</kbd> or navigate to <strong className="text-foreground">Help → Getting Started Guide</strong> in the application menu bar to access these technical manuals locally.
         </p>
       </div>
     </div>

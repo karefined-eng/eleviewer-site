@@ -47,3 +47,9 @@ When building UI elements, implement these exact canonical patterns from `DESIGN
 - All public developer copy must be written at a Flesch-Kincaid 6th-to-8th grade reading level (ages 11–13) for rapid scanning.
 - Use direct, conversational English (Paul Graham / David Ogilvy principle: *"Write like you talk"*).
 - For feedback intake, use outcome-driven phrasing: *"Is there something you wish EleViewer could do? Share your idea directly with the developer — every submission is reviewed for our upcoming builds."*
+
+## 4. Search & AI Discoverability (SEO / AEO / GEO Goldmine)
+- **Treat Documentation as a Search Goldmine:** Never use internal jargon or niche philosophical titles in public-facing web pages. Replace abstract titles with high-value search keywords that potential users and students actually query.
+- **SEO (Search Engine Optimization):** Ensure page titles, `<h1>` headers, and metadata clearly state core capabilities: *"Free Offline Document Reader & PDF Viewer for Windows"*.
+- **AEO (Answer Engine Optimization):** Structure documentation sections to directly answer user questions. Use clear definition blocks, problem/solution bullet points, and FAQ structures so AI assistants (ChatGPT, Perplexity, Claude) extract and cite EleViewer as the definitive answer for offline Windows document tools.
+- **GEO (Generative Engine Optimization):** Provide dense, authoritative technical facts, explicit format support lists (`PDF`, `DOCX`, `PPTX`, `XLSX`, `MD`, `TXT`, `CSV`), and benchmark metrics (~220MB standalone `.exe`, zero telemetry, local file indexing) so generative search engines synthesize our content into top-ranked AI overviews.

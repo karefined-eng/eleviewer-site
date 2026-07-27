@@ -40,28 +40,28 @@ export const DOCS_CATEGORIES: DocCategory[] = [
   {
     slug: "getting-started",
     title: "Getting Started",
-    description: "Installation, portable execution, and workstation architecture.",
+    description: "Installation, portable execution, and offline workspace architecture.",
     topics: [
-      { slug: "overview", title: "Workstation Architecture & Setup" },
+      { slug: "overview", title: "Application Architecture & Setup" },
       { slug: "vault-explorer", title: "Vaults & FTS5 Indexing" },
     ],
   },
   {
     slug: "workstations",
-    title: "Document Workstations",
-    description: "Specialized environments for reading, editing, and analyzing documents.",
+    title: "Document Readers & Viewers",
+    description: "Specialized tools for reading, editing, and analyzing files offline.",
     topics: [
       { slug: "pdf-and-tts", title: "PDF Reader & Universal TTS" },
       { slug: "markdown-editor", title: "Markdown & Plain Text Editor" },
-      { slug: "csv-table", title: "CSV Table Workstation" },
+      { slug: "csv-table", title: "CSV Table Editor & Viewer" },
       { slug: "office-viewers", title: "Office Docs (DOCX, XLSX, PPTX)" },
       { slug: "html-and-web", title: "HTML Live Editor & Web Panel" },
     ],
   },
   {
     slug: "shortcuts",
-    title: "Keyboard Reflexes",
-    description: "Master hotkeys for frictionless navigation and window control.",
+    title: "Keyboard Shortcuts & Hotkeys",
+    description: "Master keyboard shortcuts for frictionless navigation and window control.",
     topics: [
       { slug: "master-index", title: "Master Shortcut & Command Index" },
     ],
@@ -88,7 +88,7 @@ export const DOCS_CATEGORIES: DocCategory[] = [
 export const DOCS_TOPICS: DocTopic[] = [
   {
     slug: "overview",
-    title: "Workstation Architecture & Setup",
+    title: "Application Architecture & Setup",
     category: "Getting Started",
     categorySlug: "getting-started",
     eyebrow: "Architecture Reference",
@@ -98,20 +98,20 @@ export const DOCS_TOPICS: DocTopic[] = [
         id: "core-philosophy",
         title: "Local-First Document Processing",
         paragraphs: [
-          "EleViewer is a lightweight Windows document editor and study workstation supporting DOCX, XLSX, PPTX, MD, TXT, CSV, HTML/HTM, and PDF files within a unified tabbed interface.",
+          "EleViewer is a lightweight Windows document editor and study app supporting DOCX, XLSX, PPTX, MD, TXT, CSV, HTML/HTM, and PDF files within a unified tabbed interface.",
           "Unlike traditional cloud-tethered office suites, EleViewer executes completely offline. All document rendering, full-text indexing, and file modifications occur directly on your local CPU and storage drive without transmitting data to external servers."
         ],
         notice: {
           type: "note",
           label: "Zero Installation Required",
-          message: "EleViewer distributes as a single 16 MB portable Windows executable (.exe). No administrative privileges or Windows installers are required to run the workstation."
+          message: "EleViewer distributes as a single 16 MB portable Windows executable (.exe). No administrative privileges or Windows installers are required to run the application."
         }
       },
       {
         id: "system-requirements",
         title: "System Specifications & Requirements",
         paragraphs: [
-          "The workstation is engineered for high performance on minimal hardware specifications, ensuring smooth operation on standard student laptops and workstations."
+          "The application is engineered for high performance on minimal hardware specifications, ensuring smooth operation on standard student laptops and desktops."
         ],
         table: {
           headers: ["Specification", "Requirement / Detail"],
@@ -168,7 +168,7 @@ export const DOCS_TOPICS: DocTopic[] = [
   {
     slug: "pdf-and-tts",
     title: "PDF Reader & Universal TTS",
-    category: "Document Workstations",
+    category: "Document Readers & Viewers",
     categorySlug: "workstations",
     eyebrow: "Reading Tools",
     description: "Continuous PDF scrolling, zoom controls, persistent bookmarks, and integrated Read Aloud speech synthesis.",
@@ -207,7 +207,7 @@ export const DOCS_TOPICS: DocTopic[] = [
   {
     slug: "markdown-editor",
     title: "Markdown & Plain Text Editor",
-    category: "Document Workstations",
+    category: "Document Readers & Viewers",
     categorySlug: "workstations",
     eyebrow: "Authoring Environment",
     description: "Split-screen Markdown editing, live rendering, interactive edit modes, and XSS sanitization.",
@@ -241,8 +241,8 @@ export const DOCS_TOPICS: DocTopic[] = [
   },
   {
     slug: "csv-table",
-    title: "CSV Table Workstation",
-    category: "Document Workstations",
+    title: "CSV Table Editor & Viewer",
+    category: "Document Readers & Viewers",
     categorySlug: "workstations",
     eyebrow: "Data Analysis",
     description: "Dual Table Grid View vs. Raw Text View, interactive cell editing, and delimiter overrides.",
@@ -251,7 +251,7 @@ export const DOCS_TOPICS: DocTopic[] = [
         id: "dual-view-grid",
         title: "Table Grid View ⇄ Raw Text View",
         paragraphs: [
-          "The CSV Workstation gives you complete control over tabular datasets, experimental logs, and data spreadsheets by providing two synchronized interfaces:",
+          "The CSV editor and viewer gives you complete control over tabular datasets, experimental logs, and data spreadsheets by providing two synchronized interfaces:",
           "1. Table Grid View: An interactive spreadsheet grid allowing visual cell navigation, row sorting, and structured inspection.",
           "2. Raw Text View: A syntax-highlighted raw text editor for direct string manipulation and regex replacements.",
           "Edits performed in either view synchronize instantaneously without data loss or re-indexing delays."
@@ -283,7 +283,7 @@ export const DOCS_TOPICS: DocTopic[] = [
   {
     slug: "office-viewers",
     title: "Office Docs (DOCX, XLSX, PPTX)",
-    category: "Document Workstations",
+    category: "Document Readers & Viewers",
     categorySlug: "workstations",
     eyebrow: "Native Inspection",
     description: "Standalone native viewing and inspection for Microsoft Word, Excel, and PowerPoint files without external software.",
@@ -313,16 +313,16 @@ export const DOCS_TOPICS: DocTopic[] = [
   {
     slug: "html-and-web",
     title: "HTML Live Editor & Web Panel",
-    category: "Document Workstations",
+    category: "Document Readers & Viewers",
     categorySlug: "workstations",
     eyebrow: "Web Research",
     description: "Split-screen HTML syntax authoring, 1-click browser migration, persistent URLs, and link interception.",
     sections: [
       {
         id: "html-live-editor",
-        title: "HTML Live Authoring Workstation",
+        title: "HTML Live Authoring Tool",
         paragraphs: [
-          "When opening local .html or .htm files, EleViewer launches a split-screen web development workstation. Author HTML syntax on the left pane and observe debounced real-time visual rendering on the right pane.",
+          "When opening local .html or .htm files, EleViewer launches a split-screen live HTML development environment. Author HTML syntax on the left pane and observe debounced real-time visual rendering on the right pane.",
           "Click the Migrate to Web Panel button in the toolbar to promote a local HTML document into an interactive, full-featured browser tab session."
         ]
       },
@@ -339,7 +339,7 @@ export const DOCS_TOPICS: DocTopic[] = [
         id: "hyperlink-interception",
         title: "Global Hyperlink Interception",
         paragraphs: [
-          "To maintain a distraction-free Sovereignty Workstation environment, EleViewer intercepts hyperlink clicks across all document viewers.",
+          "To maintain a distraction-free offline study environment, EleViewer intercepts hyperlink clicks across all document viewers.",
           "When you click a web URL or local file link inside a PDF, Markdown note, or Word document, EleViewer automatically routes and opens the target inside a new internal workspace tab or Web Panel instead of launching external system browsers."
         ]
       }
@@ -348,10 +348,10 @@ export const DOCS_TOPICS: DocTopic[] = [
   {
     slug: "master-index",
     title: "Master Shortcut & Command Index",
-    category: "Keyboard Reflexes",
+    category: "Keyboard Shortcuts & Hotkeys",
     categorySlug: "shortcuts",
-    eyebrow: "Reflex Reference",
-    description: "Complete exhaustive tabular reference of all keyboard shortcuts and workstation commands.",
+    eyebrow: "Shortcut Reference",
+    description: "Complete exhaustive tabular reference of all keyboard shortcuts, hotkeys, and application commands.",
     sections: [
       {
         id: "navigation-shortcuts",
