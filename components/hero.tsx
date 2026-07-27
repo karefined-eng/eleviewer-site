@@ -16,13 +16,14 @@ export function Hero() {
           EleViewer — Free Windows Document Viewer &amp; Study Workspace
         </h1>
         <h2 className="mx-auto mt-5 max-w-xl text-pretty text-lg font-medium text-foreground">
-          The open source study workspace for every file your professor throws at you.
+          The open source study workspace for the DOCX, XLSX, PPTX, PDF, Markdown, CSV, HTML, and TXT files your professors assign.
         </h2>
         <p className="mx-auto mt-4 max-w-xl text-pretty text-[15px] leading-relaxed text-muted-foreground">
-          Open and edit DOCX, XLSX, PPTX, PDF, Markdown, CSV, HTML, and TXT
-          without Microsoft Office — in one portable .exe with text-to-speech,
-          a file vault, find &amp; replace, autosave, built-in web browser,
-          and session restore. No install. No account. No cost.
+          Open and make basic edits to DOCX, XLSX, PPTX, PDF, Markdown, CSV, HTML, and TXT
+          without Microsoft Office — all in one portable .exe with text-to-speech,
+          a sidebar-based file organizer (“vault”), find &amp; replace, autosave,
+          a built-in web browser panel, and session restore. No install. No account.
+          Completely free to use with no in-app purchases or subscriptions.
         </p>
 
         <MobileReminder />
@@ -61,7 +62,7 @@ export function Hero() {
         </div>
 
         <p className="mt-4 font-mono text-xs text-muted-foreground">
-          GPLv3 licensed · portable .exe · no telemetry
+          GPLv3 licensed · portable .exe · no telemetry (no usage analytics or tracking sent from the app)
         </p>
       </div>
 

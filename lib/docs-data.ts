@@ -49,7 +49,7 @@ export const DOCS_CATEGORIES: DocCategory[] = [
   {
     slug: "workstations",
     title: "Document Readers & Viewers",
-    description: "Specialized tools for reading, editing, and analyzing files offline.",
+    description: "Tools for offline reading, basic text and annotation editing, and document analysis features such as text search, keyword highlighting, and page-by-page content inspection.",
     topics: [
       { slug: "pdf-and-tts", title: "PDF Reader & Universal TTS" },
       { slug: "markdown-editor", title: "Markdown & Plain Text Editor" },
@@ -61,7 +61,7 @@ export const DOCS_CATEGORIES: DocCategory[] = [
   {
     slug: "shortcuts",
     title: "Keyboard Shortcuts & Hotkeys",
-    description: "Master keyboard shortcuts for frictionless navigation and window control.",
+    description: "Learn keyboard shortcuts for navigating pages, switching between documents, controlling zoom, and managing application windows without using the mouse.",
     topics: [
       { slug: "master-index", title: "Master Shortcut & Command Index" },
     ],
@@ -69,7 +69,7 @@ export const DOCS_CATEGORIES: DocCategory[] = [
   {
     slug: "security-and-data",
     title: "Data Sovereignty & Security",
-    description: "Atomic file writing, background draft recovery, and local storage.",
+    description: "Atomic file writing, background draft recovery, and storage of all documents and configuration files on the local Windows file system only (no cloud sync or remote storage).",
     topics: [
       { slug: "atomic-writes", title: "Atomic Writes & Auto-Save" },
       { slug: "local-storage", title: "Local Storage & Zero Telemetry" },
@@ -78,7 +78,7 @@ export const DOCS_CATEGORIES: DocCategory[] = [
   {
     slug: "troubleshooting",
     title: "Troubleshooting & Support",
-    description: "Resolving system voices, web engine setup, and developer feedback.",
+    description: "Fixing issues with missing or non-working Windows system voices, configuring the embedded web rendering engine, and submitting bug reports or feature requests to the development team.",
     topics: [
       { slug: "faq-and-support", title: "FAQ & Developer Support" },
     ],

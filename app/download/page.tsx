@@ -24,13 +24,13 @@ export default function DownloadPage() {
           <div className="mx-auto max-w-2xl text-center">
             <p className="mb-4 inline-flex items-center gap-2 rounded-full border border-border bg-panel px-3 py-1 font-mono text-xs font-medium text-muted-foreground uppercase tracking-wider">
               <span className="h-1.5 w-1.5 rounded-full bg-accent" />
-              Windows 10/11 · v1.3.0 Release
+              EleViewer v1.3.0 release for Windows 10 and Windows 11
             </p>
             <h1 className="text-balance text-3xl font-bold tracking-tight sm:text-4xl">
               Download EleViewer for Windows
             </h1>
             <p className="mt-3 text-pretty text-[15px] text-muted-foreground">
-              One portable .exe file. Download, double-click, and open your course files instantly.
+              One portable .exe file. Download, double-click, and open your course files quickly, without installation or setup.
             </p>
 
             <div className="mt-8 flex flex-col items-center justify-center gap-4">
@@ -54,7 +54,7 @@ export default function DownloadPage() {
 
             <div className="mt-6 mx-auto max-w-md rounded-lg border border-border bg-panel/50 p-4 text-left font-mono text-xs text-muted-foreground leading-relaxed">
               <p className="leading-relaxed">
-                <span className="font-semibold text-foreground">ℹ️ SmartScreen Notice:</span> Windows may show an "Unknown Publisher" warning because this portable binary is open source and un-signed. Click <strong>"More info"</strong> and then <strong>"Run anyway"</strong>.{" "}
+                <span className="font-semibold text-foreground">ℹ️ SmartScreen Notice:</span> Windows may show an "Unknown Publisher" warning because this portable binary is open source and not digitally signed with a code-signing certificate. Click <strong>"More info"</strong> and then <strong>"Run anyway"</strong>.{" "}
                 <a
                   href={GITHUB_URL}
                   target="_blank"
@@ -80,11 +80,11 @@ export default function DownloadPage() {
                 </li>
                 <li className="flex items-center gap-2">
                   <CheckCircle className="h-3.5 w-3.5 text-accent" />
-                  <span>~220 MB free disk space</span>
+                  <span>At least 220 MB of free disk space (for the application and basic usage)</span>
                 </li>
                 <li className="flex items-center gap-2">
                   <CheckCircle className="h-3.5 w-3.5 text-accent" />
-                  <span>No administrator privileges or installation required</span>
+                  <span>No administrator privileges required and no traditional installation process (no installer, no system-wide changes)</span>
                 </li>
               </ul>
             </div>
@@ -95,7 +95,7 @@ export default function DownloadPage() {
                 Install via Windows Package Manager
               </h2>
               <p className="mt-2 text-xs text-muted-foreground">
-                Prefer using the CLI? Install directly via Winget:
+                Prefer using the command-line interface (CLI)? Install directly via the Windows Package Manager (winget):
               </p>
               <div className="mt-3 flex items-center justify-between gap-2 rounded border border-border/80 bg-muted/40 p-2.5 font-mono text-xs text-foreground">
                 <code className="select-all">winget install karefined-eng.EleViewer</code>

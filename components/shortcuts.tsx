@@ -34,11 +34,10 @@ export function Shortcuts() {
               Keyboard-first
             </p>
             <h2 className="text-balance text-3xl font-semibold tracking-tight text-foreground">
-              Built for hands that never leave the keyboard
+              Designed for keyboard-first workflows, so your hands rarely need to leave the keyboard
             </h2>
             <p className="mt-4 text-pretty text-[15px] leading-relaxed text-muted-foreground">
-              Every core action has a shortcut. Learn a handful and EleViewer
-              starts to feel less like an app and more like a reflex.
+              Every core action has a shortcut. Learn a few core shortcuts and common actions become significantly faster than using the mouse.
             </p>
           </div>
           <ul className="flex flex-col gap-px overflow-hidden rounded-xl border border-border bg-border">

@@ -5,22 +5,22 @@ const principles = [
   {
     icon: Scale,
     title: "GPLv3 licensed",
-    body: "Use it, fork it, ship it in your own project. No strings.",
+    body: "Use it, fork it, and include it in your own project, subject to the copyleft requirements of the GPLv3 license.",
   },
   {
     icon: HardDrive,
     title: "Single-file, portable",
-    body: "One .exe. Runs from a USB stick or a locked-down lab machine.",
+    body: "One .exe. Runs from a USB stick or on lab machines where you can’t install software or get admin rights.",
   },
   {
     icon: ShieldOff,
     title: "No account, no telemetry",
-    body: "Your files stay on your machine. Nothing phones home.",
+    body: "Your documents are opened and processed locally on your machine; they aren’t uploaded to any server.",
   },
   {
     icon: GitFork,
     title: "Yours to build on",
-    body: "Clean Python + PySide6 codebase with a simple factory pattern.",
+    body: "Python + PySide6 codebase organized with a straightforward factory pattern and minimal external dependencies.",
   },
 ]
 
@@ -32,7 +32,7 @@ export function OpenSource() {
           Open source, forever
         </p>
         <h2 className="text-balance text-3xl font-semibold tracking-tight text-foreground">
-          Free because someone&apos;s free software got us here
+          Free because earlier open-source tools made the creator&apos;s education possible
         </h2>
         <p className="mt-4 text-pretty text-[15px] leading-relaxed text-muted-foreground">
           EleViewer exists because open-source tools made its{" "}
@@ -44,8 +44,8 @@ export function OpenSource() {
           >
             creator&apos;s
           </a>{" "}
-          education possible. It will never cost money, show ads, or collect
-          your data. If it helps you, star it, share it, or contribute.
+          education possible. It is intended to remain free, ad-free, and not collect
+          personal usage data. If it helps you, star it, share it, or contribute.
         </p>
       </div>
       <div className="grid gap-px overflow-hidden rounded-xl border border-border bg-border sm:grid-cols-2 lg:grid-cols-4">

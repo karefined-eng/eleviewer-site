@@ -44,8 +44,8 @@ export function TrustBar() {
               <ShieldCheck className="h-5 w-5" />
             </div>
             <div>
-              <p className="font-mono text-xs font-bold text-foreground">100% Offline</p>
-              <p className="text-[11px] text-muted-foreground">Zero tracking or ads</p>
+              <p className="font-mono text-xs font-bold text-foreground">Works fully offline</p>
+              <p className="text-[11px] text-muted-foreground">All features run locally on Windows 10/11; no ads or tracking</p>
             </div>
           </div>
 
@@ -54,8 +54,8 @@ export function TrustBar() {
               <Users className="h-5 w-5" />
             </div>
             <div>
-              <p className="font-mono text-xs font-bold text-foreground">Nightly Insiders</p>
-              <p className="text-[11px] text-muted-foreground">Active WhatsApp Hub</p>
+              <p className="font-mono text-xs font-bold text-foreground">Nightly Insiders early-access builds</p>
+              <p className="text-[11px] text-muted-foreground">Active WhatsApp community group for support and feedback</p>
             </div>
           </div>
 

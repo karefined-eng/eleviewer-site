@@ -35,7 +35,7 @@ export default function DocsOverviewPage() {
           Free Offline Document Reader & Technical Manual
         </h1>
         <p className="text-base text-muted-foreground leading-relaxed max-w-2xl">
-          Explore comprehensive technical documentation for reading, editing, and indexing PDF, DOCX, PPTX, XLSX, and Markdown files locally on Windows 10/11. Built for lightning-fast performance, universal text-to-speech, zero telemetry, and 100% offline privacy.
+          Explore technical documentation that covers installation, configuration, reading, editing, and indexing of PDF, DOCX, PPTX, XLSX, and Markdown files locally on Windows 10/11. Built for low-latency document loading and navigation, system-wide text-to-speech support for all installed Windows voices, no telemetry or analytics data collection, and operation that does not require any internet connection.
         </p>
         <div className="flex flex-wrap items-center gap-4 pt-2">
           <Link
@@ -105,7 +105,7 @@ export default function DocsOverviewPage() {
           ℹ️ Offline Compatibility Notice
         </span>
         <p>
-          This exact reference documentation is bundled natively inside every EleViewer desktop release. When working offline without an internet connection, press <kbd className="rounded border border-border bg-background px-1.5 py-0.5 text-[11px] font-semibold text-foreground">F1</kbd> or navigate to <strong className="text-foreground">Help → Getting Started Guide</strong> in the application menu bar to access these technical manuals locally.
+          This reference documentation is included as local help files inside every EleViewer desktop release. When working offline without an internet connection, press <kbd className="rounded border border-border bg-background px-1.5 py-0.5 text-[11px] font-semibold text-foreground">F1</kbd> or navigate to <strong className="text-foreground">Help → Getting Started Guide</strong> in the application menu bar to access all of the documentation modules listed above locally.
         </p>
       </div>
     </div>

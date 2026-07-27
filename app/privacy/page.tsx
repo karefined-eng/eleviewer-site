@@ -27,7 +27,7 @@ export default function PrivacyPage() {
                 1. What Data EleViewer Collects
               </h2>
               <p className="mt-2">
-                EleViewer collects <strong>no personal data</strong>. The desktop application operates entirely locally on your Windows computer. Your documents, note contents, PDF files, vault paths, and settings remain stored on your local drive and are never transmitted to any external server or third-party analytics service.
+                EleViewer collects <strong>no personal data</strong>. The desktop application operates entirely locally on your Windows computer. Your documents, note contents, PDF files, vault paths, and settings remain stored on your local drive and are not transmitted to EleViewer-operated servers or to any third-party analytics or tracking service, except when you explicitly choose to share information via the optional feedback or crash report feature described below.
               </p>
             </div>
 
@@ -36,7 +36,7 @@ export default function PrivacyPage() {
                 2. The Optional Feedback &amp; Crash Reporter
               </h2>
               <p className="mt-2">
-                If you choose to submit feedback or crash reports using the in-app feedback dialog, the text and traceback you submit are transmitted to our Vercel serverless API endpoint (<code>eleviewer.vercel.app/api/feedback</code>). No account registration, email address, or user identifier is collected or required. This feature is 100% opt-in.
+                If you choose to submit feedback or crash reports using the in-app feedback dialog, the text and traceback you submit are transmitted to our Vercel serverless API endpoint (<code>eleviewer.vercel.app/api/feedback</code>). No account registration, email address, or user identifier is collected or required. This feature is strictly optional and is only used when you actively choose to submit feedback or a crash report from within the app.
               </p>
             </div>
 
@@ -45,7 +45,7 @@ export default function PrivacyPage() {
                 3. Website Infrastructure
               </h2>
               <p className="mt-2">
-                This marketing website (<code>eleviewer.vercel.app</code>) is hosted on Vercel, which may collect standard HTTP web server logs (IP address, user agent, referring URL) as part of standard network infrastructure operations. EleViewer does not sell or track these logs.
+                This marketing website (<code>eleviewer.vercel.app</code>) is hosted on Vercel, which collects HTTP web server logs (including IP address, user agent, and referring URL) as part of its hosting operations—for example, for security, performance monitoring, and abuse prevention. EleViewer does not sell these logs or use them to create profiles of individual users; we only access aggregate or anonymized log data when needed for debugging, security, or performance analysis.
               </p>
             </div>
 
@@ -80,7 +80,7 @@ export default function PrivacyPage() {
                 5. Contact &amp; Questions
               </h2>
               <p className="mt-2">
-                Have questions about privacy or technical implementation? Open an issue on{" "}
+                Have questions about how EleViewer handles data, privacy, or how specific technical components are implemented? Open an issue on{" "}
                 <a
                   href={ISSUES_URL}
                   target="_blank"

@@ -15,37 +15,37 @@ const features = [
   {
     icon: Volume2,
     title: "PDFs that read to you",
-    body: "Native Windows text-to-speech turns any lecture slide or reading into audio. (Windows 10/11 only)",
+    body: "Native Windows text-to-speech turns selectable text in lecture slides or readings into audio. (Windows 10/11 only)",
     docSlug: "pdf-and-tts",
   },
   {
     icon: FolderTree,
     title: "Vault sidebar",
-    body: "Point EleViewer at your course folders and every file is one click away. Toggle it with Alt+V and stay in flow.",
+    body: "Point EleViewer at your course folders and all supported files are one click away in the sidebar. Toggle it with Alt+V and stay in flow.",
     docSlug: "vault-explorer",
   },
   {
     icon: Zap,
     title: "Quick switcher",
-    body: "Ctrl+Q opens a VSCode-style fuzzy finder over your recent and pinned files. Type three letters, hit Enter, keep working.",
+    body: "Ctrl+Q opens a fuzzy-search dialog over your recent and pinned files, similar to the quick file switcher in VSCode. Type three letters, hit Enter, keep working.",
     docSlug: "master-index",
   },
   {
     icon: History,
     title: "Session restore",
-    body: "Close your laptop mid-study session. Reopen EleViewer and every tab comes back — files, order, and active tab restored automatically.",
+    body: "Put your laptop to sleep or close EleViewer in the middle of a study session. Reopen EleViewer and your previous tabs are restored — including file order and active tab, when the files are still available.",
     docSlug: "overview",
   },
   {
     icon: Bookmark,
     title: "Persistent bookmarks",
-    body: "Bookmark PDF pages and files in a dedicated panel. Your place in a 400-page textbook is never lost again.",
+    body: "Bookmark PDF pages and files in a dedicated panel. Your place in long PDFs (such as a 400-page textbook) is preserved across sessions.",
     docSlug: "pdf-and-tts",
   },
   {
     icon: Globe,
     title: "Built-in web panel",
-    body: "Open a browser side-by-side with your notes using Ctrl+T. Reference the web without switching windows.",
+    body: "Open a browser side-by-side with your notes using Ctrl+T. Browse web pages in a built-in panel without switching away from your notes window.",
     docSlug: "html-and-web",
   },
   {
@@ -57,7 +57,7 @@ const features = [
   {
     icon: Save,
     title: "Autosave",
-    body: "Background saving kicks in automatically so you never lose work. Configurable interval in settings.",
+    body: "Background saving runs automatically to reduce the risk of losing work. Configurable interval in settings.",
     docSlug: "markdown-editor",
   },
 ]
@@ -70,11 +70,10 @@ export function Features() {
           Features
         </p>
         <h2 className="text-balance text-3xl font-semibold tracking-tight text-foreground">
-          A study workspace, not another bloated suite
+          A focused study workspace, not a heavy, multi-gigabyte office suite
         </h2>
         <p className="mt-4 text-pretty text-[15px] leading-relaxed text-muted-foreground">
-          Everything a student needs to read, write, and organize coursework —
-          and nothing that slows an old laptop down.
+          Core tools to read, write, and organize coursework — without large background services or heavy dependencies that slow older laptops.
         </p>
       </div>
       <div className="grid gap-px overflow-hidden rounded-xl border border-border bg-border sm:grid-cols-2 lg:grid-cols-4">

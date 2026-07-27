@@ -111,7 +111,7 @@ export default function ReviewPage() {
             How can we improve your study flow?
           </h1>
           <p className="text-muted-foreground text-[15px] leading-relaxed max-w-xl mx-auto">
-            Your feedback bypasses the noise and goes directly into our GitHub repository. We review everything to build what you actually need.
+            Your feedback skips intermediate channels (like email or social media) and is logged directly as an item in our GitHub repository. We regularly review all submitted feedback and use it to prioritize and design features that address the most common study workflows and pain points.
           </p>
         </div>
 

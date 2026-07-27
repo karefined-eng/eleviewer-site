@@ -4,13 +4,13 @@ export function UseCases() {
       <div className="rounded-3xl border border-border bg-panel p-8 shadow-sm">
         <div className="max-w-3xl">
           <p className="mb-3 font-mono text-xs uppercase tracking-widest text-accent">
-            Built for Windows study sessions
+            Optimized for Windows 10/11 study sessions with low RAM use and fast startup
           </p>
           <h2 className="text-balance text-3xl font-semibold tracking-tight text-foreground">
-            One free Windows document viewer for every student file type
+            One free Windows document viewer for the most common student file types
           </h2>
           <p className="mt-4 text-pretty text-[15px] leading-relaxed text-muted-foreground">
-            EleViewer is a portable study workspace for Windows 10 and 11. Open DOCX, XLSX, PDF, Markdown, CSV, HTML, and TXT files without installing extra software, and use PDF text-to-speech, bookmarks, and session restore to stay focused.
+            EleViewer is a portable study workspace for Windows 10 and 11. Open DOCX, XLSX, PDF, Markdown, CSV, HTML, and TXT files without installing Microsoft Office or a separate PDF reader, and use PDF text-to-speech, bookmarks, and session restore to stay focused.
           </p>
         </div>
 
@@ -18,25 +18,25 @@ export function UseCases() {
           <div className="rounded-3xl border border-border bg-background p-6">
             <h3 className="text-sm font-semibold text-foreground">Free Windows document viewer</h3>
             <p className="mt-2 text-sm leading-relaxed text-muted-foreground">
-              A lightweight portable app for opening and editing DOCX, XLSX, PDF, Markdown, CSV, HTML, and TXT on Windows.
+              A small, fast, portable app (single .exe, under 220 MB) for opening and making basic edits to DOCX, XLSX, PDF, Markdown, CSV, HTML, and TXT on Windows.
             </p>
           </div>
           <div className="rounded-3xl border border-border bg-background p-6">
             <h3 className="text-sm font-semibold text-foreground">PDF reader with text-to-speech</h3>
             <p className="mt-2 text-sm leading-relaxed text-muted-foreground">
-              Turn lecture slides and course readings into audio, so you can study hands-free or review while on the go.
+              Turn lecture slides and course readings into audio using built-in Windows voices, so you can listen without using the keyboard or mouse—for example, while walking or commuting.
             </p>
           </div>
           <div className="rounded-3xl border border-border bg-background p-6">
             <h3 className="text-sm font-semibold text-foreground">Open source and portable</h3>
             <p className="mt-2 text-sm leading-relaxed text-muted-foreground">
-              No account, no telemetry, and no installer. Keep your files local and your laptop running fast.
+              No account, no telemetry, and no installer. Keep your files local and avoid the performance overhead of large office suites that slow older laptops.
             </p>
           </div>
           <div className="rounded-3xl border border-border bg-background p-6">
             <h3 className="text-sm font-semibold text-foreground">Study-ready file vault</h3>
             <p className="mt-2 text-sm leading-relaxed text-muted-foreground">
-              Keep all your course documents accessible from one window with a vault sidebar and bookmarks.
+              Keep all your course documents accessible from one window with a sidebar file browser (“vault”) and bookmarks.
             </p>
           </div>
         </div>

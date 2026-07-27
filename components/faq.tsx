@@ -32,7 +32,7 @@ const faqs = [
   {
     question: "Is EleViewer truly free and open source?",
     answer:
-      "Yes. EleViewer is free, GPLv3 licensed, portable, and requires no account or installation.",
+      "Yes. EleViewer is free of charge, GPLv3 licensed, runs as a single portable .exe, and requires no account or installation.",
   },
   {
     question: "What file types can EleViewer open?",
@@ -42,7 +42,7 @@ const faqs = [
   {
     question: "Does EleViewer support PDF text-to-speech?",
     answer:
-      "Yes, on Windows 10 and 11. The built-in PDF reader uses the Windows speech engine to read documents aloud so you can study hands-free. macOS and Linux support is planned for a future release.",
+      "Yes, on Windows 10 and 11 only. The built-in PDF reader uses the Windows speech engine to read documents aloud so you can study hands-free. macOS and Linux support is planned for a future release.",
   },
   {
     question: "Can I use EleViewer offline?",
@@ -82,12 +82,12 @@ const faqs = [
   {
     question: "Is EleViewer safe to download? Will it trigger antivirus warnings?",
     answer:
-      "EleViewer is fully open source (GPLv3 licensed) — you can read every line of code on GitHub. Windows may show a SmartScreen warning because the app is not yet code-signed. Click 'More info' then 'Run anyway' to proceed. The source code is publicly auditable at github.com/karefined-eng/eleviewer.",
+      "EleViewer's application code is open source (GPLv3 licensed) — you can read every line of its code on GitHub. Windows may show a SmartScreen warning because the app is not yet code-signed. Click 'More info' then 'Run anyway' to proceed. The source code is publicly auditable at github.com/karefined-eng/eleviewer.",
   },
   {
     question: "Is EleViewer a good alternative to Sumatra PDF?",
     answer:
-      "Both are free and portable. The key difference: Sumatra only opens PDFs and ebooks, while EleViewer also opens DOCX, XLSX, PPTX, CSV, HTML, and Markdown — plus it has text-to-speech, a file vault, find & replace, and a built-in web browser.",
+      "Both are free of charge and run as portable executables that don't require installation. The key difference: Sumatra only opens PDFs and ebooks, while EleViewer also opens DOCX, XLSX, PPTX, CSV, HTML, and Markdown — plus it has text-to-speech, a file vault, find & replace, and a built-in web browser.",
   },
 ]
 
@@ -102,7 +102,7 @@ export function FAQ() {
           Common questions about EleViewer
         </h2>
         <p className="mt-4 text-pretty text-[15px] leading-relaxed text-muted-foreground">
-          Everything you need to know about using EleViewer as a free Windows document viewer and study workspace.
+          Key information about using EleViewer as a free Windows document viewer and study workspace.
         </p>
       </div>
       <div className="mt-10 grid gap-4 sm:grid-cols-2">

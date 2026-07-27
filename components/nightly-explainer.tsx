@@ -13,7 +13,7 @@ export function NightlyExplainer() {
               What is Nightly Insiders?
             </h2>
             <p className="mt-4 text-base text-muted-foreground leading-relaxed sm:text-lg">
-              Nightly Insiders is our official early-access community of students, power users, and developers who help shape the future of EleViewer. Instead of waiting for major public releases, Insiders get bleeding-edge updates and direct input into development.
+              Nightly Insiders is our official early-access community of students, power users, and developers who test new builds, report issues, and propose features for EleViewer. Instead of waiting for major public releases, Insiders receive frequent pre-release builds and can give feedback directly to the core developer via chat and GitHub issues.
             </p>
 
             <div className="mt-8 grid gap-6 sm:grid-cols-3">
@@ -22,7 +22,7 @@ export function NightlyExplainer() {
                   <Zap className="h-4 w-4" />
                 </div>
                 <h3 className="font-semibold text-sm text-foreground">Early Access</h3>
-                <p className="text-xs text-muted-foreground">Test unreleased builds and new document format previews before anyone else.</p>
+                <p className="text-xs text-muted-foreground">Test unreleased builds and new document format previews before they reach the general public.</p>
               </div>
 
               <div className="flex flex-col gap-2 rounded-lg border border-border/60 bg-background/60 p-4">
@@ -30,7 +30,7 @@ export function NightlyExplainer() {
                   <Vote className="h-4 w-4" />
                 </div>
                 <h3 className="font-semibold text-sm text-foreground">Feature Voting</h3>
-                <p className="text-xs text-muted-foreground">Participate in community polls to vote directly on what features get built next.</p>
+                <p className="text-xs text-muted-foreground">Participate in community polls to influence which features are prioritized next.</p>
               </div>
 
               <div className="flex flex-col gap-2 rounded-lg border border-border/60 bg-background/60 p-4">
@@ -38,7 +38,7 @@ export function NightlyExplainer() {
                   <MessageSquare className="h-4 w-4" />
                 </div>
                 <h3 className="font-semibold text-sm text-foreground">Direct Access</h3>
-                <p className="text-xs text-muted-foreground">Chat directly with the core developer, share feedback, and get instant support.</p>
+                <p className="text-xs text-muted-foreground">Chat directly with the core developer, share feedback, and get fast support during active hours.</p>
               </div>
             </div>
 
