@@ -48,7 +48,7 @@ export default function DocsOverviewPage() {
             href={DOWNLOAD_URL}
             className="flex h-11 items-center justify-center gap-2 rounded-lg border border-border bg-transparent px-6 text-sm font-medium text-foreground transition-colors hover:bg-panel"
           >
-            <Download className="h-4 w-4" /> Download Binary (~16 MB)
+            <Download className="h-4 w-4" /> Download Binary (~212 MB)
           </a>
         </div>
       </div>

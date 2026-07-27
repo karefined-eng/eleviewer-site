@@ -104,7 +104,7 @@ export const DOCS_TOPICS: DocTopic[] = [
         notice: {
           type: "note",
           label: "Zero Installation Required",
-          message: "EleViewer distributes as a single 16 MB portable Windows executable (.exe). No administrative privileges or Windows installers are required to run the application."
+          message: "EleViewer distributes as a single ~212 MB portable Windows executable (.exe). No administrative privileges or Windows installers are required to run the application."
         }
       },
       {
@@ -117,7 +117,7 @@ export const DOCS_TOPICS: DocTopic[] = [
           headers: ["Specification", "Requirement / Detail"],
           rows: [
             ["Operating System", "Windows 10 / Windows 11 (64-bit)"],
-            ["Executable Size", "~16 MB Standalone Portable Binary"],
+            ["Executable Size", "~212 MB Standalone Portable Binary"],
             ["Memory Footprint", "< 150 MB RAM during normal operation"],
             ["Network Requirement", "100% Offline / No internet required"],
             ["License", "GNU General Public License v3.0 (GPLv3)"]
