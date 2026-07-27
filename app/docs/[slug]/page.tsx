@@ -63,11 +63,14 @@ export default async function DocTopicPage({
         {/* Topic Header */}
         <div className="flex flex-col items-start gap-3 border-b border-border pb-8">
           <div className="flex items-center gap-2">
-            <span className="inline-flex items-center gap-2 rounded-full border border-border bg-panel px-3 py-1 font-mono text-xs font-medium text-muted-foreground uppercase tracking-wider">
+            <Link
+              href="/docs"
+              className="inline-flex items-center gap-2 rounded-full border border-border bg-panel px-3 py-1 font-mono text-xs font-medium text-muted-foreground uppercase tracking-wider hover:text-foreground transition-colors"
+            >
               {topic.eyebrow}
-            </span>
+            </Link>
             <span className="font-mono text-xs text-muted-foreground">
-              / {topic.category}
+              / <Link href="/docs" className="hover:underline hover:text-foreground transition-colors">{topic.category}</Link>
             </span>
           </div>
           <h1 className="text-3xl font-bold tracking-tight text-foreground sm:text-4xl">
@@ -193,6 +196,22 @@ export default async function DocTopicPage({
               </span>
             </Link>
           )}
+        </div>
+
+        {/* Article Footer Inter-Linking Box */}
+        <div className="rounded-lg border border-border bg-panel/40 p-6 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4">
+          <div className="flex flex-col gap-1">
+            <span className="font-semibold text-foreground text-sm">Ready to test EleViewer on your machine?</span>
+            <span className="text-xs text-muted-foreground">Download the free, single-file Windows executable or submit feature requests directly to our dev team.</span>
+          </div>
+          <div className="flex items-center gap-3 shrink-0">
+            <Link href="/download" className="flex h-9 items-center justify-center gap-1.5 rounded-md bg-primary px-4 text-xs font-medium text-primary-foreground hover:opacity-90 transition-opacity">
+              Download Executable
+            </Link>
+            <Link href="/review" className="flex h-9 items-center justify-center gap-1.5 rounded-md border border-border bg-panel px-4 text-xs font-medium text-foreground hover:bg-panel-2 transition-colors">
+              Feedback Hub
+            </Link>
+          </div>
         </div>
       </article>
 

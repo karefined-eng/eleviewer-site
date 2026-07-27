@@ -1,3 +1,4 @@
+import Link from "next/link"
 import { Logo } from "./logo"
 import { GITHUB_URL, RELEASES_URL, LICENSE_URL, ISSUES_URL } from "@/lib/links"
 
@@ -15,12 +16,21 @@ export function SiteFooter() {
           aria-label="Footer navigation"
           className="flex flex-wrap gap-x-6 gap-y-2 text-[13px] text-muted-foreground"
         >
-          <a
-            href="/docs"
-            className="transition-colors hover:text-foreground"
-          >
+          <Link href="/download" className="transition-colors hover:text-foreground">
+            Download
+          </Link>
+          <Link href="/docs" className="transition-colors hover:text-foreground">
             Documentation
-          </a>
+          </Link>
+          <Link href="/demo" className="transition-colors hover:text-foreground">
+            Live Demo
+          </Link>
+          <Link href="/community" className="transition-colors hover:text-foreground">
+            Community
+          </Link>
+          <Link href="/review" className="transition-colors hover:text-foreground">
+            Feedback Hub
+          </Link>
           <a
             href={GITHUB_URL}
             target="_blank"
@@ -53,12 +63,9 @@ export function SiteFooter() {
           >
             GPLv3 License
           </a>
-          <a
-            href="/privacy"
-            className="transition-colors hover:text-foreground"
-          >
+          <Link href="/privacy" className="transition-colors hover:text-foreground">
             Privacy
-          </a>
+          </Link>
         </nav>
       </div>
     </footer>

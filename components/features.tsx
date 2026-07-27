@@ -1,3 +1,4 @@
+import Link from "next/link"
 import {
   Volume2,
   FolderTree,
@@ -7,6 +8,7 @@ import {
   Globe,
   Search,
   Save,
+  ArrowRight,
 } from "lucide-react"
 
 const features = [
@@ -14,41 +16,49 @@ const features = [
     icon: Volume2,
     title: "PDFs that read to you",
     body: "Native Windows text-to-speech turns any lecture slide or reading into audio. (Windows 10/11 only)",
+    docSlug: "pdf-and-tts",
   },
   {
     icon: FolderTree,
     title: "Vault sidebar",
     body: "Point EleViewer at your course folders and every file is one click away. Toggle it with Alt+V and stay in flow.",
+    docSlug: "vault-explorer",
   },
   {
     icon: Zap,
     title: "Quick switcher",
     body: "Ctrl+Q opens a VSCode-style fuzzy finder over your recent and pinned files. Type three letters, hit Enter, keep working.",
+    docSlug: "master-index",
   },
   {
     icon: History,
     title: "Session restore",
     body: "Close your laptop mid-study session. Reopen EleViewer and every tab comes back — files, order, and active tab restored automatically.",
+    docSlug: "overview",
   },
   {
     icon: Bookmark,
     title: "Persistent bookmarks",
     body: "Bookmark PDF pages and files in a dedicated panel. Your place in a 400-page textbook is never lost again.",
+    docSlug: "pdf-and-tts",
   },
   {
     icon: Globe,
     title: "Built-in web panel",
     body: "Open a browser side-by-side with your notes using Ctrl+T. Reference the web without switching windows.",
+    docSlug: "html-and-web",
   },
   {
     icon: Search,
     title: "Find & replace",
     body: "Ctrl+F to find, Ctrl+H to replace — across any open document. Works in every text-based format EleViewer supports.",
+    docSlug: "master-index",
   },
   {
     icon: Save,
     title: "Autosave",
     body: "Background saving kicks in automatically so you never lose work. Configurable interval in settings.",
+    docSlug: "markdown-editor",
   },
 ]
 
@@ -69,14 +79,22 @@ export function Features() {
       </div>
       <div className="grid gap-px overflow-hidden rounded-xl border border-border bg-border sm:grid-cols-2 lg:grid-cols-4">
         {features.map((f) => (
-          <div key={f.title} className="flex flex-col gap-3 bg-panel p-6">
-            <f.icon className="h-5 w-5 text-accent" aria-hidden="true" />
-            <h3 className="text-[15px] font-semibold text-foreground">
-              {f.title}
-            </h3>
-            <p className="text-[13px] leading-relaxed text-muted-foreground">
-              {f.body}
-            </p>
+          <div key={f.title} className="flex flex-col justify-between gap-4 bg-panel p-6">
+            <div className="flex flex-col gap-3">
+              <f.icon className="h-5 w-5 text-accent" aria-hidden="true" />
+              <h3 className="text-[15px] font-semibold text-foreground">
+                {f.title}
+              </h3>
+              <p className="text-[13px] leading-relaxed text-muted-foreground">
+                {f.body}
+              </p>
+            </div>
+            <Link
+              href={`/docs/${f.docSlug}`}
+              className="mt-2 flex items-center gap-1 font-mono text-[11px] text-muted-foreground hover:text-accent transition-colors"
+            >
+              Read Manual <ArrowRight className="h-3 w-3" />
+            </Link>
           </div>
         ))}
       </div>
