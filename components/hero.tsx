@@ -13,7 +13,7 @@ export function Hero() {
           Free &amp; open source · Windows 10/11
         </p>
         <h1 className="text-balance text-4xl font-semibold tracking-tight text-foreground sm:text-5xl">
-          EleViewer — Free Windows Document Viewer &amp; Study Workspace
+          The Lightweight Open Source Study Workspace for Windows (PDF, DOCX, Markdown)
         </h1>
         <h2 className="mx-auto mt-5 max-w-xl text-pretty text-lg font-medium text-foreground">
           The open source study workspace for the DOCX, XLSX, PPTX, PDF, Markdown, CSV, HTML, and TXT files your professors assign.

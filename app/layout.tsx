@@ -12,7 +12,7 @@ const geistMono = Geist_Mono({
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://eleviewer.vercel.app"),
-  title: "EleViewer — Free Windows Document Viewer & Study Workspace",
+  title: "The Lightweight Open Source Study Workspace for Windows (PDF, DOCX, Markdown)",
   description:
     "EleViewer is a free, portable Windows study workspace. Open DOCX, XLSX, PPTX, PDF, Markdown, CSV, HTML, and TXT without Microsoft Office in one portable app with PDF text-to-speech, built-in web browser, find & replace, autosave, file vault, and session restore.",
   applicationName: "EleViewer",
@@ -81,7 +81,7 @@ export const metadata: Metadata = {
     "FreeFileViewer alternative",
   ],
   openGraph: {
-    title: "EleViewer — Free Windows Document Viewer & Study Workspace",
+    title: "The Lightweight Open Source Study Workspace for Windows (PDF, DOCX, Markdown)",
     description:
       "Open DOCX, XLSX, PDF, Markdown, CSV, HTML, and TXT in one portable Windows app with PDF text-to-speech for Windows, web browser, file vault, and session restore.",
     url: "https://eleviewer.vercel.app",
@@ -99,7 +99,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "EleViewer — Free Windows Document Viewer & Study Workspace",
+    title: "The Lightweight Open Source Study Workspace for Windows (PDF, DOCX, Markdown)",
     description:
       "Open DOCX, XLSX, PDF, Markdown, CSV, HTML, and TXT in one portable Windows app with PDF text-to-speech for Windows, web browser, file vault, and session restore.",
     images: ["/opengraph-image"],

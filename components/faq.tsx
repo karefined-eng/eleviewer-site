@@ -15,9 +15,9 @@ const faqs = [
       "Yes. Microsoft discontinued its official PowerPoint Viewer, but EleViewer opens .pptx presentations for free on Windows 10 and 11. Slides display with text, images, and formatting in a clean slide-by-slide view with text-to-speech support.",
   },
   {
-    question: "How can I read a PDF aloud on Windows for free?",
+    question: "Is there a free PDF reader with text to speech for Windows?",
     answer:
-      "EleViewer has built-in PDF text-to-speech using the Windows speech engine (SAPI). Press F9 to toggle the TTS bar, choose a voice, and listen to any PDF page read aloud — hands-free. Works 100% offline.",
+      "Yes. EleViewer has built-in PDF text-to-speech using the Windows speech engine (SAPI). Press F9 to toggle the TTS bar, choose a voice, and listen to any PDF page read aloud — hands-free. Because it uses native SAPI voices, you can read PDFs aloud offline with no internet connection required.",
   },
   {
     question: "What is the best free alternative to Microsoft Word Viewer?",

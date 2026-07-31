@@ -4,7 +4,7 @@ export function UseCases() {
       <div className="rounded-3xl border border-border bg-panel p-8 shadow-sm">
         <div className="max-w-3xl">
           <p className="mb-3 font-mono text-xs uppercase tracking-widest text-accent">
-            Optimized for Windows 10/11 study sessions with low RAM use and fast startup
+            Native Nuitka C++ Compilation — &lt;100ms cold-start on Windows 10/11
           </p>
           <h2 className="text-balance text-3xl font-semibold tracking-tight text-foreground">
             One free Windows document viewer for the most common student file types
@@ -16,9 +16,9 @@ export function UseCases() {
 
         <div className="mt-10 grid gap-4 sm:grid-cols-2">
           <div className="rounded-3xl border border-border bg-background p-6">
-            <h3 className="text-sm font-semibold text-foreground">Free Windows document viewer</h3>
+            <h3 className="text-sm font-semibold text-foreground">Portable DOCX & PDF Editor</h3>
             <p className="mt-2 text-sm leading-relaxed text-muted-foreground">
-              A small, fast, portable app (single .exe, under 220 MB) for opening and making basic edits to DOCX, XLSX, PDF, Markdown, CSV, HTML, and TXT on Windows.
+              A small, fast, portable app (single .exe) for opening and making basic edits to files. Open DOCX without Word, and edit XLSX, PDF, Markdown, CSV, HTML, and TXT instantly.
             </p>
           </div>
           <div className="rounded-3xl border border-border bg-background p-6">
@@ -28,9 +28,9 @@ export function UseCases() {
             </p>
           </div>
           <div className="rounded-3xl border border-border bg-background p-6">
-            <h3 className="text-sm font-semibold text-foreground">Open source and portable</h3>
+            <h3 className="text-sm font-semibold text-foreground">Local-first & No telemetry</h3>
             <p className="mt-2 text-sm leading-relaxed text-muted-foreground">
-              No account, no telemetry, and no installer. Keep your files local and avoid the performance overhead of large office suites that slow older laptops.
+              An open source PDF reader with no telemetry, no account, and no installer. Keep your files local and avoid the performance overhead of large office suites that slow older laptops.
             </p>
           </div>
           <div className="rounded-3xl border border-border bg-background p-6">
