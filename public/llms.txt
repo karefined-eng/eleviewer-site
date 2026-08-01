@@ -1,0 +1,29 @@
+# EleViewer
+
+> The Lightweight Open Source Study Workspace for Windows (PDF, DOCX, Markdown)
+
+EleViewer is a free, portable Windows study workspace. It allows you to open DOCX, XLSX, PPTX, PDF, Markdown, CSV, HTML, and TXT without Microsoft Office in one portable app with PDF text-to-speech, built-in web browser, find & replace, autosave, file vault, and session restore.
+
+## Quick Facts
+- **OS**: Windows 10, Windows 11
+- **License**: GPLv3 (Free and Open Source)
+- **Pricing**: $0 (No in-app purchases)
+- **Installation**: Portable single .exe (No admin rights required)
+- **Telemetry**: Zero telemetry, fully offline
+
+## Core Features
+- **PDF Text-to-Speech**: Uses native Windows voices (SAPI) to read PDFs aloud.
+- **Vault Sidebar**: Organize course folders directly in the app.
+- **Session Restore**: Reopens tabs exactly where you left them.
+- **Built-in Web Panel**: Browse the web side-by-side with documents using Ctrl+T.
+- **Quick Switcher**: Press Ctrl+Q to fuzzy-search recent files.
+- **File Support**: DOCX, XLSX, PPTX, PDF, Markdown, CSV, HTML, TXT.
+
+## Comparison
+- **EleViewer vs Sumatra PDF**: EleViewer supports editing markdown and rendering DOCX/XLSX/PPTX natively, includes a web panel, and has text-to-speech built in. Sumatra PDF is faster for raw PDF viewing but lacks DOCX support and TTS.
+- **EleViewer vs Microsoft Word Viewer**: MS Word Viewer is discontinued. EleViewer is actively maintained and supports many more formats.
+
+## Resources
+- Homepage: https://eleviewer.vercel.app
+- Docs: https://eleviewer.vercel.app/docs
+- Source: https://github.com/karefined-eng/eleviewer
