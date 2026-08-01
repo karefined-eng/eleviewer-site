@@ -15,6 +15,7 @@ import {
   Square
 } from "lucide-react"
 import { useTTS } from "@/hooks/use-tts"
+import { track } from "@vercel/analytics/react"
 
 const tabs = [
   { id: "md", name: "biology-notes.md", icon: FileText, type: "md" },
@@ -50,12 +51,20 @@ export function InteractiveDemo() {
 
   const handlePlayPause = () => {
     if (isPlaying) {
+      track("demo_interacted", { action: "pause_tts" })
       pause()
     } else if (isPaused) {
+      track("demo_interacted", { action: "resume_tts" })
       resume()
     } else {
+      track("demo_interacted", { action: "play_tts", tab: activeTabId })
       play(textContents[activeTabId as keyof typeof textContents])
     }
+  }
+
+  const handleStop = () => {
+    track("demo_interacted", { action: "stop_tts" })
+    stop()
   }
 
   return (
@@ -83,7 +92,7 @@ export function InteractiveDemo() {
               <button onClick={handlePlayPause} className="hover:text-white transition-colors" aria-label={isPlaying ? "Pause TTS" : "Play TTS"}>
                 {isPlaying ? <Pause className="h-3.5 w-3.5 text-accent" /> : <Play className="h-3.5 w-3.5 hover:text-accent" />}
               </button>
-              <button onClick={stop} className="hover:text-white transition-colors" aria-label="Stop TTS" disabled={!isPlaying && !isPaused}>
+              <button onClick={handleStop} className="hover:text-white transition-colors" aria-label="Stop TTS" disabled={!isPlaying && !isPaused}>
                 <Square className={`h-3.5 w-3.5 ${(isPlaying || isPaused) ? "hover:text-red-400" : "opacity-50"}`} />
               </button>
               {(isPlaying || isPaused) && <Volume2 className={`h-3.5 w-3.5 text-accent ${isPlaying ? 'animate-pulse' : ''}`} />}
@@ -99,7 +108,10 @@ export function InteractiveDemo() {
           return (
             <button
               key={tab.id}
-              onClick={() => setActiveTabId(tab.id)}
+              onClick={() => {
+                track("demo_interacted", { action: "switch_tab", tab: tab.id })
+                setActiveTabId(tab.id)
+              }}
               className={`flex items-center gap-1.5 border-r border-[#333] px-3.5 py-2 font-mono text-[11px] transition-colors cursor-pointer ${
                 isActive
                   ? "bg-[#1e1e1e] text-white border-t-2 border-t-accent"
@@ -129,7 +141,10 @@ export function InteractiveDemo() {
             return (
               <button
                 key={item.id}
-                onClick={() => setActiveTabId(item.id)}
+                onClick={() => {
+                  track("demo_interacted", { action: "switch_tab_vault", tab: item.id })
+                  setActiveTabId(item.id)
+                }}
                 className={`w-full flex items-center gap-2 py-1.5 text-[11px] transition-colors text-left ${
                   isActive ? "bg-[#2d2d2d] text-white font-semibold" : "text-[#999] hover:text-white hover:bg-[#202020]"
                 }`}

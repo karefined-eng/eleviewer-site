@@ -1,3 +1,6 @@
+"use client"
+
+import { track } from "@vercel/analytics/react"
 import { Download } from "lucide-react"
 import { DOWNLOAD_URL, ISSUES_URL } from "@/lib/links"
 
@@ -14,6 +17,7 @@ export function DownloadCta() {
         <div className="mt-8 flex flex-col items-center justify-center">
           <a
             href="/download"
+            onClick={() => track("download_clicked", { location: "footer" })}
             className="flex h-11 items-center justify-center gap-2 rounded-lg bg-primary px-6 text-sm font-medium text-primary-foreground transition-opacity hover:opacity-90 shadow-sm"
           >
             <Download className="h-4 w-4" />

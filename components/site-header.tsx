@@ -9,6 +9,7 @@ import { GitHubIcon } from "./github-icon"
 import { MenuIcon } from "./menu-icon"
 import { ThemeToggle } from "./theme-toggle"
 import { GITHUB_URL, DOWNLOAD_URL } from "@/lib/links"
+import { track } from "@vercel/analytics/react"
 
 export function SiteHeader() {
   const [isMenuOpen, setIsMenuOpen] = useState(false)
@@ -81,6 +82,7 @@ export function SiteHeader() {
             href={GITHUB_URL}
             target="_blank"
             rel="noreferrer"
+            onClick={() => track("github_clicked", { location: "nav" })}
             className="flex h-8 items-center gap-1.5 rounded-md text-muted-foreground transition-colors hover:bg-panel hover:text-foreground"
             aria-label="EleViewer on GitHub"
           >
@@ -89,6 +91,7 @@ export function SiteHeader() {
           </a>
           <Link
             href="/download"
+            onClick={() => track("download_clicked", { location: "nav" })}
             className={`flex h-8 items-center gap-1.5 rounded-md px-3 text-[13px] font-medium transition-opacity hover:opacity-90 ${
               pathname === "/download"
                 ? "bg-accent text-accent-foreground font-semibold"

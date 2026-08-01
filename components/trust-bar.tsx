@@ -1,16 +1,19 @@
 "use client";
 
 import { useState } from "react";
+import { track } from "@vercel/analytics/react";
 import { ShieldCheck, Terminal, Users, Sparkles, Check, Copy } from "lucide-react";
 
 export function TrustBar() {
   const [copied, setCopied] = useState(false);
 
   const handleCopy = () => {
+    track("winget_copied");
     navigator.clipboard.writeText("winget install karefined-eng.EleViewer");
     setCopied(true);
     setTimeout(() => setCopied(false), 2000);
   };
+
 
   return (
     <section className="border-y border-border/40 bg-panel/30 backdrop-blur-md py-6">

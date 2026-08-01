@@ -1,3 +1,6 @@
+"use client"
+
+import { track } from "@vercel/analytics/react"
 import { Download } from "lucide-react"
 import { GitHubIcon } from "./github-icon"
 import { InteractiveDemo } from "./interactive-demo"
@@ -31,6 +34,7 @@ export function Hero() {
         <div className="mt-8 hidden sm:flex flex-col items-center justify-center gap-3 sm:flex-row">
           <a
             href="/download"
+            onClick={() => track("download_clicked", { location: "hero" })}
             className="flex h-11 items-center justify-center gap-2 rounded-lg bg-primary px-6 text-sm font-medium text-primary-foreground transition-opacity hover:opacity-90"
           >
             <Download className="h-4 w-4" />
@@ -40,6 +44,7 @@ export function Hero() {
             href={GITHUB_URL}
             target="_blank"
             rel="noreferrer"
+            onClick={() => track("github_clicked", { location: "hero" })}
             className="flex h-11 items-center justify-center gap-2 rounded-lg border border-border bg-transparent px-6 text-sm font-medium text-foreground transition-colors hover:bg-panel"
           >
             <GitHubIcon className="h-4 w-4" />
