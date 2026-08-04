@@ -25,6 +25,15 @@
     "paths": {
       "@/*": [
         "./*"
+      ],
+      "~components/*": [
+        "./components/*"
+      ],
+      "~features/*": [
+        "./src/features/*"
+      ],
+      "~types/*": [
+        "./src/types/*"
       ]
     }
   },

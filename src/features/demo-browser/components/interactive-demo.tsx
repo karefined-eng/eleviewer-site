@@ -14,8 +14,10 @@ import {
   Pause,
   Square
 } from "lucide-react"
-import { useTTS } from "@/hooks/use-tts"
+import { useTTS } from "~features/demo-browser/hooks/use-tts"
 import { track } from "@vercel/analytics/react"
+import * as Tabs from '@radix-ui/react-tabs'
+import * as Tooltip from '@radix-ui/react-tooltip'
 
 const tabs = [
   { id: "md", name: "biology-notes.md", icon: FileText, type: "md" },
@@ -88,45 +90,70 @@ export function InteractiveDemo() {
           <Bookmark className="h-3.5 w-3.5 hover:text-white transition-colors cursor-pointer" />
           
           {isSupported && (
-            <div className="flex items-center gap-2 bg-[#1e1e1e] px-2 py-0.5 rounded border border-[#333]">
-              <button onClick={handlePlayPause} className="hover:text-white transition-colors" aria-label={isPlaying ? "Pause TTS" : "Play TTS"}>
-                {isPlaying ? <Pause className="h-3.5 w-3.5 text-accent" /> : <Play className="h-3.5 w-3.5 hover:text-accent" />}
-              </button>
-              <button onClick={handleStop} className="hover:text-white transition-colors" aria-label="Stop TTS" disabled={!isPlaying && !isPaused}>
-                <Square className={`h-3.5 w-3.5 ${(isPlaying || isPaused) ? "hover:text-red-400" : "opacity-50"}`} />
-              </button>
-              {(isPlaying || isPaused) && <Volume2 className={`h-3.5 w-3.5 text-accent ${isPlaying ? 'animate-pulse' : ''}`} />}
-            </div>
+            <Tooltip.Provider delayDuration={300}>
+              <div className="flex items-center gap-2 bg-[#1e1e1e] px-2 py-0.5 rounded border border-[#333]">
+                <Tooltip.Root>
+                  <Tooltip.Trigger asChild>
+                    <button onClick={handlePlayPause} className="hover:text-white transition-colors flex items-center justify-center" aria-label={isPlaying ? "Pause TTS" : "Play TTS"}>
+                      {isPlaying ? <Pause className="h-3.5 w-3.5 text-accent" /> : <Play className="h-3.5 w-3.5 hover:text-accent" />}
+                    </button>
+                  </Tooltip.Trigger>
+                  <Tooltip.Portal>
+                    <Tooltip.Content className="bg-panel text-foreground text-xs px-2 py-1 rounded shadow-lg border border-border" sideOffset={5}>
+                      {isPlaying ? "Pause" : "Read aloud"}
+                      <Tooltip.Arrow className="fill-panel" />
+                    </Tooltip.Content>
+                  </Tooltip.Portal>
+                </Tooltip.Root>
+                
+                <Tooltip.Root>
+                  <Tooltip.Trigger asChild>
+                    <button onClick={handleStop} className="hover:text-white transition-colors flex items-center justify-center" aria-label="Stop TTS" disabled={!isPlaying && !isPaused}>
+                      <Square className={`h-3.5 w-3.5 ${(isPlaying || isPaused) ? "hover:text-red-400" : "opacity-50"}`} />
+                    </button>
+                  </Tooltip.Trigger>
+                  <Tooltip.Portal>
+                    <Tooltip.Content className="bg-panel text-foreground text-xs px-2 py-1 rounded shadow-lg border border-border" sideOffset={5}>
+                      Stop
+                      <Tooltip.Arrow className="fill-panel" />
+                    </Tooltip.Content>
+                  </Tooltip.Portal>
+                </Tooltip.Root>
+
+                {(isPlaying || isPaused) && <Volume2 className={`h-3.5 w-3.5 text-accent ${isPlaying ? 'animate-pulse' : ''}`} />}
+              </div>
+            </Tooltip.Provider>
           )}
         </div>
       </div>
 
       {/* Tab bar */}
-      <div className="flex border-b border-[#333] bg-[#252526] overflow-x-auto">
-        {tabs.map((tab) => {
-          const isActive = tab.id === activeTabId
-          return (
-            <button
-              key={tab.id}
-              onClick={() => {
-                track("demo_interacted", { action: "switch_tab", tab: tab.id })
-                setActiveTabId(tab.id)
-              }}
-              className={`flex items-center gap-1.5 border-r border-[#333] px-3.5 py-2 font-mono text-[11px] transition-colors cursor-pointer ${
-                isActive
-                  ? "bg-[#1e1e1e] text-white border-t-2 border-t-accent"
-                  : "bg-[#2d2d2d] text-[#999] hover:bg-[#252526] hover:text-white"
-              }`}
-            >
-              <tab.icon className={`h-3.5 w-3.5 ${isActive ? "text-accent" : ""}`} />
-              <span className="hidden sm:inline">{tab.name}</span>
-              <span className="sm:hidden">{tab.name.split(".").pop()}</span>
-            </button>
-          )
-        })}
-      </div>
+      <Tabs.Root value={activeTabId} onValueChange={(val) => {
+        track("demo_interacted", { action: "switch_tab", tab: val })
+        setActiveTabId(val)
+      }} className="flex flex-col min-h-0">
+        <Tabs.List className="flex border-b border-[#333] bg-[#252526] overflow-x-auto" aria-label="Open files">
+          {tabs.map((tab) => {
+            const isActive = tab.id === activeTabId
+            return (
+              <Tabs.Trigger key={tab.id} value={tab.id} asChild>
+                <button
+                  className={`flex items-center gap-1.5 border-r border-[#333] px-3.5 py-2 font-mono text-[11px] transition-colors cursor-pointer outline-none focus-visible:ring-2 focus-visible:ring-accent ${
+                    isActive
+                      ? "bg-[#1e1e1e] text-white border-t-2 border-t-accent"
+                      : "bg-[#2d2d2d] text-[#999] hover:bg-[#252526] hover:text-white"
+                  }`}
+                >
+                  <tab.icon className={`h-3.5 w-3.5 ${isActive ? "text-accent" : ""}`} />
+                  <span className="hidden sm:inline">{tab.name}</span>
+                  <span className="sm:hidden">{tab.name.split(".").pop()}</span>
+                </button>
+              </Tabs.Trigger>
+            )
+          })}
+        </Tabs.List>
 
-      <div className="flex min-h-[320px]">
+        <div className="flex min-h-[320px] flex-1">
         {/* Vault sidebar */}
         <div className="hidden w-44 shrink-0 border-r border-[#333] bg-[#252526] py-2 md:block select-none">
           <div className="flex items-center gap-1 px-3 pb-2 font-mono text-[10px] uppercase tracking-widest text-[#777]">
@@ -158,9 +185,8 @@ export function InteractiveDemo() {
         </div>
 
         {/* Editor pane */}
-        <div className="min-w-0 flex-1 bg-[#1e1e1e] p-5 font-mono text-[12px] leading-relaxed select-text">
-          {activeTabId === "md" && (
-            <div className="animate-in fade-in duration-200">
+        <div className="min-w-0 flex-1 bg-[#1e1e1e] p-5 font-mono text-[12px] leading-relaxed select-text overflow-y-auto">
+          <Tabs.Content value="md" className="outline-none focus-visible:ring-2 focus-visible:ring-accent rounded animate-in fade-in duration-200">
               <p className={`font-bold text-[14px] ${isPlaying ? 'text-accent bg-accent/10' : 'text-[#6cb6ff]'}`}># Cell Respiration — Week 4</p>
               <p className="mt-3 text-[#e0e0e0]">
                 Glycolysis happens in the <span className="text-white font-semibold bg-[#252526] px-1 py-0.5 rounded">cytoplasm</span> and
@@ -175,11 +201,9 @@ export function InteractiveDemo() {
               <div className="mt-4 rounded border-l-2 border-accent bg-[#252526] p-3 text-[#777] italic">
                 💡 Exam tip: Know exactly where each stage occurs in the cell.
               </div>
-            </div>
-          )}
+          </Tabs.Content>
 
-          {activeTabId === "pdf" && (
-            <div className="animate-in fade-in duration-200 space-y-3">
+          <Tabs.Content value="pdf" className="outline-none focus-visible:ring-2 focus-visible:ring-accent rounded animate-in fade-in duration-200 space-y-3">
               <div className="flex items-center justify-between border-b border-[#333] pb-2 text-[#aaa]">
                 <span className="font-sans text-[12px] font-semibold">Lecture 04 - Molecular Biology.pdf</span>
                 <span className="text-[10px] bg-[#333] px-2 py-0.5 rounded">Page 12 / 38</span>
@@ -196,11 +220,9 @@ export function InteractiveDemo() {
                   <span>Reading page 12 aloud...</span>
                 </div>
               )}
-            </div>
-          )}
+          </Tabs.Content>
 
-          {activeTabId === "xlsx" && (
-            <div className="animate-in fade-in duration-200 font-sans">
+          <Tabs.Content value="xlsx" className="outline-none focus-visible:ring-2 focus-visible:ring-accent rounded animate-in fade-in duration-200 font-sans">
               <div className="text-[12px] font-semibold text-[#aaa] mb-2">Sheet1 — Lab Measurements</div>
               <div className={`overflow-x-auto rounded border ${isPlaying ? 'border-accent/50 bg-accent/5' : 'border-[#333]'}`}>
                 <table className="w-full text-left text-[11px] text-[#ccc]">
@@ -217,42 +239,40 @@ export function InteractiveDemo() {
                       <td className="px-3 py-1.5 border-r border-[#333] font-mono">S-101</td>
                       <td className="px-3 py-1.5 border-r border-[#333]">37.5</td>
                       <td className="px-3 py-1.5 border-r border-[#333] text-accent">4.22</td>
-                      <td className="px-3 py-1.5 text-emerald-400">Valid</td>
+                      <td className="px-3 py-1.5 text-[#f2f2f0]">Valid</td>
                     </tr>
                     <tr className={isPlaying ? 'bg-accent/10' : ''}>
                       <td className="px-3 py-1.5 border-r border-[#333] font-mono">S-102</td>
                       <td className="px-3 py-1.5 border-r border-[#333]">38.0</td>
                       <td className="px-3 py-1.5 border-r border-[#333] text-accent">5.10</td>
-                      <td className="px-3 py-1.5 text-emerald-400">Valid</td>
+                      <td className="px-3 py-1.5 text-[#f2f2f0]">Valid</td>
                     </tr>
                     <tr className={isPlaying ? 'bg-accent/10' : ''}>
                       <td className="px-3 py-1.5 border-r border-[#333] font-mono">S-103</td>
                       <td className="px-3 py-1.5 border-r border-[#333]">41.2</td>
-                      <td className="px-3 py-1.5 border-r border-[#333] text-red-400">1.04</td>
-                      <td className="px-3 py-1.5 text-amber-400">Warning</td>
+                      <td className="px-3 py-1.5 border-r border-[#333] text-[#f2f2f0]">1.04</td>
+                      <td className="px-3 py-1.5 text-[#f2f2f0]">Warning</td>
                     </tr>
                   </tbody>
                 </table>
               </div>
-            </div>
-          )}
+          </Tabs.Content>
 
-          {activeTabId === "docx" && (
-            <div className={`animate-in fade-in duration-200 font-serif text-[#ddd] leading-relaxed p-2 transition-colors rounded ${isPlaying ? 'bg-accent/10' : ''}`}>
+          <Tabs.Content value="docx" className="outline-none focus-visible:ring-2 focus-visible:ring-accent rounded animate-in fade-in duration-200 font-serif text-[#ddd] leading-relaxed p-2 transition-colors">
               <h3 className="font-sans font-bold text-[14px] text-white border-b border-[#333] pb-1 mb-2">
                 Abstract — Final Essay Draft
               </h3>
               <p className="text-[11px] text-[#ccc]">
                 This study evaluates portable desktop environments designed for students reading long lectures, essays, and notes on Windows laptops...
               </p>
-              <div className="mt-3 flex items-center gap-2 text-[10px] text-emerald-400 font-sans">
+              <div className="mt-3 flex items-center gap-2 text-[10px] text-[#f2f2f0] font-sans">
                 <CheckCircle2 className="h-3 w-3" />
                 <span>Word Doc format parsed cleanly without formatting loss</span>
               </div>
-            </div>
-          )}
+          </Tabs.Content>
         </div>
       </div>
+      </Tabs.Root>
 
       {/* Status bar */}
       <div className="flex items-center justify-between border-t border-[#333] bg-[#1e1e1e] px-4 py-1.5 font-mono text-[10px] text-[#777]">

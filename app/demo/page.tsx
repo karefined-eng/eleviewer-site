@@ -1,6 +1,6 @@
 import { SiteHeader } from "@/components/site-header"
 import { SiteFooter } from "@/components/site-footer"
-import { InteractiveDemo } from "@/components/interactive-demo"
+import { InteractiveDemo } from "~features/demo-browser/components/interactive-demo"
 
 export default function DemoPage() {
   return (

@@ -242,8 +242,8 @@ export default function ReviewPage() {
               </div>
 
               {status === "error" && (
-                <div className="flex items-center gap-2 rounded-lg border border-red-500/30 bg-red-500/10 p-3 text-xs font-medium text-red-400">
-                  <AlertCircle className="h-4 w-4 shrink-0" />
+                <div className="flex items-center gap-2 rounded-lg border border-border bg-panel p-4 font-mono text-sm text-muted-foreground">
+                  <AlertCircle className="h-4 w-4 shrink-0 text-accent" />
                   <span>{errorMessage}</span>
                 </div>
               )}

@@ -162,20 +162,20 @@ export function AppMockup() {
                     <tr>
                       <td className="px-3 py-1.5 border-r border-[#333] font-mono">S-101</td>
                       <td className="px-3 py-1.5 border-r border-[#333]">37.5</td>
-                      <td className="px-3 py-1.5 border-r border-[#333] text-accent">4.22</td>
-                      <td className="px-3 py-1.5 text-emerald-400">Valid</td>
+                      <td className="px-3 py-1.5 border-r border-[#333] text-[#6cb6ff]">4.22</td>
+                      <td className="px-3 py-1.5 text-[#f2f2f0]">Valid</td>
                     </tr>
                     <tr>
                       <td className="px-3 py-1.5 border-r border-[#333] font-mono">S-102</td>
                       <td className="px-3 py-1.5 border-r border-[#333]">38.0</td>
-                      <td className="px-3 py-1.5 border-r border-[#333] text-accent">5.10</td>
-                      <td className="px-3 py-1.5 text-emerald-400">Valid</td>
+                      <td className="px-3 py-1.5 border-r border-[#333] text-[#6cb6ff]">5.10</td>
+                      <td className="px-3 py-1.5 text-[#f2f2f0]">Valid</td>
                     </tr>
                     <tr>
                       <td className="px-3 py-1.5 border-r border-[#333] font-mono">S-103</td>
                       <td className="px-3 py-1.5 border-r border-[#333]">41.2</td>
-                      <td className="px-3 py-1.5 border-r border-[#333] text-red-400">1.04</td>
-                      <td className="px-3 py-1.5 text-amber-400">Warning</td>
+                      <td className="px-3 py-1.5 border-r border-[#333] text-[#f2f2f0]">1.04</td>
+                      <td className="px-3 py-1.5 text-[#f2f2f0]">Warning</td>
                     </tr>
                   </tbody>
                 </table>
@@ -191,7 +191,7 @@ export function AppMockup() {
               <p className="text-[11px] text-[#ccc]">
                 This study evaluates portable desktop environments designed for students reading long lectures, essays, and notes on Windows laptops...
               </p>
-              <div className="mt-3 flex items-center gap-2 text-[10px] text-emerald-400 font-sans">
+              <div className="mt-3 flex items-center gap-2 text-[10px] text-[#f2f2f0] font-sans">
                 <CheckCircle2 className="h-3 w-3" />
                 <span>Word Doc format parsed cleanly without formatting loss</span>
               </div>

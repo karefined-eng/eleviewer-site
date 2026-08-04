@@ -7,7 +7,7 @@ import { Shortcuts } from "@/components/shortcuts"
 import { OpenSource } from "@/components/open-source"
 import { UseCases } from "@/components/use-cases"
 import { NightlyExplainer } from "@/components/nightly-explainer"
-import { FAQ } from "@/components/faq"
+import { FAQ } from "~features/faq/components/faq"
 import { DownloadCta } from "@/components/download-cta"
 import { SiteFooter } from "@/components/site-footer"
 

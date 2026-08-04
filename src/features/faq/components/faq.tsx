@@ -1,3 +1,8 @@
+"use client"
+
+import * as Accordion from '@radix-ui/react-accordion'
+import { ChevronDown } from "lucide-react"
+
 const faqs = [
   {
     question: "How do I open a DOCX file without Microsoft Word?",
@@ -105,14 +110,21 @@ export function FAQ() {
           Key information about using EleViewer as a free Windows document viewer and study workspace.
         </p>
       </div>
-      <div className="mt-10 grid gap-4 sm:grid-cols-2">
-        {faqs.map((faq) => (
-          <article key={faq.question} className="rounded-3xl border border-border bg-panel p-6">
-            <h3 className="text-sm font-semibold text-foreground">{faq.question}</h3>
-            <p className="mt-3 text-sm leading-relaxed text-muted-foreground">{faq.answer}</p>
-          </article>
+      <Accordion.Root type="single" collapsible className="mt-10 grid gap-4 sm:grid-cols-2">
+        {faqs.map((faq, i) => (
+          <Accordion.Item key={faq.question} value={`item-${i}`} className="rounded-3xl border border-border bg-panel p-2">
+            <Accordion.Header className="flex">
+              <Accordion.Trigger className="group flex flex-1 items-center justify-between p-4 text-left text-sm font-semibold text-foreground hover:text-accent transition-colors">
+                {faq.question}
+                <ChevronDown className="h-4 w-4 shrink-0 transition-transform duration-200 group-data-[state=open]:rotate-180" />
+              </Accordion.Trigger>
+            </Accordion.Header>
+            <Accordion.Content className="overflow-hidden text-sm leading-relaxed text-muted-foreground data-[state=closed]:hidden">
+              <div className="px-4 pb-4 pt-1">{faq.answer}</div>
+            </Accordion.Content>
+          </Accordion.Item>
         ))}
-      </div>
+      </Accordion.Root>
     </section>
   )
 }

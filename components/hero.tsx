@@ -3,7 +3,7 @@
 import { track } from "@vercel/analytics/react"
 import { Download } from "lucide-react"
 import { GitHubIcon } from "./github-icon"
-import { InteractiveDemo } from "./interactive-demo"
+import { InteractiveDemo } from "~features/demo-browser/components/interactive-demo"
 import { MobileReminder } from "./mobile-reminder"
 import { GITHUB_URL, DOWNLOAD_URL } from "@/lib/links"
 
