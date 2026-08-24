@@ -23,7 +23,7 @@ export default function DemoPage() {
             </p>
             <InteractiveDemo />
             <div className="mt-8 rounded-lg border border-border bg-panel/50 p-4 text-left font-mono text-xs text-muted-foreground leading-relaxed">
-              <span className="font-semibold text-foreground">ℹ️ Simulation Notice:</span> This web demo is an interactive simulation of the EleViewer desktop interface. The actual desktop application runs offline on Windows 10 and 11 as a native app; this browser version lets you test the layout, file switcher, and document viewers before downloading the ~212 MB portable executable.
+              <span className="font-semibold text-foreground">ℹ️ Simulation Notice:</span> This web demo is an interactive simulation of the EleViewer desktop interface. The actual desktop application runs offline on Windows 10 and 11 as a native app; this browser version lets you test the layout, file switcher, and document viewers before downloading the ~129 MB portable executable.
             </div>
           </div>
         </section>
