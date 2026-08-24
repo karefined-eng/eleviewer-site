@@ -88,18 +88,18 @@ export const DOCS_CATEGORIES: DocCategory[] = [
 export const DOCS_TOPICS: DocTopic[] = [
   {
     slug: "overview",
-    title: "Application Architecture & Setup",
+    title: "Start here: your first study session",
     category: "Getting Started",
     categorySlug: "getting-started",
-    eyebrow: "Architecture Reference",
-    description: "Overview of the EleViewer local-first study workspace, portable execution, and core capabilities.",
+    eyebrow: "Beginner Guide",
+    description: "Download EleViewer, open your first course file, try Read Aloud, and set up a local course folder.",
     sections: [
       {
         id: "core-philosophy",
-        title: "Local-First Document Processing",
+        title: "Open a file and start studying",
         paragraphs: [
-          "EleViewer is a lightweight Windows document editor and study app supporting DOCX, XLSX, PPTX, MD, TXT, CSV, HTML/HTM, and PDF files within a unified tabbed interface.",
-          "Unlike traditional cloud-tethered office suites, EleViewer executes completely offline. All document rendering, full-text indexing, and file modifications occur directly on your local CPU and storage drive without transmitting data to external servers."
+          "EleViewer is a portable Windows study workspace for PDFs, Word documents, PowerPoint slides, spreadsheets, Markdown, CSV, HTML, and plain-text notes.",
+          "Download the portable .exe, open a course file with Ctrl+O, and keep reading, listening, and taking notes in one window. Your documents stay on your computer, and no account is required."
         ],
         notice: {
           type: "note",
@@ -109,9 +109,9 @@ export const DOCS_TOPICS: DocTopic[] = [
       },
       {
         id: "system-requirements",
-        title: "System Specifications & Requirements",
+        title: "What you need",
         paragraphs: [
-          "The application is engineered for high performance on minimal hardware specifications, ensuring smooth operation on standard student laptops and desktops."
+          "EleViewer is built for Windows student laptops and shared computers. It runs as a portable application, so you can try it without installing a traditional Windows package."
         ],
         table: {
           headers: ["Specification", "Requirement / Detail"],
@@ -125,28 +125,29 @@ export const DOCS_TOPICS: DocTopic[] = [
         }
       },
       {
-        id: "factory-pattern",
-        title: "File Routing & Factory Pattern",
+        id: "first-actions",
+        title: "Three useful first actions",
         paragraphs: [
-          "Internally, EleViewer implements a factory design pattern for document routing. When you open a file via the Quick Switcher or native OS dialog, file_handler.py inspects the file signature and extension, routing it directly into the appropriate high-performance viewer or editor module."
+          "Press F9 while a PDF is open to show the Read Aloud controls. Select a passage first if you want EleViewer to read only that section.",
+          "Press Alt + V to show the Vault sidebar, then add a course folder in Settings. Press Ctrl + Q later to find files without searching through folders."
         ]
       }
     ]
   },
   {
     slug: "vault-explorer",
-    title: "Vaults & FTS5 Indexing",
+    title: "Course folders & file search",
     category: "Getting Started",
     categorySlug: "getting-started",
-    eyebrow: "Project Management",
-    description: "How to register local study directories and utilize background SQLite FTS5 full-text search.",
+    eyebrow: "Stay Organized",
+    description: "Keep your course files together, search them quickly, and return to the same study session later.",
     sections: [
       {
         id: "vault-configuration",
-        title: "Registering Study Vaults",
+        title: "Add a course folder",
         paragraphs: [
-          "A Vault in EleViewer is any local folder on your computer containing study materials, coursework, or project documents. You can register multiple vaults and switch between them instantly.",
-          "To configure your vaults: Press Alt + V to open the sidebar, click the Settings icon (Alt + S), and navigate to Vault Configuration to add or remove local folder paths."
+          "A vault is simply a local folder containing your readings, assignments, and notes. You can add more than one folder and switch between them when you change courses.",
+          "Press Alt + V to show the sidebar, open Settings with Alt + S, and add your course folder under the vault settings."
         ],
         notice: {
           type: "tip",
@@ -156,37 +157,37 @@ export const DOCS_TOPICS: DocTopic[] = [
       },
       {
         id: "fts5-indexing",
-        title: "Background SQLite FTS5 Indexer",
+        title: "Find a file when you need it",
         paragraphs: [
-          "When you register a vault folder, EleViewer launches an asynchronous off-thread indexer (vault_indexer.py) that scans your document library.",
-          "Text contents from Markdown notes, plain text files, and code scripts are ingested into an optimized SQLite FTS5 (Full-Text Search 5) database stored locally in your Windows AppData directory.",
-          "This index enables instantaneous sub-second search results when using the Quick Switcher (Ctrl + Q) or Vault Search tools, regardless of how many hundreds of files reside in your folders."
+          "After you add a vault, EleViewer indexes supported local files in the background. The index is stored locally with your application data.",
+          "Press Ctrl + Q to search recent and pinned files, or use the Vault Search tools when you want to search across your course folders."
         ]
       }
     ]
   },
   {
     slug: "pdf-and-tts",
-    title: "PDF Reader & Universal TTS",
+    title: "Read PDFs and listen aloud",
     category: "Document Readers & Viewers",
     categorySlug: "workstations",
     eyebrow: "Reading Tools",
-    description: "Continuous PDF scrolling, zoom controls, persistent bookmarks, and integrated Read Aloud speech synthesis.",
+    description: "Open a PDF, save your place, and use Windows Read Aloud when you want to study hands-free.",
     sections: [
       {
         id: "pdf-navigation",
-        title: "High-Speed PDF Viewing",
+        title: "Keep your place in a long reading",
         paragraphs: [
-          "The PDF workstation is built for reading lengthy academic papers and lecture slides. It features smooth continuous scrolling, fit-to-page / fit-to-width toolbar toggles, and direct keyboard navigation using Arrow keys, PageUp, and PageDown."
+          "Use continuous scrolling, fit-to-page or fit-to-width controls, and the Arrow, Page Up, and Page Down keys to move through papers and lecture slides. Add a bookmark when you want to return to a page later."
         ]
       },
       {
         id: "universal-tts",
-        title: "Universal Text-to-Speech (Read Aloud)",
+        title: "Use Read Aloud",
+
         paragraphs: [
-          "EleViewer integrates native Windows speech synthesis across all document formats. Press F9 or click the Speaker icon in the toolbar to activate Read Aloud.",
-          "If you highlight a specific text paragraph before pressing F9, the speech engine reads only your selected passage. If no text is selected, it reads continuously from your current document position.",
-          "You can adjust speech velocity dynamically using the reading rate slider located directly on the top toolbar."
+          "Press F9 or click the Speaker icon to show the Read Aloud controls in a supported document.",
+          "Select a passage before pressing F9 to read only that passage. With no selection, EleViewer reads from the current document position.",
+          "Use the reading-rate control to make the voice easier to follow while you walk, commute, or rest your eyes."
         ],
         notice: {
           type: "important",

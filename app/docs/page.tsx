@@ -4,8 +4,8 @@ import { ArrowRight, BookOpen, Download, Terminal, Shield, Keyboard, FileText } 
 import { DOWNLOAD_URL } from "@/lib/links";
 
 export const metadata = {
-  title: "Free Windows Document Reader & Technical Manual | EleViewer",
-  description: "Explore comprehensive technical documentation, keyboard shortcuts, and offline reading guides for EleViewer on Windows 10/11.",
+  title: "How to Start Studying with EleViewer | EleViewer",
+  description: "Learn how to open course files, listen to PDFs, set up a local course folder, and return to your study session in EleViewer.",
 };
 
 export default function DocsOverviewPage() {
@@ -29,26 +29,26 @@ export default function DocsOverviewPage() {
       {/* Page Header */}
       <div className="flex flex-col items-start gap-4 border-b border-border pb-8">
         <span className="inline-flex items-center gap-2 rounded-full border border-border bg-panel px-3 py-1 font-mono text-xs font-medium text-muted-foreground uppercase tracking-wider">
-          Windows Document Reader & Study Tool
+          Beginner guide for Windows
         </span>
         <h1 className="text-3xl font-bold tracking-tight text-foreground sm:text-4xl">
-          Free Offline Document Reader & Technical Manual
+          Start your first study session
         </h1>
         <p className="text-base text-muted-foreground leading-relaxed max-w-2xl">
-          Explore technical documentation that covers installation, configuration, reading, editing, and indexing of PDF, DOCX, PPTX, XLSX, and Markdown files locally on Windows 10/11. Built for low-latency document loading and navigation, system-wide text-to-speech support for all installed Windows voices, no telemetry or analytics data collection, and operation that does not require any internet connection.
+          Download the portable app, open a course file, press F9 to listen to a reading, and add your course folder when you are ready. These short guides explain the everyday workflow without assuming technical knowledge.
         </p>
         <div className="flex flex-wrap items-center gap-4 pt-2">
           <Link
             href="/docs/overview"
             className="flex h-11 items-center justify-center gap-2 rounded-lg bg-primary px-6 text-sm font-medium text-primary-foreground transition-opacity hover:opacity-90"
           >
-            Start Reading <ArrowRight className="h-4 w-4" />
+            Start the beginner guide <ArrowRight className="h-4 w-4" />
           </Link>
           <a
             href={DOWNLOAD_URL}
             className="flex h-11 items-center justify-center gap-2 rounded-lg border border-border bg-transparent px-6 text-sm font-medium text-foreground transition-colors hover:bg-panel"
           >
-            <Download className="h-4 w-4" /> Download Binary (~212 MB)
+            <Download className="h-4 w-4" /> Download for Windows (~212 MB)
           </a>
         </div>
       </div>
@@ -56,7 +56,7 @@ export default function DocsOverviewPage() {
       {/* Categories Overview Grid */}
       <div className="flex flex-col gap-6">
         <h2 className="text-xl font-semibold tracking-tight text-foreground">
-          Documentation Modules
+          Choose what you want to do
         </h2>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
           {DOCS_CATEGORIES.map((category) => (
@@ -102,10 +102,10 @@ export default function DocsOverviewPage() {
       {/* Offline Notice Box */}
       <div className="rounded-lg border border-border bg-panel/50 p-6 text-left font-mono text-xs text-muted-foreground leading-relaxed flex flex-col gap-2">
         <span className="font-semibold text-foreground text-sm flex items-center gap-2">
-          ℹ️ Offline Compatibility Notice
+          ℹ️ Need help offline?
         </span>
         <p>
-          This reference documentation is included as local help files inside every EleViewer desktop release. When working offline without an internet connection, press <kbd className="rounded border border-border bg-background px-1.5 py-0.5 text-[11px] font-semibold text-foreground">F1</kbd> or navigate to <strong className="text-foreground">Help → Getting Started Guide</strong> in the application menu bar to access all of the documentation modules listed above locally.
+          The same beginner and reference guides are included with every EleViewer desktop release. Press <kbd className="rounded border border-border bg-background px-1.5 py-0.5 text-[11px] font-semibold text-foreground">F1</kbd> or open <strong className="text-foreground">Help → Getting Started Guide</strong> in EleViewer to read them without an internet connection.
         </p>
       </div>
     </div>

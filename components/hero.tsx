@@ -62,7 +62,15 @@ export function Hero() {
           </p>
         </div>
 
-        <p className="mt-4 font-mono text-xs text-muted-foreground">
+        <div className="mt-5 flex flex-wrap items-center justify-center gap-x-4 gap-y-2 text-xs text-muted-foreground">
+          <span><strong className="text-foreground">1.</strong> Download</span>
+          <span aria-hidden="true">→</span>
+          <span><strong className="text-foreground">2.</strong> Open a file</span>
+          <span aria-hidden="true">→</span>
+          <span><strong className="text-foreground">3.</strong> Press F9 to listen</span>
+        </div>
+
+        <p className="mt-3 font-mono text-xs text-muted-foreground">
           GPLv3 licensed · portable .exe · no account · no telemetry
         </p>
       </div>

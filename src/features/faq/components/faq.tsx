@@ -5,9 +5,14 @@ import { ChevronDown } from "lucide-react"
 
 const faqs = [
   {
+    question: "What should I do first after downloading EleViewer?",
+    answer:
+      "Open EleViewer, press Ctrl+O, and choose a course file. Open a PDF and press F9 to show Read Aloud, or press Alt+V to set up a local course folder. You can start without an account or an internet connection.",
+  },
+  {
     question: "How do I open a DOCX file without Microsoft Word?",
     answer:
-      "Download EleViewer — it opens Word documents (.docx) for free with no Microsoft Office required. Just drag the file onto EleViewer or use Ctrl+O to open it. It's a single portable .exe — no installation, no sign-up.",
+      "Download EleViewer, then drag the Word document onto the app or press Ctrl+O to open it. It is a single portable .exe, so you do not need Microsoft Office, an installation, or a sign-up.",
   },
   {
     question: "How do I open an XLSX spreadsheet without Excel?",
@@ -22,7 +27,7 @@ const faqs = [
   {
     question: "Is there a free PDF reader with text to speech for Windows?",
     answer:
-      "Yes. EleViewer has built-in PDF text-to-speech using the Windows speech engine (SAPI). Press F9 to toggle the TTS bar, choose a voice, and listen to any PDF page read aloud — hands-free. Because it uses native SAPI voices, you can read PDFs aloud offline with no internet connection required.",
+      "Yes. Open a PDF, select a passage if you want to hear only that section, and press F9 to show the Read Aloud controls. EleViewer uses Windows voices, so supported voices can work offline.",
   },
   {
     question: "What is the best free alternative to Microsoft Word Viewer?",
@@ -77,7 +82,7 @@ const faqs = [
   {
     question: "How do I open my course folder in EleViewer?",
     answer:
-      "Press Alt+V to toggle the Vault sidebar, then point it at your course folder in settings. Every file in the folder becomes one click away.",
+      "Press Alt+V to show the Vault sidebar, open Settings with Alt+S, and add your course folder. EleViewer keeps supported local files one click away and lets you switch between folders when you change courses.",
   },
   {
     question: "Does EleViewer save my files automatically?",
@@ -104,10 +109,10 @@ export function FAQ() {
           FAQ
         </p>
         <h2 className="text-balance text-3xl font-semibold tracking-tight text-foreground">
-          Common questions about EleViewer
+          Start using EleViewer with confidence
         </h2>
         <p className="mt-4 text-pretty text-[15px] leading-relaxed text-muted-foreground">
-          Key information about using EleViewer as a free Windows document viewer and study workspace.
+          The short answers to the questions that come up before your first study session.
         </p>
       </div>
       <Accordion.Root type="single" collapsible className="mt-10 grid gap-4 sm:grid-cols-2">

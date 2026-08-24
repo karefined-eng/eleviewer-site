@@ -20,44 +20,44 @@ const features = [
   },
   {
     icon: FolderTree,
-    title: "Vault sidebar",
-    body: "Point EleViewer at your course folders and all supported files are one click away in the sidebar. Toggle it with Alt+V and stay in flow.",
+        title: "Keep a course folder close",
+        body: "Point EleViewer at a course folder and keep its supported files one click away in the sidebar. Toggle it with Alt+V whenever you need it.",
     docSlug: "vault-explorer",
   },
   {
     icon: Zap,
-    title: "Quick switcher",
-    body: "Ctrl+Q opens a fuzzy-search dialog over your recent and pinned files, similar to the quick file switcher in VSCode. Type three letters, hit Enter, keep working.",
+        title: "Find the next file fast",
+        body: "Press Ctrl+Q to search recent and pinned files without digging through folders. Type a few letters, press Enter, and keep working.",
     docSlug: "master-index",
   },
   {
     icon: History,
-    title: "Session restore",
-    body: "Put your laptop to sleep or close EleViewer in the middle of a study session. Reopen EleViewer and your previous tabs are restored — including file order and active tab, when the files are still available.",
+        title: "Pick up where you stopped",
+        body: "Close EleViewer in the middle of a study session and reopen it later with your tabs restored, including the active tab when the files are still available.",
     docSlug: "overview",
   },
   {
     icon: Bookmark,
-    title: "Persistent bookmarks",
-    body: "Bookmark PDF pages and files in a dedicated panel. Your place in long PDFs (such as a 400-page textbook) is preserved across sessions.",
+        title: "Save your place",
+        body: "Bookmark pages and files in a dedicated panel so you can return to the important part of a long reading tomorrow.",
     docSlug: "pdf-and-tts",
   },
   {
     icon: Globe,
-    title: "Built-in web panel",
-    body: "Open a browser side-by-side with your notes using Ctrl+T. Browse web pages in a built-in panel without switching away from your notes window.",
+        title: "Look things up beside your notes",
+        body: "Press Ctrl+T to open a browser panel beside your documents, so you can check a source without losing your place.",
     docSlug: "html-and-web",
   },
   {
     icon: Search,
-    title: "Find & replace",
-    body: "Ctrl+F to find, Ctrl+H to replace — across any open document. Works in every text-based format EleViewer supports.",
+        title: "Search inside your notes",
+        body: "Press Ctrl+F to find text or Ctrl+H to replace it across any open text-based document.",
     docSlug: "master-index",
   },
   {
     icon: Save,
-    title: "Autosave",
-    body: "Background saving runs automatically to reduce the risk of losing work. Configurable interval in settings.",
+        title: "Keep your work safe",
+        body: "Background saving runs automatically to reduce the risk of losing notes. You can adjust the interval in Settings.",
     docSlug: "markdown-editor",
   },
 ]
@@ -67,13 +67,13 @@ export function Features() {
     <section id="features" className="mx-auto max-w-5xl scroll-mt-20 px-5 pb-16 sm:pb-24">
       <div className="mb-12 max-w-xl">
         <p className="mb-3 font-mono text-xs uppercase tracking-widest text-accent">
-          Features
+          Your first study session
         </p>
         <h2 className="text-balance text-3xl font-semibold tracking-tight text-foreground">
-          A focused study workspace, not a heavy, multi-gigabyte office suite
+          Everything you need to start studying in one window
         </h2>
         <p className="mt-4 text-pretty text-[15px] leading-relaxed text-muted-foreground">
-          Core tools to read, write, and organize coursework — without large background services or heavy dependencies that slow older laptops.
+          Open a reading, listen when your eyes need a break, save your place, and return to the same work later — without switching between several heavy apps.
         </p>
       </div>
       <div className="grid gap-px overflow-hidden rounded-xl border border-border bg-border sm:grid-cols-2 lg:grid-cols-4">
@@ -92,7 +92,7 @@ export function Features() {
               href={`/docs/${f.docSlug}`}
               className="mt-2 flex items-center gap-1 font-mono text-[11px] text-muted-foreground hover:text-accent transition-colors"
             >
-              Read Manual <ArrowRight className="h-3 w-3" />
+              See how it works <ArrowRight className="h-3 w-3" />
             </Link>
           </div>
         ))}
