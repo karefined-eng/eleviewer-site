@@ -22,7 +22,7 @@ export function Hero() {
           A lightweight Windows study workspace for the files your professors assign.
         </h2>
         <p className="mx-auto mt-4 max-w-xl text-pretty text-[15px] leading-relaxed text-muted-foreground">
-          Open PDFs, Word files, slides, spreadsheets, Markdown, and notes without Microsoft Office. Listen to PDFs aloud, keep a course folder in one local vault, and return to the same session tomorrow. No account. No cloud upload. Completely free.
+          Open PDFs, Word files, slides, spreadsheets, Markdown, and notes without Microsoft Office. Listen to supported readings aloud, keep a course folder in one local vault, and return to the same session tomorrow. No account. No cloud upload. Completely free.
         </p>
 
         <MobileReminder />

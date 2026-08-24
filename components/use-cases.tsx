@@ -4,7 +4,7 @@ export function UseCases() {
       <div className="rounded-3xl border border-border bg-panel p-8 shadow-sm">
         <div className="max-w-3xl">
           <p className="mb-3 font-mono text-xs uppercase tracking-widest text-accent">
-            Native Nuitka C++ Compilation — &lt;100ms cold-start on Windows 10/11
+            Open a file. Press F9. Keep studying.
           </p>
           <h2 className="text-balance text-3xl font-semibold tracking-tight text-foreground">
             One local workspace for the files your course already uses
@@ -24,7 +24,7 @@ export function UseCases() {
           <div className="rounded-3xl border border-border bg-background p-6">
               <h3 className="text-sm font-semibold text-foreground">Listen to readings while you study</h3>
             <p className="mt-2 text-sm leading-relaxed text-muted-foreground">
-              Use built-in Windows voices to read selected text or a full PDF aloud while you walk, commute, or rest your eyes.
+              Use built-in Windows voices to read selected text or supported documents aloud while you walk, commute, or rest your eyes.
             </p>
           </div>
           <div className="rounded-3xl border border-border bg-background p-6">

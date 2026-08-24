@@ -98,7 +98,7 @@ export function StructuredData() {
             "name": "How can I read a PDF aloud on Windows for free?",
             "acceptedAnswer": {
               "@type": "Answer",
-              "text": "EleViewer has built-in PDF text-to-speech that uses the Windows speech engine (SAPI) to read any PDF page aloud. Press F9 to toggle the TTS reader bar, select a voice, and listen hands-free. It works offline with no internet required."
+              "text": "EleViewer has built-in Read Aloud using the Windows speech engine (SAPI). Open a supported document, select a passage if you want to hear only that section, and press F9 to show the reader controls. Supported Windows voices can work offline with no internet connection required."
             }
           },
           {

@@ -7,13 +7,13 @@ export function NightlyExplainer() {
         <div className="rounded-2xl border border-border bg-panel/30 p-8 md:p-12 shadow-sm relative">
           <div className="max-w-3xl">
             <span className="inline-flex items-center gap-2 rounded-full border border-border bg-panel px-3 py-1 font-mono text-xs font-medium text-muted-foreground uppercase tracking-wider mb-4">
-              🚀 Community Program
+              Optional next step
             </span>
             <h2 className="text-3xl font-bold tracking-tight text-foreground sm:text-4xl">
-              What is Nightly Insiders?
+              Help shape what Eleviewer becomes next
             </h2>
             <p className="mt-4 text-base text-muted-foreground leading-relaxed sm:text-lg">
-              Nightly Insiders is our official early-access community of students, power users, and developers who test new builds, report issues, and propose features for EleViewer. Instead of waiting for major public releases, Insiders receive frequent pre-release builds and can give feedback directly to the core developer via chat and GitHub issues.
+              Once you have tried the core workflow, Nightly Insiders is an optional community for students, power users, and developers who want to test new builds, report issues, and suggest features. You can use EleViewer without joining, and the public release remains the simplest place to start.
             </p>
 
             <div className="mt-8 grid gap-6 sm:grid-cols-3">
@@ -47,11 +47,11 @@ export function NightlyExplainer() {
                 href="/community"
                 className="flex h-11 items-center justify-center gap-2 rounded-lg bg-primary px-6 text-sm font-medium text-primary-foreground transition-opacity hover:opacity-90 shadow-sm"
               >
-                Join Nightly Insiders on WhatsApp
+                Explore the community
                 <ArrowRight className="h-4 w-4" />
               </a>
               <span className="text-xs text-muted-foreground font-mono">
-                100% free · Opt-in anytime
+                Optional · Join only if useful
               </span>
             </div>
           </div>

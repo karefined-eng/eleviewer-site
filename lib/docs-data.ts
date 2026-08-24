@@ -39,19 +39,19 @@ export interface DocCategory {
 export const DOCS_CATEGORIES: DocCategory[] = [
   {
     slug: "getting-started",
-    title: "Getting Started",
-    description: "Installation, portable execution, and offline workspace architecture.",
+    title: "Start studying",
+    description: "Open your first file, try Read Aloud, and set up a local course folder.",
     topics: [
-      { slug: "overview", title: "Application Architecture & Setup" },
-      { slug: "vault-explorer", title: "Vaults & FTS5 Indexing" },
+      { slug: "overview", title: "Your first study session" },
+      { slug: "vault-explorer", title: "Course folders & file search" },
     ],
   },
   {
     slug: "workstations",
-    title: "Document Readers & Viewers",
-    description: "Tools for offline reading, basic text and annotation editing, and document analysis features such as text search, keyword highlighting, and page-by-page content inspection.",
+    title: "Read, write, and organize",
+    description: "Open readings and notes, listen aloud, save your place, and keep common course formats together.",
     topics: [
-      { slug: "pdf-and-tts", title: "PDF Reader & Universal TTS" },
+      { slug: "pdf-and-tts", title: "Read PDFs & listen aloud" },
       { slug: "markdown-editor", title: "Markdown & Plain Text Editor" },
       { slug: "csv-table", title: "CSV Table Editor & Viewer" },
       { slug: "office-viewers", title: "Office Docs (DOCX, XLSX, PPTX)" },
@@ -60,16 +60,16 @@ export const DOCS_CATEGORIES: DocCategory[] = [
   },
   {
     slug: "shortcuts",
-    title: "Keyboard Shortcuts & Hotkeys",
-    description: "Learn keyboard shortcuts for navigating pages, switching between documents, controlling zoom, and managing application windows without using the mouse.",
+    title: "Shortcuts for later",
+    description: "Learn the few shortcuts that make opening, finding, and returning to study files faster.",
     topics: [
-      { slug: "master-index", title: "Master Shortcut & Command Index" },
+      { slug: "master-index", title: "Shortcut reference" },
     ],
   },
   {
     slug: "security-and-data",
-    title: "Data Sovereignty & Security",
-    description: "Atomic file writing, background draft recovery, and storage of all documents and configuration files on the local Windows file system only (no cloud sync or remote storage).",
+    title: "Files and privacy",
+    description: "Understand where EleViewer stores settings and drafts, how recovery works, and why your documents stay local.",
     topics: [
       { slug: "atomic-writes", title: "Atomic Writes & Auto-Save" },
       { slug: "local-storage", title: "Local Storage & Zero Telemetry" },
@@ -77,8 +77,8 @@ export const DOCS_CATEGORIES: DocCategory[] = [
   },
   {
     slug: "troubleshooting",
-    title: "Troubleshooting & Support",
-    description: "Fixing issues with missing or non-working Windows system voices, configuring the embedded web rendering engine, and submitting bug reports or feature requests to the development team.",
+    title: "When something needs fixing",
+    description: "Solve Read Aloud, browser-panel, and document issues, or send feedback to the developer.",
     topics: [
       { slug: "faq-and-support", title: "FAQ & Developer Support" },
     ],
@@ -348,17 +348,17 @@ export const DOCS_TOPICS: DocTopic[] = [
   },
   {
     slug: "master-index",
-    title: "Master Shortcut & Command Index",
-    category: "Keyboard Shortcuts & Hotkeys",
+    title: "Shortcut reference",
+    category: "Shortcuts for later",
     categorySlug: "shortcuts",
-    eyebrow: "Shortcut Reference",
-    description: "Complete exhaustive tabular reference of all keyboard shortcuts, hotkeys, and application commands.",
+    eyebrow: "Shortcuts to learn later",
+    description: "A complete reference for opening, finding, reading, and organizing files faster.",
     sections: [
       {
         id: "navigation-shortcuts",
         title: "File Navigation & Vault Commands",
         table: {
-          headers: ["Shortcut", "Command Name", "Technical Description"],
+          headers: ["Shortcut", "Action", "What it does"],
           rows: [
             ["Ctrl + Q", "Quick Switcher", "Summons fuzzy search dialog to filter and open vault files instantly."],
             ["Alt + V", "Toggle Vault Sidebar", "Expands or collapses left-hand directory tree for full-screen focus."],
@@ -373,7 +373,7 @@ export const DOCS_TOPICS: DocTopic[] = [
         id: "tab-shortcuts",
         title: "Tab & Window Management",
         table: {
-          headers: ["Shortcut", "Command Name", "Technical Description"],
+          headers: ["Shortcut", "Action", "What it does"],
           rows: [
             ["Ctrl + T", "New Web Tab", "Launches integrated web browser panel in a new workspace tab."],
             ["Ctrl + W", "Close Tab", "Closes active document or web tab and releases buffer memory."],
@@ -386,7 +386,7 @@ export const DOCS_TOPICS: DocTopic[] = [
         id: "reading-shortcuts",
         title: "Reading, Search & Study Reflexes",
         table: {
-          headers: ["Shortcut", "Command Name", "Technical Description"],
+          headers: ["Shortcut", "Action", "What it does"],
           rows: [
             ["F9", "Universal Read Aloud", "Toggles text-to-speech engine for full document or text selection."],
             ["Ctrl + D", "Bookmark Position", "Drops persistent bookmark at current scroll line or PDF page number."],
@@ -399,7 +399,7 @@ export const DOCS_TOPICS: DocTopic[] = [
         id: "system-shortcuts",
         title: "System & Global Utilities",
         table: {
-          headers: ["Shortcut", "Command Name", "Technical Description"],
+          headers: ["Shortcut", "Action", "What it does"],
           rows: [
             ["Alt + E", "System-Wide Quick Note", "Global Windows hotkey: Brings EleViewer to front and opens scratchpad from anywhere in OS."],
             ["Alt + S", "Open Settings Dialog", "Opens workspace configuration for themes, vaults, and preferences."],
@@ -412,7 +412,7 @@ export const DOCS_TOPICS: DocTopic[] = [
   {
     slug: "atomic-writes",
     title: "Atomic Writes & Auto-Save",
-    category: "Data Sovereignty & Security",
+    category: "Files and privacy",
     categorySlug: "security-and-data",
     eyebrow: "Crash Protection",
     description: "Technical engineering behind 60-second background draft saving and atomic zero-byte corruption prevention.",
@@ -463,7 +463,7 @@ def atomic_write(target_path: Path, content: str) -> None:
   {
     slug: "local-storage",
     title: "Local Storage & Zero Telemetry",
-    category: "Data Sovereignty & Security",
+    category: "Files and privacy",
     categorySlug: "security-and-data",
     eyebrow: "Privacy Architecture",
     description: "Reference guide to local Windows AppData file structures, symlink guards, and zero-telemetry guarantees.",

@@ -9,10 +9,10 @@ export function DownloadCta() {
     <section className="border-t border-border bg-panel/40">
       <div className="mx-auto max-w-5xl px-5 py-20 text-center sm:py-28">
         <h2 className="mx-auto max-w-lg text-balance text-3xl font-semibold tracking-tight text-foreground sm:text-4xl">
-          Download it. Open your course documents. Pay nothing.
+          Download it. Open a course file. Press F9 when you want to listen.
         </h2>
         <p className="mx-auto mt-4 max-w-md text-pretty text-[15px] leading-relaxed text-muted-foreground">
-          One portable .exe for Windows 10/11. Download, double-click, and common course files (DOCX, XLSX, PPTX, PDF, Markdown, CSV, HTML, and TXT) just open.
+          One portable .exe for Windows 10/11. Download, double-click, press Ctrl+O to open a file, and use Alt+V later when you want a local course folder.
         </p>
         <div className="mt-8 flex flex-col items-center justify-center">
           <a

@@ -30,7 +30,7 @@ export default function DownloadPage() {
               Download EleViewer for Windows
             </h1>
             <p className="mt-3 text-pretty text-[15px] text-muted-foreground">
-              Download the current portable build, double-click it, and open your course files without an account or installation process.
+              Download the current portable build, double-click it, and start with a course file without an account or installation process.
             </p>
 
             <div className="mt-8 flex flex-col items-center justify-center gap-4">
@@ -65,6 +65,26 @@ export default function DownloadPage() {
                 </a>
               </p>
             </div>
+          </div>
+
+          <div className="mx-auto mt-10 max-w-3xl rounded-xl border border-border bg-panel/40 p-6 text-left">
+            <p className="font-mono text-xs font-semibold uppercase tracking-widest text-accent">
+              After you open EleViewer
+            </p>
+            <ol className="mt-4 grid gap-4 sm:grid-cols-3">
+              <li>
+                <p className="text-sm font-semibold text-foreground">1. Open a file</p>
+                <p className="mt-1 text-xs leading-relaxed text-muted-foreground">Press <kbd className="rounded border border-border bg-background px-1.5 py-0.5 font-mono text-[11px]">Ctrl+O</kbd> and choose a reading or note.</p>
+              </li>
+              <li>
+                <p className="text-sm font-semibold text-foreground">2. Try Read Aloud</p>
+                <p className="mt-1 text-xs leading-relaxed text-muted-foreground">Select a passage and press <kbd className="rounded border border-border bg-background px-1.5 py-0.5 font-mono text-[11px]">F9</kbd> to listen.</p>
+              </li>
+              <li>
+                <p className="text-sm font-semibold text-foreground">3. Add your folder</p>
+                <p className="mt-1 text-xs leading-relaxed text-muted-foreground">Press <kbd className="rounded border border-border bg-background px-1.5 py-0.5 font-mono text-[11px]">Alt+V</kbd> when you want course files one click away.</p>
+              </li>
+            </ol>
           </div>
 
           <div className="mt-16 grid gap-6 sm:grid-cols-2">
