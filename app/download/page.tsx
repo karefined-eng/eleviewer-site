@@ -1,8 +1,8 @@
 import type { Metadata } from "next"
-import { Download, Terminal, ShieldCheck, HardDrive, CheckCircle } from "lucide-react"
+import { Download, ShieldCheck, HardDrive, CheckCircle } from "lucide-react"
 import { SiteHeader } from "@/components/site-header"
 import { SiteFooter } from "@/components/site-footer"
-import { DOWNLOAD_URL, GITHUB_URL } from "@/lib/links"
+import { DOWNLOAD_URL, GITHUB_URL, LATEST_RELEASE_VERSION } from "@/lib/links"
 
 export const metadata: Metadata = {
   title: "Download EleViewer — Free Windows Document Viewer & Study Workspace",
@@ -24,13 +24,13 @@ export default function DownloadPage() {
           <div className="mx-auto max-w-2xl text-center">
             <p className="mb-4 inline-flex items-center gap-2 rounded-full border border-border bg-panel px-3 py-1 font-mono text-xs font-medium text-muted-foreground uppercase tracking-wider">
               <span className="h-1.5 w-1.5 rounded-full bg-accent" />
-              EleViewer v1.3.0 release for Windows 10 and Windows 11
+              EleViewer v{LATEST_RELEASE_VERSION} for Windows 10 and Windows 11
             </p>
             <h1 className="text-balance text-3xl font-bold tracking-tight sm:text-4xl">
               Download EleViewer for Windows
             </h1>
             <p className="mt-3 text-pretty text-[15px] text-muted-foreground">
-              One portable .exe file. Download, double-click, and open your course files quickly, without installation or setup.
+              Download the current portable build, double-click it, and open your course files without an account or installation process.
             </p>
 
             <div className="mt-8 flex flex-col items-center justify-center gap-4">
@@ -39,7 +39,7 @@ export default function DownloadPage() {
                 className="flex h-11 items-center justify-center gap-2 rounded-lg bg-primary px-6 text-sm font-medium text-primary-foreground transition-opacity hover:opacity-90 shadow-sm"
               >
                 <Download className="h-4 w-4" />
-                Download EleViewer.exe (v1.3.0)
+                Download EleViewer.exe (v{LATEST_RELEASE_VERSION})
               </a>
 
               <div className="rounded-lg border border-border bg-panel p-4 max-w-md w-full text-left">
@@ -91,15 +91,20 @@ export default function DownloadPage() {
 
             <div className="rounded-xl border border-border bg-panel p-6">
               <h2 className="flex items-center gap-2 text-base font-semibold text-foreground">
-                <Terminal className="h-5 w-5 text-accent" />
-                Install via Windows Package Manager
+                <ShieldCheck className="h-5 w-5 text-accent" />
+                Verify before you run it
               </h2>
-              <p className="mt-2 text-xs text-muted-foreground">
-                Prefer using the command-line interface (CLI)? Install directly via the Windows Package Manager (winget):
+              <p className="mt-2 text-xs leading-relaxed text-muted-foreground">
+                This is an unsigned open-source Windows build, so SmartScreen may show an “Unknown Publisher” warning. Compare the SHA-256 checksum above and use the official GitHub release page if you need to verify the source.
               </p>
-              <div className="mt-3 flex items-center justify-between gap-2 rounded border border-border/80 bg-muted/40 p-2.5 font-mono text-xs text-foreground">
-                <code className="select-all">winget install karefined-eng.EleViewer</code>
-              </div>
+              <a
+                href={`${GITHUB_URL}/releases`}
+                target="_blank"
+                rel="noreferrer"
+                className="mt-3 inline-flex text-xs font-medium text-foreground underline underline-offset-4 hover:text-accent"
+              >
+                Open the official release page
+              </a>
             </div>
           </div>
         </section>

@@ -16,17 +16,13 @@ export function Hero() {
           Free &amp; open source · Windows 10/11
         </p>
         <h1 className="text-balance text-4xl font-semibold tracking-tight text-foreground sm:text-5xl">
-          The Lightweight Open Source Study Workspace for Windows (PDF, DOCX, Markdown)
+          Open your course files. Listen to your readings. Keep studying locally.
         </h1>
         <h2 className="mx-auto mt-5 max-w-xl text-pretty text-lg font-medium text-foreground">
-          The open source study workspace for the DOCX, XLSX, PPTX, PDF, Markdown, CSV, HTML, and TXT files your professors assign.
+          A lightweight Windows study workspace for the files your professors assign.
         </h2>
         <p className="mx-auto mt-4 max-w-xl text-pretty text-[15px] leading-relaxed text-muted-foreground">
-          Open and make basic edits to DOCX, XLSX, PPTX, PDF, Markdown, CSV, HTML, and TXT
-          without Microsoft Office — all in one portable .exe with text-to-speech,
-          a sidebar-based file organizer (“vault”), find &amp; replace, autosave,
-          a built-in web browser panel, and session restore. No install. No account.
-          Completely free to use with no in-app purchases or subscriptions.
+          Open PDFs, Word files, slides, spreadsheets, Markdown, and notes without Microsoft Office. Listen to PDFs aloud, keep a course folder in one local vault, and return to the same session tomorrow. No account. No cloud upload. Completely free.
         </p>
 
         <MobileReminder />
@@ -54,7 +50,7 @@ export function Hero() {
 
         <div className="mt-6 mx-auto max-w-md rounded-lg border border-border bg-panel/50 p-4 text-left font-mono text-xs text-muted-foreground leading-relaxed">
           <p className="leading-relaxed">
-            <span className="font-semibold text-foreground">ℹ️ SmartScreen Notice:</span> Windows may show an "Unknown Publisher" warning because this portable binary is open source and un-signed. Click <strong>"More info"</strong> and then <strong>"Run anyway"</strong>.{" "}
+            <span className="font-semibold text-foreground">Before you open it:</span> Windows may show an "Unknown Publisher" warning because this free open-source build is not digitally signed. Download only from the official release page, compare the checksum, then click <strong>"More info"</strong> and <strong>"Run anyway"</strong>.{" "}
             <a
               href="https://github.com/karefined-eng/eleviewer"
               className="underline hover:text-foreground transition-colors"
@@ -67,7 +63,7 @@ export function Hero() {
         </div>
 
         <p className="mt-4 font-mono text-xs text-muted-foreground">
-          GPLv3 licensed · portable .exe · no telemetry (no usage analytics or tracking sent from the app)
+          GPLv3 licensed · portable .exe · no account · no telemetry
         </p>
       </div>
 
