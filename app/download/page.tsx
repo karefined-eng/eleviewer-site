@@ -2,7 +2,7 @@ import type { Metadata } from "next"
 import { Download, ShieldCheck, HardDrive, CheckCircle } from "lucide-react"
 import { SiteHeader } from "@/components/site-header"
 import { SiteFooter } from "@/components/site-footer"
-import { DOWNLOAD_URL, GITHUB_URL, LATEST_RELEASE_VERSION } from "@/lib/links"
+import { DOWNLOAD_URL, GITHUB_URL, LATEST_RELEASE_VERSION, LATEST_RELEASE_SHA256 } from "@/lib/links"
 
 export const metadata: Metadata = {
   title: "Download EleViewer — Free Windows Document Viewer & Study Workspace",
@@ -14,7 +14,7 @@ export const metadata: Metadata = {
 }
 
 export default function DownloadPage() {
-  const sha256Hash = process.env.NEXT_PUBLIC_SHA256 ?? "See GitHub Releases"
+  const sha256Hash = process.env.NEXT_PUBLIC_SHA256 ?? LATEST_RELEASE_SHA256
 
   return (
     <div className="flex min-h-screen flex-col bg-background text-foreground">
