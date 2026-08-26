@@ -6,6 +6,7 @@ import { GITHUB_URL, ISSUES_URL, LICENSE_URL } from "@/lib/links"
 export const metadata: Metadata = {
   title: "Privacy Policy — EleViewer",
   description: "EleViewer privacy policy: 100% local processing, zero telemetry, zero analytics.",
+  alternates: { canonical: "/privacy" },
 }
 
 export default function PrivacyPage() {

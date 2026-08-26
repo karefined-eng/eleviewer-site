@@ -1,0 +1,13 @@
+name: SEO audit
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+
+jobs:
+  seo:
+    uses: karefined-eng/website-seo-automation/.github/workflows/seo-audit-reusable.yml@main
+    with:
+      config-path: seo.config.json

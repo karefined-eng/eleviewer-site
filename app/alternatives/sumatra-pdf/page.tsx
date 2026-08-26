@@ -3,6 +3,7 @@ import { Metadata } from "next"
 export const metadata: Metadata = {
   title: "EleViewer vs Sumatra PDF — Free Document Viewer Alternative",
   description: "Comparing EleViewer and Sumatra PDF for Windows. See which portable PDF and document reader is right for your study workflow.",
+  alternates: { canonical: "/alternatives/sumatra-pdf" },
 }
 
 export default function SumatraAlternativePage() {

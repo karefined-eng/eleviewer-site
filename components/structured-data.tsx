@@ -49,12 +49,6 @@ export function StructuredData() {
           "url": "https://github.com/karefined-eng/eleviewer/releases"
         },
         "downloadUrl": "https://github.com/karefined-eng/eleviewer/releases/latest/download/EleViewer.exe",
-        "aggregateRating": {
-          "@type": "AggregateRating",
-          "ratingValue": "4.8",
-          "ratingCount": "12",
-          "bestRating": "5"
-        }
       },
       {
         "@type": "WebSite",

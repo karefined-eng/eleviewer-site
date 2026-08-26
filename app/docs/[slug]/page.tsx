@@ -23,6 +23,9 @@ export async function generateMetadata({
   return {
     title: `${topic.title} | EleViewer Documentation`,
     description: topic.description,
+    alternates: {
+      canonical: `/docs/${topic.slug}`,
+    },
   };
 }
 

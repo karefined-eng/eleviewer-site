@@ -6,6 +6,7 @@ import { DOWNLOAD_URL } from "@/lib/links";
 export const metadata = {
   title: "How to Start Studying with EleViewer | EleViewer",
   description: "Learn how to open course files, listen to PDFs, set up a local course folder, and return to your study session in EleViewer.",
+  alternates: { canonical: "/docs" },
 };
 
 export default function DocsOverviewPage() {

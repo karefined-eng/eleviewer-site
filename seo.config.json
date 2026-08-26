@@ -1,0 +1,54 @@
+{
+  "siteUrl": "https://eleviewer.vercel.app",
+  "framework": "source",
+  "sourceChecks": [
+    {
+      "file": "app/layout.tsx",
+      "contains": [
+        "metadataBase:",
+        "alternates:",
+        "openGraph:",
+        "twitter:",
+        "robots:"
+      ],
+      "siteUrlMarker": true
+    },
+    {
+      "file": "app/robots.ts",
+      "contains": [
+        "sitemap:",
+        "host:",
+        "allow: \"/\""
+      ],
+      "siteUrlMarker": true
+    },
+    {
+      "file": "app/sitemap.ts",
+      "contains": [
+        "DOCS_TOPICS.map",
+        "${baseUrl}/docs/${topic.slug}",
+        "${baseUrl}/download",
+        "${baseUrl}/privacy"
+      ],
+      "siteUrlMarker": true
+    },
+    {
+      "file": "components/structured-data.tsx",
+      "contains": [
+        "application/ld+json",
+        "SoftwareApplication",
+        "WebSite",
+        "FAQPage"
+      ],
+      "siteUrlMarker": true
+    },
+    {
+      "file": "app/docs/[slug]/page.tsx",
+      "contains": [
+        "generateMetadata",
+        "alternates",
+        "canonical: `/docs/${topic.slug}`"
+      ]
+    }
+  ]
+}

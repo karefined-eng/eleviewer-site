@@ -2,6 +2,12 @@ import { SiteHeader } from "@/components/site-header"
 import { SiteFooter } from "@/components/site-footer"
 import { InteractiveDemo } from "~features/demo-browser/components/interactive-demo"
 
+export const metadata = {
+  title: "Try EleViewer Live — Browser Demo",
+  description: "Test-drive EleViewer in your browser with sample PDF, Markdown, CSV, and document-viewer workflows before downloading the Windows app.",
+  alternates: { canonical: "/demo" },
+}
+
 export default function DemoPage() {
   return (
     <div className="flex min-h-screen flex-col">
