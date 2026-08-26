@@ -10,6 +10,6 @@ on:
 
 jobs:
   seo:
-    uses: karefined-eng/website-seo-automation/.github/workflows/seo-audit-reusable.yml@main
+    uses: karefined-eng/website-seo-automation/.github/workflows/seo-audit-reusable.yml@537bd9333f8142eb7bdc5496b6a9dc55a9a2847b # main
     with:
       config-path: seo.config.json
