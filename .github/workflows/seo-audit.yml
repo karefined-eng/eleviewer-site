@@ -1,5 +1,7 @@
 name: SEO audit
 
+# The shared engine is public and contains no repository secrets.
+
 on:
   push:
     branches: [main]
