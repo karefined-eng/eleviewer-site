@@ -11,9 +11,9 @@ export function StructuredData() {
         "applicationCategory": "UtilitiesApplication",
         "applicationSubCategory": "Document Viewer",
         "description": "Free portable Windows document viewer and study workspace. Opens DOCX, XLSX, PPTX, PDF, Markdown, CSV, HTML, and TXT with text-to-speech, file vault, and session restore. No install, no account, no cost.",
-        "softwareVersion": "1.3.0",
+        "softwareVersion": "1.3.1",
         "license": "https://github.com/karefined-eng/eleviewer/blob/main/LICENSE",
-        "fileSize": "220MB",
+        "fileSize": "135MB",
         "releaseNotes": "https://github.com/karefined-eng/eleviewer/releases",
         "featureList": [
           "Open DOCX files without Microsoft Word",

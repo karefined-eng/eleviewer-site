@@ -2,7 +2,7 @@
 
 This is the marketing and landing site for [EleViewer](https://github.com/karefined-eng/eleviewer), a lightweight, portable document editor and study workspace for Windows. 
 
-EleViewer solves a specific problem for students: juggling several heavy apps just to read a PDF, write notes, and view a Word document. It brings those workflows into one ~129MB portable Windows executable with built-in text-to-speech for PDFs.
+EleViewer solves a specific problem for students: juggling several heavy apps just to read a PDF, write notes, and view a Word document. It brings those workflows into one ~135MB portable Windows executable with built-in text-to-speech for PDFs.
 
 ## 🔗 Links
 - **Live Website**: [eleviewer.vercel.app](https://eleviewer.vercel.app)
@@ -24,7 +24,7 @@ Opens & edits **DOCX, XLSX, PDF, MD, TXT and HTML** — all in one workspace.
 - **Session restore** — reopens all tabs right where you left off.
 
 ### 💻 Specs
-- ~129 MB, single portable `.exe` — no traditional installation needed.
+- ~135 MB, single portable `.exe` — no traditional installation needed.
 - No account, no telemetry — files stay local.
 
 ## 🛠️ Development

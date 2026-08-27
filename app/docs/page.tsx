@@ -1,6 +1,6 @@
 import Link from "next/link";
 import { DOCS_CATEGORIES } from "@/lib/docs-data";
-import { ArrowRight, BookOpen, Download, Terminal, Shield, Keyboard, FileText } from "lucide-react";
+import { ArrowRight, BookOpen, Download, Terminal, Shield, Keyboard, FileText, Bookmark, Bug } from "lucide-react";
 import { DOWNLOAD_URL } from "@/lib/links";
 
 export const metadata = {
@@ -49,10 +49,63 @@ export default function DocsOverviewPage() {
             href={DOWNLOAD_URL}
             className="flex h-11 items-center justify-center gap-2 rounded-lg border border-border bg-transparent px-6 text-sm font-medium text-foreground transition-colors hover:bg-panel"
           >
-            <Download className="h-4 w-4" /> Download for Windows (~129 MB)
+            <Download className="h-4 w-4" /> Download for Windows (~135 MB)
           </a>
         </div>
       </div>
+
+      {/* Quick Help Actions */}
+      <section className="flex flex-col gap-5" aria-labelledby="quick-help-heading">
+        <div>
+          <p className="font-mono text-[11px] font-medium uppercase tracking-wider text-muted-foreground">Quick help</p>
+          <h2 id="quick-help-heading" className="mt-2 text-xl font-semibold tracking-tight text-foreground">
+            What are you trying to do?
+          </h2>
+        </div>
+        <div className="grid grid-cols-1 gap-4 md:grid-cols-3">
+          <Link
+            href="/docs/overview"
+            className="group rounded-lg border border-border bg-panel/30 p-5 transition-colors hover:bg-panel/60"
+          >
+            <FileText className="h-5 w-5 text-accent" />
+            <h3 className="mt-3 font-semibold text-foreground">Keep two files open</h3>
+            <p className="mt-2 text-sm leading-relaxed text-muted-foreground">
+              Open your document, then open the PDF you need in another tab.
+            </p>
+            <span className="mt-4 inline-flex items-center gap-1 text-sm font-medium text-accent">
+              Show me how <ArrowRight className="h-3.5 w-3.5 transition-transform group-hover:translate-x-0.5" />
+            </span>
+          </Link>
+          <Link
+            href="/docs/pdf-and-tts"
+            className="group rounded-lg border border-border bg-panel/30 p-5 transition-colors hover:bg-panel/60"
+          >
+            <Bookmark className="h-5 w-5 text-accent" />
+            <h3 className="mt-3 font-semibold text-foreground">Read and save your place</h3>
+            <p className="mt-2 text-sm leading-relaxed text-muted-foreground">
+              Use Read Aloud, save a bookmark, and return to the same page later.
+            </p>
+            <span className="mt-4 inline-flex items-center gap-1 text-sm font-medium text-accent">
+              Open reading help <ArrowRight className="h-3.5 w-3.5 transition-transform group-hover:translate-x-0.5" />
+            </span>
+          </Link>
+          <a
+            href="https://github.com/karefined-eng/eleviewer/issues/new"
+            target="_blank"
+            rel="noreferrer"
+            className="group rounded-lg border border-border bg-panel/30 p-5 transition-colors hover:bg-panel/60"
+          >
+            <Bug className="h-5 w-5 text-accent" />
+            <h3 className="mt-3 font-semibold text-foreground">Something is not working?</h3>
+            <p className="mt-2 text-sm leading-relaxed text-muted-foreground">
+              Report a bug or suggest a feature. Never attach private course files.
+            </p>
+            <span className="mt-4 inline-flex items-center gap-1 text-sm font-medium text-accent">
+              Open issue form <ArrowRight className="h-3.5 w-3.5 transition-transform group-hover:translate-x-0.5" />
+            </span>
+          </a>
+        </div>
+      </section>
 
       {/* Categories Overview Grid */}
       <div className="flex flex-col gap-6">
@@ -103,7 +156,7 @@ export default function DocsOverviewPage() {
       {/* Offline Notice Box */}
       <div className="rounded-lg border border-border bg-panel/50 p-6 text-left font-mono text-xs text-muted-foreground leading-relaxed flex flex-col gap-2">
         <span className="font-semibold text-foreground text-sm flex items-center gap-2">
-          ℹ️ Need help offline?
+          Offline help is built in
         </span>
         <p>
           The same beginner and reference guides are included with every EleViewer desktop release. Press <kbd className="rounded border border-border bg-background px-1.5 py-0.5 text-[11px] font-semibold text-foreground">F1</kbd> or open <strong className="text-foreground">Help → Getting Started Guide</strong> in EleViewer to read them without an internet connection.
