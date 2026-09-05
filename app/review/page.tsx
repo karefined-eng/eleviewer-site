@@ -1,6 +1,6 @@
 "use client"
 
-import { useState, useEffect } from "react"
+import { useState } from "react"
 import { SiteHeader } from "@/components/site-header"
 import { SiteFooter } from "@/components/site-footer"
 import { Check, Send, AlertCircle, MessageSquare, Terminal } from "lucide-react"
@@ -26,14 +26,6 @@ export default function ReviewPage() {
   const [isSubmitting, setIsSubmitting] = useState(false)
   const [status, setStatus] = useState<"idle" | "success" | "error">("idle")
   const [errorMessage, setErrorMessage] = useState("")
-
-  // Auto-detect environment context smoothly (only on client)
-  const [userAgentInfo, setUserAgentInfo] = useState("Unknown Browser")
-  useEffect(() => {
-    if (typeof window !== "undefined") {
-      setUserAgentInfo(window.navigator.userAgent)
-    }
-  }, [])
 
   const isFormValid = () => {
     if (category === "Bug Report") return bugAction.trim() && bugExpected.trim() && bugActual.trim()
@@ -63,13 +55,13 @@ export default function ReviewPage() {
       const res = await fetch("/api/feedback", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({
-          type: category,
-          description: generateDescription(),
-          version: "Web Form",
-          os_name: "Web Browser",
-          platform: userAgentInfo,
-        }),
+          body: JSON.stringify({
+            type: category,
+            description: generateDescription(),
+            version: "Web Form",
+            os_name: "Web Browser",
+            platform: "Browser",
+          }),
       })
 
       const data = await res.json()
@@ -111,7 +103,7 @@ export default function ReviewPage() {
             How can we improve your study flow?
           </h1>
           <p className="text-muted-foreground text-[15px] leading-relaxed max-w-xl mx-auto">
-            Your feedback skips intermediate channels (like email or social media) and is logged directly as an item in our GitHub repository. We regularly review all submitted feedback and use it to prioritize and design features that address the most common study workflows and pain points.
+            Your feedback is sent to our GitHub repository so the developer can review it. Please do not include passwords, private document content, or personal information. We review submissions to improve common study workflows and pain points.
           </p>
         </div>
 
@@ -134,6 +126,7 @@ export default function ReviewPage() {
             </div>
           ) : (
             <form onSubmit={handleSubmit} className="space-y-8 animate-in fade-in duration-300">
+              <input name="website" type="text" tabIndex={-1} autoComplete="off" aria-hidden="true" className="absolute -left-[9999px] h-px w-px opacity-0" />
               <div className="space-y-3">
                 <label className="block text-xs font-mono font-medium text-muted-foreground uppercase tracking-wider">
                   1. What kind of feedback?
