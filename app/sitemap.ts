@@ -38,6 +38,26 @@ export default function sitemap(): MetadataRoute.Sitemap {
       priority: 0.7,
     },
     {
+      url: `${baseUrl}/alternatives/microsoft-office-viewer`,
+      changeFrequency: "monthly",
+      priority: 0.8,
+    },
+    ...[
+      "open-docx-without-word",
+      "open-xlsx-without-excel",
+      "pdf-text-to-speech-windows",
+      "portable-document-viewer",
+    ].map((slug) => ({
+      url: `${baseUrl}/guides/${slug}`,
+      changeFrequency: "monthly" as const,
+      priority: 0.8,
+    })),
+    ...["students", "offline-study", "school-computers"].map((slug) => ({
+      url: `${baseUrl}/use-cases/${slug}`,
+      changeFrequency: "monthly" as const,
+      priority: 0.8,
+    })),
+    {
       url: `${baseUrl}/privacy`,
       changeFrequency: "yearly",
       priority: 0.5,
