@@ -1,6 +1,8 @@
 # EleViewer
 
-> The Lightweight Open Source Study Workspace for Windows (PDF, DOCX, Markdown)
+> The portable, offline study workspace for Windows
+
+EleViewer is a free, open-source Windows document viewer for students and people who need to work without Microsoft Office, an installer, or an internet connection.
 
 EleViewer is a free, portable Windows study workspace. It allows you to open DOCX, XLSX, PPTX, PDF, Markdown, CSV, HTML, and TXT without Microsoft Office in one portable app with PDF text-to-speech, built-in web browser, find & replace, autosave, file vault, and session restore.
 
