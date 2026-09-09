@@ -9,56 +9,58 @@ import {
   Search,
   Save,
   ArrowRight,
+  PenTool,
+  Lightbulb,
 } from "lucide-react"
 
 const features = [
+  {
+    icon: Globe,
+    title: "Split-Screen Web Browser",
+    body: "Press Ctrl+T to open a split-screen web browser with built-in downloads and smooth page zoom, so you can research without losing your place.",
+    docSlug: "html-and-web",
+  },
+  {
+    icon: FolderTree,
+    title: "Keep a course folder close",
+    body: "Point EleViewer at a course folder and keep its supported files one click away in the sidebar. Toggle it with Alt+V whenever you need it.",
+    docSlug: "vault-explorer",
+  },
+  {
+    icon: Zap,
+    title: "Find the next file fast",
+    body: "Press Ctrl+Q to search recent and pinned files without digging through folders. Type a few letters, press Enter, and keep working.",
+    docSlug: "master-index",
+  },
+  {
+    icon: History,
+    title: "Pick up where you stopped",
+    body: "Close EleViewer in the middle of a study session and reopen it later with your tabs restored, including the active tab when the files are still available.",
+    docSlug: "overview",
+  },
+  {
+    icon: Bookmark,
+    title: "Save your place",
+    body: "Bookmark pages and files in a dedicated panel so you can return to the important part of a long reading tomorrow.",
+    docSlug: "pdf-and-tts",
+  },
+  {
+    icon: PenTool,
+    title: "Global Quick Note",
+    body: "Press Alt+E to instantly open a quick scratchpad from anywhere in Windows to jot down an idea without losing your focus.",
+    docSlug: "overview",
+  },
+  {
+    icon: Lightbulb,
+    title: "Interactive Playground Tutorials",
+    body: "Learn power-user shortcuts and document manipulation through guided, step-by-step spotlight overlays directly inside the app.",
+    docSlug: "overview",
+  },
   {
     icon: Volume2,
     title: "PDFs that read to you",
     body: "Native Windows text-to-speech turns selectable text in lecture slides or readings into audio. (Windows 10/11 only)",
     docSlug: "pdf-and-tts",
-  },
-  {
-    icon: FolderTree,
-        title: "Keep a course folder close",
-        body: "Point EleViewer at a course folder and keep its supported files one click away in the sidebar. Toggle it with Alt+V whenever you need it.",
-    docSlug: "vault-explorer",
-  },
-  {
-    icon: Zap,
-        title: "Find the next file fast",
-        body: "Press Ctrl+Q to search recent and pinned files without digging through folders. Type a few letters, press Enter, and keep working.",
-    docSlug: "master-index",
-  },
-  {
-    icon: History,
-        title: "Pick up where you stopped",
-        body: "Close EleViewer in the middle of a study session and reopen it later with your tabs restored, including the active tab when the files are still available.",
-    docSlug: "overview",
-  },
-  {
-    icon: Bookmark,
-        title: "Save your place",
-        body: "Bookmark pages and files in a dedicated panel so you can return to the important part of a long reading tomorrow.",
-    docSlug: "pdf-and-tts",
-  },
-  {
-    icon: Globe,
-        title: "Look things up beside your notes",
-        body: "Press Ctrl+T to open a browser panel beside your documents, so you can check a source without losing your place.",
-    docSlug: "html-and-web",
-  },
-  {
-    icon: Search,
-        title: "Search inside your notes",
-        body: "Press Ctrl+F to find text or Ctrl+H to replace it across any open text-based document.",
-    docSlug: "master-index",
-  },
-  {
-    icon: Save,
-        title: "Keep your work safe",
-        body: "Background saving runs automatically to reduce the risk of losing notes. You can adjust the interval in Settings.",
-    docSlug: "markdown-editor",
   },
 ]
 

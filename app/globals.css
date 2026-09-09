@@ -69,3 +69,50 @@ body {
   background: var(--accent);
   color: var(--accent-foreground);
 }
+
+@keyframes morph-top {
+  0%, 100% { transform: translate(0, 0) rotate(0deg) scaleX(1); opacity: 1; }
+  12.5% { transform: translate(0, 5.5px) rotate(90deg) scaleX(1.2); opacity: 1; }
+  25% { transform: translate(0, 5.5px) rotate(60deg) scaleX(1.4); opacity: 1; }
+  37.5% { transform: translate(2.75px, 1.65px) rotate(45deg) scaleX(0.8); opacity: 1; }
+  50% { transform: translate(-2.75px, 1.65px) rotate(-45deg) scaleX(0.8); opacity: 1; }
+  62.5% { transform: translate(0, 2.75px) rotate(0deg) scaleX(1); opacity: 1; }
+  75% { transform: translate(0, 3.3px) rotate(0deg) scaleX(0.8); opacity: 1; }
+  87.5% { transform: translate(0, 0) rotate(0deg) scaleX(1); opacity: 0; }
+}
+
+@keyframes morph-mid {
+  0%, 100% { transform: translate(0, 0) rotate(0deg) scaleX(1); opacity: 1; }
+  12.5% { transform: translate(0, 0) rotate(0deg) scaleX(1.4); opacity: 1; }
+  25% { transform: translate(0, 0) rotate(0deg) scaleX(1.4); opacity: 1; }
+  37.5%, 50%, 62.5% { transform: translate(0, 0) rotate(0deg) scaleX(1); opacity: 0; }
+  75% { transform: translate(0, 0) rotate(45deg) scaleX(1.4); opacity: 1; }
+  87.5% { transform: translate(0, 0) rotate(0deg) scaleX(1); opacity: 1; }
+}
+
+@keyframes morph-bot {
+  0%, 100% { transform: translate(0, 0) rotate(0deg) scaleX(1); opacity: 1; }
+  12.5% { transform: translate(0, 0) rotate(0deg) scaleX(1); opacity: 0; }
+  25% { transform: translate(0, -5.5px) rotate(-60deg) scaleX(1.4); opacity: 1; }
+  37.5% { transform: translate(2.75px, -1.65px) rotate(-45deg) scaleX(0.8); opacity: 1; }
+  50% { transform: translate(-2.75px, -1.65px) rotate(45deg) scaleX(0.8); opacity: 1; }
+  62.5% { transform: translate(0, -2.75px) rotate(0deg) scaleX(1); opacity: 1; }
+  75% { transform: translate(0, -3.3px) rotate(0deg) scaleX(0.8); opacity: 1; }
+  87.5% { transform: translate(0, 0) rotate(0deg) scaleX(1); opacity: 0; }
+}
+
+.morph-top {
+  transform-box: fill-box;
+  transform-origin: center;
+  animation: morph-top 8s cubic-bezier(0.87, 0, 0.13, 1) infinite;
+}
+.morph-mid {
+  transform-box: fill-box;
+  transform-origin: center;
+  animation: morph-mid 8s cubic-bezier(0.87, 0, 0.13, 1) infinite;
+}
+.morph-bot {
+  transform-box: fill-box;
+  transform-origin: center;
+  animation: morph-bot 8s cubic-bezier(0.87, 0, 0.13, 1) infinite;
+}

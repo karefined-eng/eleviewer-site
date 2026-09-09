@@ -6,6 +6,7 @@ import { GitHubIcon } from "./github-icon"
 import { InteractiveDemo } from "~features/demo-browser/components/interactive-demo"
 import { MobileReminder } from "./mobile-reminder"
 import { GITHUB_URL, DOWNLOAD_URL } from "@/lib/links"
+import { MorphingLogo } from "./morphing-logo"
 
 export function Hero() {
   return (
@@ -73,6 +74,10 @@ export function Hero() {
         <p className="mt-3 font-mono text-xs text-muted-foreground">
           GPLv3 licensed · portable .exe · no account · no telemetry
         </p>
+      </div>
+
+      <div className="mt-12 flex justify-center">
+        <MorphingLogo size={160} />
       </div>
 
       <div className="mt-14 sm:mt-20">

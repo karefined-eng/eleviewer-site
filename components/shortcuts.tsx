@@ -15,6 +15,8 @@ const shortcuts = [
   { keys: ["Ctrl", "Shift", "T"], action: "Reopen a closed tab" },
   { keys: ["Ctrl", "Alt", "B"], action: "Show bookmarks" },
   { keys: ["Alt", "S"], action: "Open settings" },
+  { keys: ["Alt", "E"], action: "Open the global quick note scratchpad" },
+  { keys: ["Ctrl", "Alt", "T"], action: "Toggle distraction-free reading mode" },
 ]
 
 function Kbd({ children }: { children?: ReactNode }) {
