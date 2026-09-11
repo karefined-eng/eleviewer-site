@@ -22,7 +22,11 @@ export function TrustBar() {
             </div>
             <div>
               <p className="font-mono text-xs font-bold text-foreground">Private by default</p>
-              <p className="text-[11px] text-muted-foreground">Your documents stay on your computer</p>
+              <p className="text-[11px] text-muted-foreground">
+                <a href="/privacy/local-document-viewer" className="underline underline-offset-2 hover:text-foreground">
+                  Your documents stay local
+                </a>
+              </p>
             </div>
           </div>
 

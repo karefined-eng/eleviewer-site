@@ -30,7 +30,7 @@ export default function DownloadPage() {
               Download EleViewer for Windows
             </h1>
             <p className="mt-3 text-pretty text-[15px] text-muted-foreground">
-              Download the current portable build, double-click it, and start with a course file without an account or installation process.
+              Download the current portable build, double-click it, and start with a course file without an account or installation process. The executable is about 135 MB.
             </p>
 
             <div className="mt-8 flex flex-col items-center justify-center gap-4">
@@ -69,7 +69,10 @@ export default function DownloadPage() {
 
           <div className="mx-auto mt-10 max-w-3xl rounded-xl border border-border bg-panel/40 p-6 text-left">
             <p className="font-mono text-xs font-semibold uppercase tracking-widest text-accent">
-              After you open EleViewer
+              Your first study session
+            </p>
+            <p className="mt-2 text-sm text-muted-foreground">
+              Download, double-click the portable file, then use these three shortcuts to get started.
             </p>
             <ol className="mt-4 grid gap-4 sm:grid-cols-3">
               <li>

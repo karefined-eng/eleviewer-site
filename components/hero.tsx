@@ -48,6 +48,12 @@ export function Hero() {
             View on GitHub
           </a>
         </div>
+        <a
+          href="/demo"
+          className="mt-4 inline-flex text-sm font-medium text-accent underline-offset-4 transition-colors hover:underline"
+        >
+          Preview the study workflow before downloading
+        </a>
 
         <div className="mt-5 flex flex-wrap items-center justify-center gap-x-4 gap-y-2 text-xs text-muted-foreground">
           <span><strong className="text-foreground">1.</strong> Download</span>
