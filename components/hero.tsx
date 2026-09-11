@@ -70,9 +70,11 @@ export function Hero() {
         <InteractiveDemo />
       </div>
 
-      <div className="mx-auto mt-8 max-w-md rounded-lg border border-border bg-panel/50 p-4 text-left font-mono text-xs leading-relaxed text-muted-foreground">
-        <p>
-          <span className="font-semibold text-foreground">Before you open it:</span>{" "}
+      <details className="mx-auto mt-8 max-w-md rounded-lg border border-border bg-panel/50 p-4 text-left font-mono text-xs leading-relaxed text-muted-foreground">
+        <summary className="cursor-pointer font-semibold text-foreground">
+          Download safety note
+        </summary>
+        <p className="mt-3">
           Windows may show an &quot;Unknown Publisher&quot; warning because this free
           open-source build is not digitally signed. Download only from the official
           release page, compare the checksum, then click <strong>&quot;More info&quot;</strong>{" "}
@@ -86,7 +88,7 @@ export function Hero() {
             Verify source code on GitHub.
           </a>
         </p>
-      </div>
+      </details>
     </section>
   )
 }
