@@ -49,20 +49,6 @@ export function Hero() {
           </a>
         </div>
 
-        <div className="mt-6 mx-auto max-w-md rounded-lg border border-border bg-panel/50 p-4 text-left font-mono text-xs text-muted-foreground leading-relaxed">
-          <p className="leading-relaxed">
-            <span className="font-semibold text-foreground">Before you open it:</span> Windows may show an "Unknown Publisher" warning because this free open-source build is not digitally signed. Download only from the official release page, compare the checksum, then click <strong>"More info"</strong> and <strong>"Run anyway"</strong>.{" "}
-            <a
-              href="https://github.com/karefined-eng/eleviewer"
-              className="underline hover:text-foreground transition-colors"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              Verify source code on GitHub.
-            </a>
-          </p>
-        </div>
-
         <div className="mt-5 flex flex-wrap items-center justify-center gap-x-4 gap-y-2 text-xs text-muted-foreground">
           <span><strong className="text-foreground">1.</strong> Download</span>
           <span aria-hidden="true">→</span>
@@ -82,6 +68,24 @@ export function Hero() {
 
       <div className="mt-14 sm:mt-20">
         <InteractiveDemo />
+      </div>
+
+      <div className="mx-auto mt-8 max-w-md rounded-lg border border-border bg-panel/50 p-4 text-left font-mono text-xs leading-relaxed text-muted-foreground">
+        <p>
+          <span className="font-semibold text-foreground">Before you open it:</span>{" "}
+          Windows may show an &quot;Unknown Publisher&quot; warning because this free
+          open-source build is not digitally signed. Download only from the official
+          release page, compare the checksum, then click <strong>&quot;More info&quot;</strong>{" "}
+          and <strong>&quot;Run anyway&quot;</strong>.{" "}
+          <a
+            href="https://github.com/karefined-eng/eleviewer"
+            className="underline transition-colors hover:text-foreground"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            Verify source code on GitHub.
+          </a>
+        </p>
       </div>
     </section>
   )

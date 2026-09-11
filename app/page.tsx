@@ -17,9 +17,9 @@ export default function Home() {
       <SiteHeader />
       <main id="main-content" className="scroll-mt-14">
         <Hero />
+        <UseCases />
         <TrustBar />
         <Formats />
-        <UseCases />
         <Features />
         <Shortcuts />
         <NightlyExplainer />
