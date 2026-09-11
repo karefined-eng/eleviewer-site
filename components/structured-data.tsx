@@ -1,4 +1,5 @@
 import React from "react"
+import { DOWNLOAD_URL, GITHUB_URL, LATEST_RELEASE_VERSION } from "@/lib/links"
 
 export function StructuredData() {
   const jsonLd = {
@@ -9,6 +10,17 @@ export function StructuredData() {
         "name": "EleViewer",
         "operatingSystem": "Windows 10, Windows 11",
         "applicationCategory": "UtilitiesApplication",
+        "applicationSubCategory": "DocumentViewer",
+        "softwareVersion": LATEST_RELEASE_VERSION,
+        "url": "https://eleviewer.vercel.app",
+        "downloadUrl": DOWNLOAD_URL,
+        "image": "https://eleviewer.vercel.app/opengraph-image",
+        "sameAs": [GITHUB_URL],
+        "author": {
+          "@type": "Organization",
+          "name": "Karefined",
+          "url": "https://github.com/karefined-eng",
+        },
         "offers": {
           "@type": "Offer",
           "price": "0",
@@ -20,32 +32,6 @@ export function StructuredData() {
         "@type": "WebSite",
         "url": "https://eleviewer.vercel.app",
         "name": "EleViewer",
-        "potentialAction": {
-          "@type": "SearchAction",
-          "target": "https://eleviewer.vercel.app/docs?q={search_term_string}",
-          "query-input": "required name=search_term_string"
-        }
-      },
-      {
-        "@type": "FAQPage",
-        "mainEntity": [
-          {
-            "@type": "Question",
-            "name": "Is EleViewer free?",
-            "acceptedAnswer": {
-              "@type": "Answer",
-              "text": "Yes, EleViewer is completely free."
-            }
-          },
-          {
-            "@type": "Question",
-            "name": "Does EleViewer require installation?",
-            "acceptedAnswer": {
-              "@type": "Answer",
-              "text": "No, EleViewer is a portable executable and does not require installation."
-            }
-          }
-        ]
       }
     ]
   }

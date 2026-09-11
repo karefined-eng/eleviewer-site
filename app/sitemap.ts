@@ -42,6 +42,11 @@ export default function sitemap(): MetadataRoute.Sitemap {
       changeFrequency: "monthly",
       priority: 0.8,
     },
+    {
+      url: `${baseUrl}/alternatives/sumatra-pdf`,
+      changeFrequency: "monthly",
+      priority: 0.8,
+    },
     ...[
       "open-docx-without-word",
       "open-xlsx-without-excel",
