@@ -50,18 +50,6 @@ const features = [
     body: "Press Alt+E to instantly open a quick scratchpad from anywhere in Windows to jot down an idea without losing your focus.",
     docSlug: "overview",
   },
-  {
-    icon: Lightbulb,
-    title: "Interactive Playground Tutorials",
-    body: "Learn power-user shortcuts and document manipulation through guided, step-by-step spotlight overlays directly inside the app.",
-    docSlug: "overview",
-  },
-  {
-    icon: Volume2,
-    title: "PDFs that read to you",
-    body: "Native Windows text-to-speech turns selectable text in lecture slides or readings into audio. (Windows 10/11 only)",
-    docSlug: "pdf-and-tts",
-  },
 ]
 
 export function Features() {
@@ -78,7 +66,7 @@ export function Features() {
           Open a reading, listen when your eyes need a break, save your place, and return to the same work later — without switching between several heavy apps.
         </p>
       </div>
-      <div className="grid gap-px overflow-hidden rounded-xl border border-border bg-border sm:grid-cols-2 lg:grid-cols-4">
+      <div className="grid gap-px overflow-hidden rounded-xl border border-border bg-border sm:grid-cols-2 lg:grid-cols-3">
         {features.map((f) => (
           <div key={f.title} className="flex flex-col justify-between gap-4 bg-panel p-6">
             <div className="flex flex-col gap-3">

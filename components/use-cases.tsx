@@ -1,3 +1,5 @@
+import { BookOpen, Volume2, ShieldCheck, History } from "lucide-react"
+
 export function UseCases() {
   return (
     <section className="mx-auto max-w-5xl px-5 py-16 sm:py-24">
@@ -16,26 +18,30 @@ export function UseCases() {
 
         <div className="mt-10 grid gap-4 sm:grid-cols-2">
           <div className="rounded-3xl border border-border bg-background p-6">
-              <h3 className="text-sm font-semibold text-foreground">Open the files professors assign</h3>
-            <p className="mt-2 text-sm leading-relaxed text-muted-foreground">
+            <BookOpen className="mb-3 h-5 w-5 text-accent" aria-hidden="true" />
+            <h3 className="text-[14px] font-semibold text-foreground">Open the files professors assign</h3>
+            <p className="mt-2 text-[13px] leading-relaxed text-muted-foreground">
               Open Word documents, slides, spreadsheets, PDFs, Markdown, CSV, HTML, and TXT from one small portable app—even when Microsoft Office is not available.
             </p>
           </div>
           <div className="rounded-3xl border border-border bg-background p-6">
-              <h3 className="text-sm font-semibold text-foreground">Listen to readings while you study</h3>
-            <p className="mt-2 text-sm leading-relaxed text-muted-foreground">
+            <Volume2 className="mb-3 h-5 w-5 text-accent" aria-hidden="true" />
+            <h3 className="text-[14px] font-semibold text-foreground">Listen to readings while you study</h3>
+            <p className="mt-2 text-[13px] leading-relaxed text-muted-foreground">
               Use built-in Windows voices to read selected text or supported documents aloud while you walk, commute, or rest your eyes.
             </p>
           </div>
           <div className="rounded-3xl border border-border bg-background p-6">
-              <h3 className="text-sm font-semibold text-foreground">Keep private notes private</h3>
-            <p className="mt-2 text-sm leading-relaxed text-muted-foreground">
+            <ShieldCheck className="mb-3 h-5 w-5 text-accent" aria-hidden="true" />
+            <h3 className="text-[14px] font-semibold text-foreground">Keep private notes private</h3>
+            <p className="mt-2 text-[13px] leading-relaxed text-muted-foreground">
               No account, no ads, and no usage tracking. Your documents are opened and processed locally on your Windows computer.
             </p>
           </div>
           <div className="rounded-3xl border border-border bg-background p-6">
-              <h3 className="text-sm font-semibold text-foreground">Return to the same study session</h3>
-            <p className="mt-2 text-sm leading-relaxed text-muted-foreground">
+            <History className="mb-3 h-5 w-5 text-accent" aria-hidden="true" />
+            <h3 className="text-[14px] font-semibold text-foreground">Return to the same study session</h3>
+            <p className="mt-2 text-[13px] leading-relaxed text-muted-foreground">
               Add a course folder, bookmark your place, and reopen your tabs and reading position when you come back.
             </p>
           </div>

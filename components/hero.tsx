@@ -28,7 +28,7 @@ export function Hero() {
 
         <MobileReminder />
 
-        <div className="mt-8 hidden sm:flex flex-col items-center justify-center gap-3 sm:flex-row">
+        <div className="mt-8 flex flex-col items-center justify-center gap-3 sm:flex-row">
           <a
             href="/download"
             onClick={() => track("download_clicked", { location: "hero" })}
@@ -47,13 +47,14 @@ export function Hero() {
             <GitHubIcon className="h-4 w-4" />
             View on GitHub
           </a>
+          <a
+            href="/demo"
+            onClick={() => track("demo_clicked", { location: "hero" })}
+            className="flex h-11 items-center justify-center gap-2 rounded-lg border border-accent/50 bg-transparent px-6 text-sm font-medium text-accent transition-colors hover:bg-accent/10"
+          >
+            Preview the app
+          </a>
         </div>
-        <a
-          href="/demo"
-          className="mt-4 inline-flex text-sm font-medium text-accent underline-offset-4 transition-colors hover:underline"
-        >
-          Preview the study workflow before downloading
-        </a>
 
         <div className="mt-5 flex flex-wrap items-center justify-center gap-x-4 gap-y-2 text-xs text-muted-foreground">
           <span><strong className="text-foreground">1.</strong> Download</span>
@@ -76,25 +77,6 @@ export function Hero() {
         <InteractiveDemo />
       </div>
 
-      <details className="mx-auto mt-8 max-w-md rounded-lg border border-border bg-panel/50 p-4 text-left font-mono text-xs leading-relaxed text-muted-foreground">
-        <summary className="cursor-pointer font-semibold text-foreground">
-          Download safety note
-        </summary>
-        <p className="mt-3">
-          Windows may show an &quot;Unknown Publisher&quot; warning because this free
-          open-source build is not digitally signed. Download only from the official
-          release page, compare the checksum, then click <strong>&quot;More info&quot;</strong>{" "}
-          and <strong>&quot;Run anyway&quot;</strong>.{" "}
-          <a
-            href="https://github.com/karefined-eng/eleviewer"
-            className="underline transition-colors hover:text-foreground"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Verify source code on GitHub.
-          </a>
-        </p>
-      </details>
     </section>
   )
 }
