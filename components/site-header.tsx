@@ -45,6 +45,9 @@ export function SiteHeader() {
           <Link href="/docs" className={getLinkClass("/docs")}>
             Docs
           </Link>
+          <Link href="/updates" className={getLinkClass("/updates")}>
+            Updates
+          </Link>
           <Link href="/demo" className={getLinkClass("/demo")}>
             Live Demo
           </Link>
@@ -143,6 +146,15 @@ export function SiteHeader() {
                 onClick={() => setIsMenuOpen(false)}
               >
                 Live Demo
+              </Link>
+              <Link
+                href="/updates"
+                className={`w-full rounded-md p-3 transition-colors hover:bg-panel ${
+                  pathname?.startsWith("/updates") ? "text-accent font-semibold" : ""
+                }`}
+                onClick={() => setIsMenuOpen(false)}
+              >
+                Updates
               </Link>
               <Link
                 href="/docs"

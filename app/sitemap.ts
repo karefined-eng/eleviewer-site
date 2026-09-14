@@ -1,5 +1,6 @@
 import { MetadataRoute } from "next"
 import { DOCS_TOPICS } from "@/lib/docs-data"
+import { RELEASES } from "@/lib/releases-data"
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const baseUrl = "https://eleviewer.vercel.app"
@@ -27,6 +28,16 @@ export default function sitemap(): MetadataRoute.Sitemap {
       priority: 0.9,
     },
     ...docUrls,
+    {
+      url: `${baseUrl}/updates`,
+      changeFrequency: "weekly" as const,
+      priority: 0.9,
+    },
+    ...RELEASES.map((r) => ({
+      url: `${baseUrl}/updates/${r.version}`,
+      changeFrequency: "monthly" as const,
+      priority: 0.8,
+    })),
     {
       url: `${baseUrl}/demo`,
       changeFrequency: "monthly",
