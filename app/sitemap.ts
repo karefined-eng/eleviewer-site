@@ -68,7 +68,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
       changeFrequency: "monthly" as const,
       priority: 0.8,
     })),
-    ...["students", "offline-study", "school-computers"].map((slug) => ({
+    ...["students", "offline-study", "school-computers", "distraction-free-study", "universal-document-viewer"].map((slug) => ({
       url: `${baseUrl}/use-cases/${slug}`,
       changeFrequency: "monthly" as const,
       priority: 0.8,

@@ -40,6 +40,28 @@ const useCases = {
       "Open source code is available for institutional review"
     ] 
   },
+  "distraction-free-study": {
+    title: "Distraction-Free Offline Study Workspace",
+    description: "Keep your focus with a local-first study app. EleViewer blocks the noise of the browser so you can concentrate on your readings and notes.",
+    answer: "EleViewer is designed to be a distraction-free study environment for Windows. By moving your readings, slides, and notes out of the web browser and into an offline, local app, you remove the temptation of opening new tabs or checking social media.",
+    points: [
+      "Offline-first design removes the need for an internet connection",
+      "Split-screen view keeps readings and notes in one window",
+      "Read Aloud feature helps you focus while resting your eyes",
+      "No ads, no accounts, and no data tracking"
+    ]
+  },
+  "universal-document-viewer": {
+    title: "Universal Document Viewer for Windows",
+    description: "Open PDF, DOCX, XLSX, and PPTX files in a single, lightweight Windows application instead of installing bloated software suites.",
+    answer: "EleViewer replaces the need for installing multiple heavy applications like Adobe Acrobat and Microsoft Office. It's an all-in-one universal viewer that handles documents, spreadsheets, and presentations instantly.",
+    points: [
+      "Open multiple file types without switching applications",
+      "Significantly smaller footprint than Microsoft Office",
+      "Starts up instantly on Windows 10 and 11",
+      "Portable design means no installation is required"
+    ]
+  }
 } as const
 
 type UseCaseSlug = keyof typeof useCases
