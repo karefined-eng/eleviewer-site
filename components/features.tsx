@@ -1,3 +1,6 @@
+"use client"
+
+import { useRef } from "react"
 import Link from "next/link"
 import {
   Volume2,
@@ -53,6 +56,17 @@ const features = [
 ]
 
 export function Features() {
+  const containerRef = useRef<HTMLDivElement>(null)
+
+  const handleMouseMove = (e: React.MouseEvent<HTMLDivElement>) => {
+    if (!containerRef.current) return
+    const rect = containerRef.current.getBoundingClientRect()
+    const x = e.clientX - rect.left
+    const y = e.clientY - rect.top
+    containerRef.current.style.setProperty("--mouse-x", `${x}px`)
+    containerRef.current.style.setProperty("--mouse-y", `${y}px`)
+  }
+
   return (
     <section id="features" className="mx-auto max-w-5xl scroll-mt-20 px-5 pb-16 sm:pb-24">
       <div className="mb-12 max-w-xl">
@@ -66,10 +80,20 @@ export function Features() {
           Open a reading, listen when your eyes need a break, save your place, and return to the same work later — without switching between several heavy apps.
         </p>
       </div>
-      <div className="grid gap-px overflow-hidden rounded-xl border border-border bg-border sm:grid-cols-2 lg:grid-cols-3">
+      <div 
+        ref={containerRef}
+        onMouseMove={handleMouseMove}
+        className="group relative grid gap-px overflow-hidden rounded-xl border border-border bg-border sm:grid-cols-2 lg:grid-cols-3"
+      >
         {features.map((f) => (
-          <div key={f.title} className="flex flex-col justify-between gap-4 bg-panel p-6">
-            <div className="flex flex-col gap-3">
+          <div key={f.title} className="relative flex flex-col justify-between gap-4 bg-panel p-6 z-10 hover:bg-panel/80 transition-colors overflow-hidden">
+            <div 
+              className="pointer-events-none absolute -inset-px opacity-0 transition duration-300 group-hover:opacity-100 z-0"
+              style={{
+                background: `radial-gradient(400px circle at var(--mouse-x) var(--mouse-y), rgba(108,182,255,0.15), transparent 40%)`
+              }}
+            />
+            <div className="flex flex-col gap-3 relative z-10">
               <f.icon className="h-5 w-5 text-accent" aria-hidden="true" />
               <h3 className="text-[15px] font-semibold text-foreground">
                 {f.title}
@@ -80,7 +104,7 @@ export function Features() {
             </div>
             <Link
               href={`/docs/${f.docSlug}`}
-              className="mt-2 flex items-center gap-1 font-mono text-[11px] text-muted-foreground hover:text-accent transition-colors"
+              className="mt-2 flex items-center gap-1 font-mono text-[11px] text-muted-foreground hover:text-accent transition-colors relative z-10"
             >
               See how it works <ArrowRight className="h-3 w-3" />
             </Link>

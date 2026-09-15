@@ -1,4 +1,5 @@
 import { SiteHeader } from "@/components/site-header"
+import { SplitScreenDemo } from "~features/demo-browser/components/split-screen-demo"
 import { Hero } from "@/components/hero"
 import { TrustBar } from "@/components/trust-bar"
 import { Formats } from "@/components/formats"
@@ -21,6 +22,7 @@ export default function Home() {
         <TrustBar />
         <Formats />
         <Features />
+        <SplitScreenDemo />
         <Shortcuts />
         <NightlyExplainer />
         <OpenSource />

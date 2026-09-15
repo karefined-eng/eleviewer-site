@@ -43,6 +43,8 @@ const textContents = {
 export function InteractiveDemo() {
   const [activeTabId, setActiveTabId] = useState("md")
   const { play, pause, resume, stop, isPlaying, isPaused, isSupported } = useTTS()
+  const [rotation, setRotation] = useState({ x: 0, y: 0 })
+  const [isHovering, setIsHovering] = useState(false)
 
   const currentTab = tabs.find((t) => t.id === activeTabId) || tabs[0]
 
@@ -69,9 +71,29 @@ export function InteractiveDemo() {
     stop()
   }
 
+  const handleMouseMove = (e: React.MouseEvent<HTMLDivElement>) => {
+    const rect = e.currentTarget.getBoundingClientRect()
+    const x = e.clientX - rect.left
+    const y = e.clientY - rect.top
+    const centerX = rect.width / 2
+    const centerY = rect.height / 2
+    const rotateX = ((y - centerY) / centerY) * -3 // subtle tilt
+    const rotateY = ((x - centerX) / centerX) * 3
+    setRotation({ x: rotateX, y: rotateY })
+  }
+
   return (
     <div
-      className="overflow-hidden rounded-xl border border-border bg-[#1e1e1e] shadow-[0_24px_80px_-24px_rgba(0,0,0,0.8)] transition-all duration-300"
+      onMouseMove={handleMouseMove}
+      onMouseEnter={() => setIsHovering(true)}
+      onMouseLeave={() => { setIsHovering(false); setRotation({ x: 0, y: 0 }) }}
+      className={`overflow-hidden rounded-xl border border-border bg-[#1e1e1e] shadow-[0_24px_80px_-24px_rgba(0,0,0,0.8)] ${
+        isHovering ? "transition-none" : "transition-transform duration-500 ease-out"
+      }`}
+      style={{
+        transform: `perspective(1200px) rotateX(${rotation.x}deg) rotateY(${rotation.y}deg)`,
+        transformStyle: "preserve-3d",
+      }}
       role="region"
       aria-label="Interactive EleViewer App Previewer"
     >
