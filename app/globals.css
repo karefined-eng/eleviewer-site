@@ -116,3 +116,45 @@ body {
   transform-origin: center;
   animation: morph-bot 8s cubic-bezier(0.87, 0, 0.13, 1) infinite;
 }
+
+/* Tumbling Bars Scroll Animation */
+@keyframes tumble-down {
+  from { transform: translateY(-20vh) rotate(0deg); }
+  to { transform: translateY(120vh) rotate(720deg); }
+}
+
+@keyframes tumble-up {
+  from { transform: translateY(-20vh) rotate(0deg); }
+  to { transform: translateY(120vh) rotate(-720deg); }
+}
+
+.tumble-bar {
+  top: 0;
+  /* Fallback for Safari/Firefox */
+  animation: tumble-down 30s linear infinite;
+  will-change: transform;
+}
+.tumble-fast { animation-duration: 20s; }
+.tumble-slow { animation-duration: 45s; }
+.tumble-medium { animation-duration: 35s; }
+.tumble-reverse { animation-name: tumble-up; animation-duration: 40s; }
+
+/* Upgrade to Scroll-Driven if supported */
+@supports (animation-timeline: scroll()) {
+  .tumble-bar {
+    animation-timeline: scroll(root);
+    animation-duration: auto;
+  }
+  .tumble-fast { animation-range: 0% 120%; }
+  .tumble-slow { animation-range: 0% 80%; }
+  .tumble-medium { animation-range: 0% 100%; }
+  .tumble-reverse { animation-range: 0% 110%; }
+}
+
+/* Accessibility: No motion */
+@media (prefers-reduced-motion: reduce) {
+  .tumble-bar {
+    animation: none !important;
+    display: none !important;
+  }
+}

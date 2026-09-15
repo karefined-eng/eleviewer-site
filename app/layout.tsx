@@ -117,6 +117,7 @@ export const viewport: Viewport = {
 import { StructuredData } from "@/components/structured-data"
 import { ThemeProvider } from "@/components/theme-provider"
 import { ScrollToTop } from "@/components/scroll-to-top"
+import { TumblingBackground } from "@/components/tumbling-background"
 
 export default function RootLayout({
   children,
@@ -142,6 +143,7 @@ export default function RootLayout({
           >
             Skip to main content
           </a>
+          <TumblingBackground />
           {children}
           <ScrollToTop />
           <StructuredData />
