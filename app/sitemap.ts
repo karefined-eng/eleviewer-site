@@ -54,6 +54,16 @@ export default function sitemap(): MetadataRoute.Sitemap {
       priority: 0.8,
     },
     {
+      url: `${baseUrl}/alternatives/adobe-reader`,
+      changeFrequency: "monthly",
+      priority: 0.8,
+    },
+    {
+      url: `${baseUrl}/alternatives/freefileviewer`,
+      changeFrequency: "monthly",
+      priority: 0.8,
+    },
+    {
       url: `${baseUrl}/alternatives/sumatra-pdf`,
       changeFrequency: "monthly",
       priority: 0.8,
@@ -61,8 +71,10 @@ export default function sitemap(): MetadataRoute.Sitemap {
     ...[
       "open-docx-without-word",
       "open-xlsx-without-excel",
+      "open-pptx-without-powerpoint",
       "pdf-text-to-speech-windows",
       "portable-document-viewer",
+      "open-pdf-docx-xlsx-without-office",
     ].map((slug) => ({
       url: `${baseUrl}/guides/${slug}`,
       changeFrequency: "monthly" as const,
@@ -75,6 +87,11 @@ export default function sitemap(): MetadataRoute.Sitemap {
     })),
     {
       url: `${baseUrl}/privacy`,
+      changeFrequency: "yearly",
+      priority: 0.5,
+    },
+    {
+      url: `${baseUrl}/privacy/local-document-viewer`,
       changeFrequency: "yearly",
       priority: 0.5,
     },

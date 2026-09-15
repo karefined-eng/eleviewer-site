@@ -5,4 +5,4 @@ export const ISSUES_URL = "https://github.com/karefined-eng/eleviewer/issues";
 export const DOWNLOAD_URL = "/api/download";
 export const GITHUB_PROFILE_URL = "https://github.com/karefined-eng";
 export const LATEST_RELEASE_VERSION = "1.3.5";
-export const LATEST_RELEASE_SHA256 = "E1EF2B0FB6A01D3061331297B0FF621FD70A2E8C35338148A7E75CCF777FED3A"; // placeholder
+export const LATEST_RELEASE_SHA256 = "EEA9B0430200A761BB6AF288AB0F2CCD333F678286F886DDA968B22E2EB4B8C9";
