@@ -3,6 +3,7 @@
 import { track } from "@vercel/analytics/react"
 import { Download } from "lucide-react"
 import { GitHubIcon } from "./github-icon"
+import { WindowsIcon } from "./windows-icon"
 import { InteractiveDemo } from "~features/demo-browser/components/interactive-demo"
 import { MobileReminder } from "./mobile-reminder"
 import { GITHUB_URL, DOWNLOAD_URL } from "@/lib/links"
@@ -34,7 +35,7 @@ export function Hero() {
             onClick={() => track("download_clicked", { location: "hero" })}
             className="flex h-11 items-center justify-center gap-2 rounded-lg bg-primary px-6 text-sm font-medium text-primary-foreground transition-opacity hover:opacity-90"
           >
-            <Download className="h-4 w-4" />
+            <WindowsIcon className="h-4 w-4" />
             Download for Windows
           </a>
           <a

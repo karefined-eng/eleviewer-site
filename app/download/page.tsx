@@ -2,6 +2,7 @@ import type { Metadata } from "next"
 import { Download, ShieldCheck, HardDrive, CheckCircle } from "lucide-react"
 import { SiteHeader } from "@/components/site-header"
 import { SiteFooter } from "@/components/site-footer"
+import { WindowsIcon } from "@/components/windows-icon"
 import { DOWNLOAD_URL, GITHUB_URL, LATEST_RELEASE_VERSION, LATEST_RELEASE_SHA256 } from "@/lib/links"
 
 export const metadata: Metadata = {
@@ -38,7 +39,7 @@ export default function DownloadPage() {
                 href={DOWNLOAD_URL}
                 className="flex h-11 items-center justify-center gap-2 rounded-lg bg-primary px-6 text-sm font-medium text-primary-foreground transition-opacity hover:opacity-90 shadow-sm"
               >
-                <Download className="h-4 w-4" />
+                <WindowsIcon className="h-4 w-4" />
                 Download EleViewer.exe (v{LATEST_RELEASE_VERSION})
               </a>
 
