@@ -3,6 +3,7 @@ import { notFound } from "next/navigation"
 import { SiteHeader } from "@/components/site-header"
 import { SiteFooter } from "@/components/site-footer"
 import { DOWNLOAD_URL } from "@/lib/links"
+import { BreadcrumbJsonLd } from "@/components/breadcrumb-json-ld"
 
 const useCases = {
   students: { 
@@ -101,6 +102,7 @@ export default async function UseCasePage({ params }: { params: Promise<{ slug: 
       <main id="main-content" className="flex-1">
         <article className="mx-auto max-w-4xl px-5 py-16 sm:py-24">
           <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }} />
+          <BreadcrumbJsonLd items={[{ name: "EleViewer", url: "https://eleviewer.vercel.app/" }, { name: "Use cases", url: "https://eleviewer.vercel.app/use-cases" }, { name: item.title, url: `https://eleviewer.vercel.app/use-cases/${slug}` }]} />
           <p className="inline-flex items-center rounded-full border border-border bg-panel px-3 py-1 font-mono text-xs font-medium uppercase tracking-wider text-muted-foreground">
             Use case
           </p>

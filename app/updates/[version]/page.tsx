@@ -5,6 +5,7 @@ import { SiteHeader } from "@/components/site-header"
 import { SiteFooter } from "@/components/site-footer"
 import { RELEASES, getReleaseByVersion } from "@/lib/releases-data"
 import { GITHUB_URL } from "@/lib/links"
+import { BreadcrumbJsonLd } from "@/components/breadcrumb-json-ld"
 import { ArrowLeft, ArrowRight, Calendar, Download, Tag } from "lucide-react"
 
 interface Props {
@@ -98,6 +99,7 @@ export default async function ReleasePage({ params }: Props) {
 
         {/* ── Main Content ──────────────────────────────────────────────── */}
         <main className="flex-1 min-w-0 py-10 md:pl-12">
+          <BreadcrumbJsonLd items={[{ name: "EleViewer", url: "https://eleviewer.vercel.app/" }, { name: "Updates", url: "https://eleviewer.vercel.app/updates" }, { name: `Version ${release.version}`, url: `https://eleviewer.vercel.app/updates/${release.version}` }]} />
           {/* Back link on mobile */}
           <Link
             href="/updates"

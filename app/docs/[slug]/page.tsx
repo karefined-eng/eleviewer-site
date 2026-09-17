@@ -2,6 +2,7 @@ import React from "react";
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import { DOCS_TOPICS, getDocTopicBySlug } from "@/lib/docs-data";
+import { BreadcrumbJsonLd } from "@/components/breadcrumb-json-ld";
 import { ArrowLeft, ArrowRight, BookOpen, Terminal, CheckCircle2, AlertTriangle, Info, HelpCircle } from "lucide-react";
 
 export async function generateStaticParams() {
@@ -61,6 +62,16 @@ export default async function DocTopicPage({
 
   return (
     <div className="flex flex-col xl:flex-row gap-12">
+      <BreadcrumbJsonLd
+        items={[
+          { name: "EleViewer", url: "https://eleviewer.vercel.app/" },
+          { name: "Documentation", url: "https://eleviewer.vercel.app/docs" },
+          {
+            name: topic.title,
+            url: `https://eleviewer.vercel.app/docs/${topic.slug}`,
+          },
+        ]}
+      />
       {/* Main Article Area */}
       <article className="flex-1 min-w-0 max-w-3xl flex flex-col gap-10">
         {/* Topic Header */}
