@@ -1,4 +1,5 @@
 import { Metadata } from "next"
+import { BreadcrumbJsonLd } from "@/components/breadcrumb-json-ld"
 
 export const metadata: Metadata = {
   title: "EleViewer vs Sumatra PDF — Free Document Viewer Alternative",
@@ -9,6 +10,7 @@ export const metadata: Metadata = {
 export default function SumatraAlternativePage() {
   return (
     <div className="mx-auto max-w-4xl px-5 py-16 sm:py-24">
+      <BreadcrumbJsonLd items={[{ name: "EleViewer", url: "https://eleviewer.vercel.app/" }, { name: "Alternatives", url: "https://eleviewer.vercel.app/alternatives" }, { name: "Sumatra PDF alternative", url: "https://eleviewer.vercel.app/alternatives/sumatra-pdf" }]} />
       <h1 className="mb-4 text-4xl font-bold tracking-tight text-foreground">EleViewer vs Sumatra PDF</h1>
       <p className="mb-8 text-lg text-muted-foreground">
         Sumatra PDF is an excellent, lightweight PDF reader. But if you need to also open DOCX, XLSX, and PPTX files, or if you want built-in text-to-speech for studying, EleViewer might be a better fit.

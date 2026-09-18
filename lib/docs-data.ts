@@ -43,7 +43,7 @@ export const DOCS_CATEGORIES: DocCategory[] = [
     description: "Open your first file, try the reader voice, and set up your study folders.",
     topics: [
       { slug: "overview", title: "Your first study sesh" },
-      { slug: "vault-explorer", title: "Course folders & finding stuff instantly" },
+      { slug: "vault-explorer", title: "Course folders & fast file search" },
     ],
   },
   {
@@ -51,10 +51,10 @@ export const DOCS_CATEGORIES: DocCategory[] = [
     title: "Read, write, and organize",
     description: "Open your readings, take notes, and keep all your course stuff together without the headache.",
     topics: [
-      { slug: "pdf-and-tts", title: "PDFs that read themselves to you" },
-      { slug: "markdown-editor", title: "Notes that basically write themselves" },
+      { slug: "pdf-and-tts", title: "PDF Read Aloud and bookmarks" },
+      { slug: "markdown-editor", title: "Markdown notes editor" },
       { slug: "csv-table", title: "Spreadsheets without the headache" },
-      { slug: "office-viewers", title: "Opening Word & PowerPoint (No Office needed)" },
+      { slug: "office-viewers", title: "Open Word and PowerPoint without Office" },
       { slug: "html-and-web", title: "Side-by-side web browsing" },
     ],
   },
@@ -72,7 +72,7 @@ export const DOCS_CATEGORIES: DocCategory[] = [
     description: "Understand how we save your stuff so you never lose an essay, and why your documents stay completely private.",
     topics: [
       { slug: "atomic-writes", title: "Auto-save & crash protection" },
-      { slug: "local-storage", title: "Privacy check: Your files stay yours" },
+      { slug: "local-storage", title: "Local storage and file privacy" },
     ],
   },
   {
@@ -80,7 +80,7 @@ export const DOCS_CATEGORIES: DocCategory[] = [
     title: "When things glitch",
     description: "How to fix the reader voice, sort out bugs, or send feedback straight to the developer.",
     topics: [
-      { slug: "faq-and-support", title: "FAQ & Help (When things glitch)" },
+      { slug: "faq-and-support", title: "FAQ and troubleshooting help" },
     ],
   },
 ];
@@ -137,7 +137,7 @@ export const DOCS_TOPICS: DocTopic[] = [
   },
   {
     slug: "vault-explorer",
-    title: "Course folders & finding stuff instantly",
+    title: "Course folders & fast file search",
     category: "Getting Started",
     categorySlug: "getting-started",
     eyebrow: "Stay Organized",
@@ -168,7 +168,7 @@ export const DOCS_TOPICS: DocTopic[] = [
   },
   {
     slug: "pdf-and-tts",
-    title: "PDFs that literally read themselves to you",
+    title: "PDF Read Aloud and bookmarks",
     category: "Document Readers & Viewers",
     categorySlug: "workstations",
     eyebrow: "Reading Tools",
@@ -207,7 +207,7 @@ export const DOCS_TOPICS: DocTopic[] = [
   },
   {
     slug: "markdown-editor",
-    title: "Notes that basically write themselves",
+    title: "Markdown notes editor",
     category: "Document Readers & Viewers",
     categorySlug: "workstations",
     eyebrow: "Authoring Environment",

@@ -14,7 +14,7 @@ export const metadata: Metadata = {
   metadataBase: new URL("https://eleviewer.vercel.app"),
   title: "EleViewer — Portable Offline Study Workspace for Windows",
   description:
-    "EleViewer is a free, portable Windows study workspace. Open DOCX, XLSX, PPTX, PDF, Markdown, CSV, HTML, and TXT without Microsoft Office in one portable app with PDF text-to-speech, built-in web browser, find & replace, autosave, file vault, and session restore.",
+    "EleViewer is a free portable Windows study workspace for opening DOCX, XLSX, PPTX, PDF, Markdown, CSV, HTML, and TXT without Microsoft Office.",
   applicationName: "EleViewer",
   authors: [{ name: "karefined-eng", url: "https://github.com/karefined-eng" }],
   creator: "karefined-eng",
