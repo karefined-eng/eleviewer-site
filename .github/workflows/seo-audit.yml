@@ -1,0 +1,24 @@
+name: SEO audit
+
+# Validates that critical SEO metadata markers have not been accidentally
+# removed from source files. The checker script is vendored at scripts/seo_check.py
+# so this workflow has no external repository dependencies.
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+
+jobs:
+  seo:
+    name: Validate website SEO surface
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262 # v4
+
+      - name: Run SEO checks
+        run: python3 scripts/seo_check.py --config seo.config.json

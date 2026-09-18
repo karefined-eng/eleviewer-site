@@ -37,8 +37,7 @@
       "contains": [
         "application/ld+json",
         "SoftwareApplication",
-        "WebSite",
-        "FAQPage"
+        "WebSite"
       ],
       "siteUrlMarker": true
     },
