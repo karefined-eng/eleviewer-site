@@ -3,6 +3,7 @@ import { BreadcrumbJsonLd } from "@/components/breadcrumb-json-ld"
 import { SiteHeader } from "@/components/site-header"
 import { SiteFooter } from "@/components/site-footer"
 import { DOWNLOAD_URL } from "@/lib/links"
+import { RelatedAlternatives } from "@/components/related-alternatives"
 
 export const metadata: Metadata = {
   title: "Microsoft Office Viewer Alternative | EleViewer",
@@ -97,6 +98,9 @@ export default function MicrosoftOfficeViewerAlternative() {
               Download EleViewer
             </a>
           </section>
+
+          <hr className="my-16 border-border" />
+          <RelatedAlternatives currentSlug="microsoft-office-viewer" />
         </article>
       </main>
       <SiteFooter />

@@ -3,6 +3,7 @@ import { SiteHeader } from "@/components/site-header"
 import { SiteFooter } from "@/components/site-footer"
 import { DOWNLOAD_URL } from "@/lib/links"
 import { BreadcrumbJsonLd } from "@/components/breadcrumb-json-ld"
+import { RelatedAlternatives } from "@/components/related-alternatives"
 
 export const metadata: Metadata = { 
   title: "FreeFileViewer Alternative for Windows", 
@@ -89,6 +90,9 @@ export default function FreeFileViewerAlternative() {
               Download the portable app
             </a>
           </section>
+
+          <hr className="my-16 border-border" />
+          <RelatedAlternatives currentSlug="freefileviewer" />
         </article>
       </main>
       <SiteFooter />
