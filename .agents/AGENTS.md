@@ -11,3 +11,7 @@ Before creating or modifying any web component in `eleviewer-site`, you MUST rea
    - All primary CTAs (Download, Join Insiders, Push to Laptop) MUST use the canonical `button-primary` styling (`h-11 px-6 bg-primary text-primary-foreground rounded-lg font-medium hover:opacity-90`).
    - All category tags and status pills MUST use the canonical `status-pill` styling (`rounded-full border border-border bg-panel px-3 py-1 font-mono text-xs text-muted-foreground`).
 4. **SEO, AEO & GEO Keyword Optimization (No Niche Jargon):** When writing headings (`<h1>`, `<h2>`), titles, meta descriptions, or documentation copy, do NOT use obscure internal branding or niche philosophy terms (like *"Sovereignty Workstation"* or *"Reflex Engine"*). Instead, prioritize high-intent, universally searched keywords (e.g., *"Free Windows Document Reader"*, *"Offline PDF & Office Viewer"*, *"Local Text-to-Speech Study Tool"*, *"Zero Telemetry Document Indexer"*) to maximize discoverability across traditional search engines (SEO), AI chat assistants (AEO), and generative AI summaries (GEO).
+
+## Tool Quirks & Environment Traps
+
+1. **PowerShell File Encoding (vercel.json):** When creating files like `vercel.json` on Windows PowerShell using `echo ... > file.json`, PowerShell defaults to UTF-16LE with a BOM. This causes external parsers (like Vercel CLI) to throw invalid JSON errors. **Workaround:** Always use the `write_to_file` tool to create config files, which ensures proper UTF-8 encoding.
