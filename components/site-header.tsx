@@ -84,13 +84,14 @@ export function SiteHeader() {
           <a
             href={GITHUB_URL}
             target="_blank"
-            rel="noreferrer"
+            rel="noopener noreferrer"
             onClick={() => track("github_clicked", { location: "nav" })}
             className="flex h-8 items-center gap-1.5 rounded-md text-muted-foreground transition-colors hover:bg-panel hover:text-foreground"
             aria-label="EleViewer on GitHub"
           >
             <GitHubIcon className="h-4 w-4" />
             <ExternalLink className="ml-1 h-3 w-3" />
+            <span className="sr-only">EleViewer on GitHub</span>
           </a>
           <Link
             href="/download"

@@ -21,6 +21,9 @@ export const metadata: Metadata = {
   publisher: "Karefined",
   alternates: {
     canonical: "https://eleviewer.vercel.app/",
+    types: {
+      "text/markdown": [{ url: "/llms.txt", title: "LLM Content" }],
+    },
   },
   robots: {
     index: true,

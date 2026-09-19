@@ -9,13 +9,25 @@ export function SiteFooter() {
         <div className="flex flex-col gap-2">
           <Logo />
           <p className="text-xs text-muted-foreground">
-            Built by <a href="https://github.com/karefined-eng" target="_blank" rel="noreferrer" className="underline hover:text-foreground transition-colors">karefined-eng</a>. Free forever.
+            Built by{" "}
+            <a
+              href="https://github.com/karefined-eng"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="underline hover:text-foreground transition-colors"
+            >
+              karefined-eng
+            </a>
+            . Free forever.
           </p>
         </div>
         <nav
           aria-label="Footer navigation"
           className="flex flex-wrap gap-x-6 gap-y-2 text-[13px] text-muted-foreground"
         >
+          <Link href="/about" className="transition-colors hover:text-foreground">
+            About
+          </Link>
           <Link href="/download" className="transition-colors hover:text-foreground">
             Download
           </Link>
@@ -34,7 +46,7 @@ export function SiteFooter() {
           <a
             href={GITHUB_URL}
             target="_blank"
-            rel="noreferrer"
+            rel="noopener noreferrer"
             className="transition-colors hover:text-foreground"
           >
             GitHub
@@ -42,7 +54,7 @@ export function SiteFooter() {
           <a
             href={RELEASES_URL}
             target="_blank"
-            rel="noreferrer"
+            rel="noopener noreferrer"
             className="transition-colors hover:text-foreground"
           >
             Releases
@@ -50,7 +62,7 @@ export function SiteFooter() {
           <a
             href={ISSUES_URL}
             target="_blank"
-            rel="noreferrer"
+            rel="noopener noreferrer"
             className="transition-colors hover:text-foreground"
           >
             Report a bug
@@ -58,7 +70,7 @@ export function SiteFooter() {
           <a
             href={LICENSE_URL}
             target="_blank"
-            rel="noreferrer"
+            rel="noopener noreferrer"
             className="transition-colors hover:text-foreground"
           >
             GPLv3 License
@@ -66,6 +78,17 @@ export function SiteFooter() {
           <Link href="/privacy" className="transition-colors hover:text-foreground">
             Privacy
           </Link>
+          <Link href="/terms" className="transition-colors hover:text-foreground">
+            Terms
+          </Link>
+          <a
+            href="/llms.txt"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="transition-colors hover:text-foreground font-mono text-xs"
+          >
+            llms.txt
+          </a>
         </nav>
       </div>
     </footer>

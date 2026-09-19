@@ -61,7 +61,7 @@ export default function UpdatesPage() {
             <a
               href={`${GITHUB_URL}/releases`}
               target="_blank"
-              rel="noreferrer"
+              rel="noopener noreferrer"
               className="mt-2 flex items-center gap-1 rounded-md px-3 py-1.5 text-sm text-muted-foreground transition-colors hover:text-foreground"
             >
               All releases

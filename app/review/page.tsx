@@ -269,7 +269,7 @@ export default function ReviewPage() {
             <a
               href="https://github.com/karefined-eng/eleviewer/issues/new/choose"
               target="_blank"
-              rel="noreferrer"
+              rel="noopener noreferrer"
               className="inline-flex items-center gap-1.5 font-mono text-[11px] uppercase tracking-widest text-muted-foreground hover:text-foreground transition-colors"
             >
               <Terminal className="h-3.5 w-3.5" />
@@ -278,7 +278,7 @@ export default function ReviewPage() {
             <a
               href="https://github.com/karefined-eng/eleviewer/discussions"
               target="_blank"
-              rel="noreferrer"
+              rel="noopener noreferrer"
               className="inline-flex items-center gap-1.5 font-mono text-[11px] uppercase tracking-widest text-muted-foreground hover:text-foreground transition-colors"
             >
               <MessageSquare className="h-3.5 w-3.5" />

@@ -88,7 +88,7 @@ export default async function ReleasePage({ params }: Props) {
             <a
               href={`${GITHUB_URL}/releases`}
               target="_blank"
-              rel="noreferrer"
+              rel="noopener noreferrer"
               className="mt-2 flex items-center gap-1 rounded-md px-3 py-1.5 text-sm text-muted-foreground transition-colors hover:text-foreground"
             >
               GitHub Releases
@@ -134,7 +134,7 @@ export default async function ReleasePage({ params }: Props) {
               <a
                 href={`${GITHUB_URL}/releases/tag/v${release.version}`}
                 target="_blank"
-                rel="noreferrer"
+                rel="noopener noreferrer"
                 className="flex h-9 items-center gap-2 rounded-md bg-primary px-4 text-sm font-medium text-primary-foreground transition-opacity hover:opacity-90"
               >
                 <Download className="h-3.5 w-3.5" />
@@ -143,7 +143,7 @@ export default async function ReleasePage({ params }: Props) {
               <a
                 href={`${GITHUB_URL}/releases/tag/v${release.version}`}
                 target="_blank"
-                rel="noreferrer"
+                rel="noopener noreferrer"
                 className="flex h-9 items-center gap-2 rounded-md border border-border bg-transparent px-4 text-sm font-medium text-foreground transition-colors hover:bg-panel"
               >
                 View on GitHub

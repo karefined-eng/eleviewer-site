@@ -39,7 +39,7 @@ export function OpenSource() {
           <a
             href={GITHUB_PROFILE_URL}
             target="_blank"
-            rel="noreferrer"
+            rel="noopener noreferrer"
             className="text-foreground underline underline-offset-4 transition-colors hover:text-accent"
           >
             creator&apos;s
@@ -64,7 +64,7 @@ export function OpenSource() {
         <a
           href={LICENSE_URL}
           target="_blank"
-          rel="noreferrer"
+          rel="noopener noreferrer"
           className="text-accent underline-offset-4 hover:underline"
         >
           GNU GPLv3 license
@@ -73,7 +73,7 @@ export function OpenSource() {
         <a
           href={GITHUB_URL}
           target="_blank"
-          rel="noreferrer"
+          rel="noopener noreferrer"
           className="text-accent underline-offset-4 hover:underline"
         >
           source code

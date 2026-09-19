@@ -93,7 +93,7 @@ export function SplitScreenDemo() {
              </div>
            </div>
            <div className="p-6 sm:p-8 h-full bg-white overflow-hidden text-gray-800">
-              <h1 className="text-2xl font-serif border-b border-gray-200 pb-2 mb-4">Mitochondrion</h1>
+              <div role="heading" aria-level={3} className="text-2xl font-serif border-b border-gray-200 pb-2 mb-4 font-bold">Mitochondrion</div>
               <p className="text-sm leading-relaxed mb-4">
                 A mitochondrion is a double-membrane-bound organelle found in most eukaryotic organisms. Mitochondria generate most of the cell's supply of adenosine triphosphate (ATP), used as a source of chemical energy.
               </p>

@@ -59,7 +59,7 @@ export default function PrivacyPage() {
                 <a
                   href={LICENSE_URL}
                   target="_blank"
-                  rel="noreferrer"
+                  rel="noopener noreferrer"
                   className="text-accent underline"
                 >
                   GNU GPLv3 License
@@ -68,7 +68,7 @@ export default function PrivacyPage() {
                 <a
                   href={GITHUB_URL}
                   target="_blank"
-                  rel="noreferrer"
+                  rel="noopener noreferrer"
                   className="text-accent underline"
                 >
                   GitHub
@@ -85,7 +85,7 @@ export default function PrivacyPage() {
                 <a
                   href={ISSUES_URL}
                   target="_blank"
-                  rel="noreferrer"
+                  rel="noopener noreferrer"
                   className="text-accent underline"
                 >
                   GitHub Issues

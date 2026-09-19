@@ -92,7 +92,7 @@ export default function DocsOverviewPage() {
           <a
             href="https://github.com/karefined-eng/eleviewer/issues/new"
             target="_blank"
-            rel="noreferrer"
+            rel="noopener noreferrer"
             className="group rounded-lg border border-border bg-panel/30 p-5 transition-colors hover:bg-panel/60"
           >
             <Bug className="h-5 w-5 text-accent" />

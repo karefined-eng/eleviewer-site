@@ -49,7 +49,7 @@ export function TrustBar() {
               <a
                 href="https://github.com/karefined-eng/eleviewer"
                 target="_blank"
-                rel="noreferrer"
+                rel="noopener noreferrer"
                 className="text-[11px] text-muted-foreground underline underline-offset-2 hover:text-foreground"
               >
                 Star the repo ⭐

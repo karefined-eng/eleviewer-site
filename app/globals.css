@@ -70,6 +70,11 @@ body {
   color: var(--accent-foreground);
 }
 
+:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 2px;
+}
+
 @keyframes morph-top {
   0%, 100% { transform: translate(0, 0) rotate(0deg) scaleX(1); opacity: 1; }
   12.5% { transform: translate(0, 5.5px) rotate(90deg) scaleX(1.2); opacity: 1; }

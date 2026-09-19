@@ -42,7 +42,7 @@ export function DownloadCta() {
           <a
             href={ISSUES_URL}
             target="_blank"
-            rel="noreferrer"
+            rel="noopener noreferrer"
             className="text-accent underline-offset-4 hover:underline"
           >
             Open an issue

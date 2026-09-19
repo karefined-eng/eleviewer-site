@@ -41,7 +41,7 @@ export function Hero() {
           <a
             href={GITHUB_URL}
             target="_blank"
-            rel="noreferrer"
+            rel="noopener noreferrer"
             onClick={() => track("github_clicked", { location: "hero" })}
             className="flex h-11 items-center justify-center gap-2 rounded-lg border border-border bg-transparent px-6 text-sm font-medium text-foreground transition-colors hover:bg-panel"
           >

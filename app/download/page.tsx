@@ -124,7 +124,7 @@ export default function DownloadPage() {
               <a
                 href={`${GITHUB_URL}/releases`}
                 target="_blank"
-                rel="noreferrer"
+                rel="noopener noreferrer"
                 className="mt-3 inline-flex text-xs font-medium text-foreground underline underline-offset-4 hover:text-accent"
               >
                 Open the official release page
