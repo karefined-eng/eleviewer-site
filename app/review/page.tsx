@@ -157,8 +157,9 @@ export default function ReviewPage() {
                 {category === "Bug Report" && (
                   <div className="space-y-4">
                     <div>
-                      <p className="text-[13px] font-medium mb-1.5 text-foreground/80">What did you click or try to do?</p>
+                      <label htmlFor="bug-action" className="text-[13px] font-medium mb-1.5 text-foreground/80">What did you click or try to do?</label>
                       <textarea
+                        id="bug-action"
                         value={bugAction}
                         onChange={(e) => setBugAction(e.target.value)}
                         rows={2}
@@ -168,8 +169,9 @@ export default function ReviewPage() {
                       />
                     </div>
                     <div>
-                      <p className="text-[13px] font-medium mb-1.5 text-foreground/80">What were you expecting to happen?</p>
+                      <label htmlFor="bug-expected" className="text-[13px] font-medium mb-1.5 text-foreground/80">What were you expecting to happen?</label>
                       <textarea
+                        id="bug-expected"
                         value={bugExpected}
                         onChange={(e) => setBugExpected(e.target.value)}
                         rows={2}
@@ -179,8 +181,9 @@ export default function ReviewPage() {
                       />
                     </div>
                     <div>
-                      <p className="text-[13px] font-medium mb-1.5 text-foreground/80">What actually broke or went wrong?</p>
+                      <label htmlFor="bug-actual" className="text-[13px] font-medium mb-1.5 text-foreground/80">What actually broke or went wrong?</label>
                       <textarea
+                        id="bug-actual"
                         value={bugActual}
                         onChange={(e) => setBugActual(e.target.value)}
                         rows={2}
