@@ -94,7 +94,7 @@ export default function ReviewPage() {
   return (
     <div className="flex min-h-screen flex-col bg-background text-foreground selection:bg-accent/30 selection:text-accent">
       <SiteHeader />
-      <main className="flex-1 mx-auto max-w-3xl px-5 py-16 sm:py-24 w-full">
+      <main id="main-content" className="flex-1 mx-auto max-w-3xl px-5 py-16 sm:py-24 w-full">
         <div className="text-center max-w-2xl mx-auto mb-12">
           <p className="mb-4 inline-flex items-center gap-2 rounded-full border border-border bg-panel px-3 py-1 font-mono text-xs font-medium text-muted-foreground uppercase tracking-wider shadow-sm">
             Direct Developer Inbox
@@ -256,7 +256,7 @@ export default function ReviewPage() {
                     {isSubmitting ? "Transmitting to GitHub..." : "Submit to Developer"}
                   </span>
                 </button>
-                <p className="mt-4 text-center font-mono text-[11px] text-muted-foreground/70">
+                <p className="mt-4 text-center font-mono text-[12px] text-muted-foreground/70">
                   Submitting anonymously · No account or email required
                 </p>
               </div>
@@ -273,7 +273,7 @@ export default function ReviewPage() {
               href="https://github.com/karefined-eng/eleviewer/issues/new/choose"
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center gap-1.5 font-mono text-[11px] uppercase tracking-widest text-muted-foreground hover:text-foreground transition-colors"
+              className="inline-flex items-center gap-1.5 font-mono text-[12px] uppercase tracking-widest text-muted-foreground hover:text-foreground transition-colors"
             >
               <Terminal className="h-3.5 w-3.5" />
               GitHub Issues
@@ -282,7 +282,7 @@ export default function ReviewPage() {
               href="https://github.com/karefined-eng/eleviewer/discussions"
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center gap-1.5 font-mono text-[11px] uppercase tracking-widest text-muted-foreground hover:text-foreground transition-colors"
+              className="inline-flex items-center gap-1.5 font-mono text-[12px] uppercase tracking-widest text-muted-foreground hover:text-foreground transition-colors"
             >
               <MessageSquare className="h-3.5 w-3.5" />
               GitHub Discussions

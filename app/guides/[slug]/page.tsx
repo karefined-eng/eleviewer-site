@@ -4,6 +4,8 @@ import { SiteHeader } from "@/components/site-header"
 import { SiteFooter } from "@/components/site-footer"
 import { DOWNLOAD_URL } from "@/lib/links"
 import { BreadcrumbJsonLd } from "@/components/breadcrumb-json-ld"
+import { EditorialProof } from "@/components/editorial-proof"
+import { createArticleJsonLd } from "@/lib/editorial"
 
 type FormatRow = [string, string, string, string] // Format, Open/View, Text Extraction, Limitations
 
@@ -129,12 +131,15 @@ export default async function GuidePage({ params }: { params: Promise<{ slug: st
   if (!guide) notFound()
 
   const jsonLd = { 
-    "@context": "https://schema.org", 
-    "@type": "HowTo", 
+    ...createArticleJsonLd({
+      headline: guide.title,
+      description: guide.description,
+      url: `https://eleviewer.vercel.app/guides/${slug}`,
+    }),
+    "@type": "HowTo",
     name: guide.title, 
     description: guide.description, 
     step: guide.steps.map((text) => ({ "@type": "HowToStep", text })), 
-    url: `https://eleviewer.vercel.app/guides/${slug}` 
   }
 
   return (
@@ -208,6 +213,8 @@ export default async function GuidePage({ params }: { params: Promise<{ slug: st
               </p>
             </section>
           )}
+
+          <EditorialProof />
 
           <section className="mt-12 rounded-xl border border-border p-6">
             <h2 className="text-xl font-semibold">Why use EleViewer?</h2>

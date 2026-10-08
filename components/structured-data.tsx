@@ -1,7 +1,26 @@
 import React from "react"
-import { DOWNLOAD_URL, GITHUB_URL, LATEST_RELEASE_VERSION } from "@/lib/links"
+import {
+  DOWNLOAD_URL,
+  GITHUB_PROFILE_URL,
+  GITHUB_URL,
+  LATEST_RELEASE_VERSION,
+} from "@/lib/links"
 
 export function StructuredData() {
+  const organizationSchema = {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "@id": "https://eleviewer.vercel.app/#organization",
+    name: "Karefined",
+    url: GITHUB_PROFILE_URL,
+    sameAs: [GITHUB_PROFILE_URL, GITHUB_URL],
+    founder: {
+      "@type": "Person",
+      name: "karefined-eng",
+      url: GITHUB_PROFILE_URL,
+    },
+  }
+
   const softwareSchema = {
     "@context": "https://schema.org",
     "@type": "SoftwareApplication",
@@ -13,11 +32,12 @@ export function StructuredData() {
     "url": "https://eleviewer.vercel.app",
     "downloadUrl": "https://eleviewer.vercel.app" + DOWNLOAD_URL,
     "image": "https://eleviewer.vercel.app/opengraph-image",
-    "sameAs": [GITHUB_URL],
+    "sameAs": [GITHUB_URL, GITHUB_PROFILE_URL],
     "author": {
       "@type": "Organization",
       "name": "Karefined",
       "url": "https://github.com/karefined-eng",
+      "@id": "https://eleviewer.vercel.app/#organization",
     },
     "offers": {
       "@type": "Offer",
@@ -34,10 +54,15 @@ export function StructuredData() {
     "url": "https://eleviewer.vercel.app",
     "name": "EleViewer",
     "description": "Free, portable Windows document viewer and study workspace for students and researchers.",
+    "publisher": { "@id": "https://eleviewer.vercel.app/#organization" },
   }
 
   return (
     <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(organizationSchema) }}
+      />
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(softwareSchema) }}

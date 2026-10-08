@@ -4,6 +4,8 @@ import { SiteHeader } from "@/components/site-header"
 import { SiteFooter } from "@/components/site-footer"
 import { DOWNLOAD_URL } from "@/lib/links"
 import { RelatedAlternatives } from "@/components/related-alternatives"
+import { EditorialProof } from "@/components/editorial-proof"
+import { createArticleJsonLd } from "@/lib/editorial"
 
 export const metadata: Metadata = {
   title: "EleViewer vs Sumatra PDF — Free Document Viewer Alternative",
@@ -12,13 +14,11 @@ export const metadata: Metadata = {
 }
 
 export default function SumatraAlternativePage() {
-  const jsonLd = {
-    "@context": "https://schema.org",
-    "@type": "Article",
+  const jsonLd = createArticleJsonLd({
     headline: "EleViewer vs Sumatra PDF — Free Document Viewer Alternative",
     description: "Comparing EleViewer and Sumatra PDF for Windows. See which portable PDF and document reader is right for your study workflow.",
     url: "https://eleviewer.vercel.app/alternatives/sumatra-pdf",
-  }
+  })
 
   return (
     <div className="flex min-h-screen flex-col bg-background text-foreground">
@@ -96,6 +96,8 @@ export default function SumatraAlternativePage() {
               </tbody>
             </table>
           </div>
+
+          <EditorialProof />
 
           <div className="mt-12">
             <h2 className="mb-4 text-2xl font-semibold text-foreground">When to choose Sumatra PDF</h2>

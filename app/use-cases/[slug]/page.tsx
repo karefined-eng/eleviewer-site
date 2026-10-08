@@ -4,6 +4,8 @@ import { SiteHeader } from "@/components/site-header"
 import { SiteFooter } from "@/components/site-footer"
 import { DOWNLOAD_URL } from "@/lib/links"
 import { BreadcrumbJsonLd } from "@/components/breadcrumb-json-ld"
+import { EditorialProof } from "@/components/editorial-proof"
+import { createArticleJsonLd } from "@/lib/editorial"
 
 import { useCases, UseCaseSlug } from "@/lib/use-cases-data"
 import Link from "next/link"
@@ -29,14 +31,11 @@ export default async function UseCasePage({ params }: { params: Promise<{ slug: 
   const item = useCases[slug as UseCaseSlug]; 
   if (!item) notFound(); 
   
-  const jsonLd = { 
-    "@context": "https://schema.org", 
-    "@type": "Article", 
-    headline: item.title, 
-    description: item.description, 
-    url: `https://eleviewer.vercel.app/use-cases/${slug}`, 
-    author: { "@type": "Organization", name: "EleViewer" } 
-  }; 
+  const jsonLd = createArticleJsonLd({
+    headline: item.title,
+    description: item.description,
+    url: `https://eleviewer.vercel.app/use-cases/${slug}`,
+  })
   
   return (
     <div className="flex min-h-screen flex-col bg-background text-foreground">
@@ -68,6 +67,7 @@ export default async function UseCasePage({ params }: { params: Promise<{ slug: 
               ))}
             </ul>
           </section>
+          <EditorialProof />
           <a href={DOWNLOAD_URL} className="mt-10 inline-flex h-11 items-center justify-center rounded-lg bg-primary px-6 text-sm font-medium text-primary-foreground transition-opacity hover:opacity-90">
             Download the portable app
           </a>

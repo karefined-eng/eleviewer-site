@@ -4,10 +4,15 @@ import { SiteFooter } from "@/components/site-footer"
 import { DOWNLOAD_URL } from "@/lib/links"
 import { BreadcrumbJsonLd } from "@/components/breadcrumb-json-ld"
 import { RelatedAlternatives } from "@/components/related-alternatives"
+import { EditorialProof } from "@/components/editorial-proof"
+import { createArticleJsonLd } from "@/lib/editorial"
 
-export const metadata: Metadata = { 
+const pageDescription =
+  "A lightweight, portable alternative to Adobe Reader that opens PDFs alongside DOCX, XLSX, and PPTX files. No installer required."
+
+export const metadata: Metadata = {
   title: "Adobe Reader Alternative for Windows", 
-  description: "A lightweight, portable alternative to Adobe Reader that opens PDFs alongside DOCX, XLSX, and PPTX files. No installer required.", 
+  description: pageDescription,
   alternates: { canonical: "https://eleviewer.vercel.app/alternatives/adobe-reader" } 
 }
 
@@ -21,13 +26,11 @@ const rows = [
 ]
 
 export default function AdobeReaderAlternative() { 
-  const jsonLd = { 
-    "@context": "https://schema.org", 
-    "@type": "Article", 
-    headline: "Adobe Reader Alternative for Windows", 
-    description: metadata.description, 
-    url: "https://eleviewer.vercel.app/alternatives/adobe-reader" 
-  }; 
+  const jsonLd = createArticleJsonLd({
+    headline: "Adobe Reader Alternative for Windows",
+    description: pageDescription,
+    url: "https://eleviewer.vercel.app/alternatives/adobe-reader",
+  })
   
   return (
     <div className="flex min-h-screen flex-col bg-background text-foreground">
@@ -80,6 +83,7 @@ export default function AdobeReaderAlternative() {
               If you are a student or professional who frequently receives a mix of <code>.pdf</code>, <code>.docx</code>, and <code>.xlsx</code> files, EleViewer keeps you focused. It runs as a single portable application, meaning no background update services are installed on your computer. Plus, all your documents are processed strictly locally with zero usage telemetry.
             </p>
           </section>
+          <EditorialProof />
           
           <section className="mt-12 rounded-xl border border-border bg-panel/50 p-6">
             <h2 className="text-xl font-semibold">Try the portable alternative</h2>

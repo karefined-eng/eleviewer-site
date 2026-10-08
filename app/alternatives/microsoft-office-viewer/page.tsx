@@ -4,11 +4,15 @@ import { SiteHeader } from "@/components/site-header"
 import { SiteFooter } from "@/components/site-footer"
 import { DOWNLOAD_URL } from "@/lib/links"
 import { RelatedAlternatives } from "@/components/related-alternatives"
+import { EditorialProof } from "@/components/editorial-proof"
+import { createArticleJsonLd } from "@/lib/editorial"
+
+const pageDescription =
+  "Open DOCX, XLSX, and PPTX files with a free portable alternative to the discontinued Microsoft Office viewers."
 
 export const metadata: Metadata = {
   title: "Microsoft Office Viewer Alternative | EleViewer",
-  description:
-    "Open DOCX, XLSX, and PPTX files with a free portable alternative to the discontinued Microsoft Office viewers.",
+  description: pageDescription,
   alternates: {
     canonical: "https://eleviewer.vercel.app/alternatives/microsoft-office-viewer",
   },
@@ -24,13 +28,11 @@ const rows = [
 ]
 
 export default function MicrosoftOfficeViewerAlternative() {
-  const jsonLd = {
-    "@context": "https://schema.org",
-    "@type": "Article",
+  const jsonLd = createArticleJsonLd({
     headline: "Microsoft Office Viewer Alternative for Windows",
-    description: metadata.description,
+    description: pageDescription,
     url: "https://eleviewer.vercel.app/alternatives/microsoft-office-viewer",
-  }
+  })
 
   return (
     <div className="flex min-h-screen flex-col bg-background text-foreground">
@@ -86,6 +88,8 @@ export default function MicrosoftOfficeViewerAlternative() {
               </tbody>
             </table>
           </div>
+          <EditorialProof />
+
           <section className="mt-12 rounded-xl border border-border bg-panel/50 p-6">
             <h2 className="text-xl font-semibold">Which files can it open?</h2>
             <p className="mt-3 leading-7 text-muted-foreground">

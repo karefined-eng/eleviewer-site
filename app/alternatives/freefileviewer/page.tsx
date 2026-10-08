@@ -4,10 +4,15 @@ import { SiteFooter } from "@/components/site-footer"
 import { DOWNLOAD_URL } from "@/lib/links"
 import { BreadcrumbJsonLd } from "@/components/breadcrumb-json-ld"
 import { RelatedAlternatives } from "@/components/related-alternatives"
+import { EditorialProof } from "@/components/editorial-proof"
+import { createArticleJsonLd } from "@/lib/editorial"
 
-export const metadata: Metadata = { 
+const pageDescription =
+  "A modern, open-source alternative to FreeFileViewer with a unified study workspace, dark mode, and built-in PDF text-to-speech."
+
+export const metadata: Metadata = {
   title: "FreeFileViewer Alternative for Windows", 
-  description: "A modern, open-source alternative to FreeFileViewer with a unified study workspace, dark mode, and built-in PDF text-to-speech.", 
+  description: pageDescription,
   alternates: { canonical: "https://eleviewer.vercel.app/alternatives/freefileviewer" } 
 }
 
@@ -21,13 +26,11 @@ const rows = [
 ]
 
 export default function FreeFileViewerAlternative() { 
-  const jsonLd = { 
-    "@context": "https://schema.org", 
-    "@type": "Article", 
-    headline: "FreeFileViewer Alternative for Windows", 
-    description: metadata.description, 
-    url: "https://eleviewer.vercel.app/alternatives/freefileviewer" 
-  }; 
+  const jsonLd = createArticleJsonLd({
+    headline: "FreeFileViewer Alternative for Windows",
+    description: pageDescription,
+    url: "https://eleviewer.vercel.app/alternatives/freefileviewer",
+  })
   
   return (
     <div className="flex min-h-screen flex-col bg-background text-foreground">
@@ -81,6 +84,8 @@ export default function FreeFileViewerAlternative() {
             </p>
           </section>
           
+          <EditorialProof />
+
           <section className="mt-12 rounded-xl border border-border bg-panel/50 p-6">
             <h2 className="text-xl font-semibold">Try EleViewer</h2>
             <p className="mt-3 leading-7 text-muted-foreground">

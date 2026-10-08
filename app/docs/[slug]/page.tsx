@@ -3,6 +3,8 @@ import Link from "next/link";
 import { notFound } from "next/navigation";
 import { DOCS_TOPICS, getDocTopicBySlug } from "@/lib/docs-data";
 import { BreadcrumbJsonLd } from "@/components/breadcrumb-json-ld";
+import { EditorialProof } from "@/components/editorial-proof";
+import { createArticleJsonLd } from "@/lib/editorial";
 import { ArrowLeft, ArrowRight, BookOpen, Terminal, CheckCircle2, AlertTriangle, Info, HelpCircle } from "lucide-react";
 
 export async function generateStaticParams() {
@@ -71,6 +73,18 @@ export default async function DocTopicPage({
             url: `https://eleviewer.vercel.app/docs/${topic.slug}`,
           },
         ]}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify(
+            createArticleJsonLd({
+              headline: topic.title,
+              description: topic.description,
+              url: `https://eleviewer.vercel.app/docs/${topic.slug}`,
+            }),
+          ),
+        }}
       />
       {/* Main Article Area */}
       <article className="flex-1 min-w-0 max-w-3xl flex flex-col gap-10">
@@ -178,6 +192,8 @@ export default async function DocTopicPage({
             </section>
           ))}
         </div>
+
+        <EditorialProof />
 
         {/* Article Pagination (Next / Previous) */}
         <div className="mt-8 pt-8 border-t border-border grid grid-cols-1 sm:grid-cols-2 gap-4">
