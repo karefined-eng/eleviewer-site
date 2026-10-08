@@ -8,7 +8,7 @@ import { DOWNLOAD_URL, GITHUB_URL, LATEST_RELEASE_VERSION, LATEST_RELEASE_SHA256
 export const metadata: Metadata = {
   title: "Download EleViewer — Free Windows Document Viewer & Study Workspace",
   description:
-    "Download EleViewer for Windows 10 and 11: a free portable app for DOCX, XLSX, PPTX, PDF, Markdown, CSV, and HTML. No installation or account.",
+    "Download EleViewer for Windows 10 and 11: a free app for DOCX, XLSX, PPTX, PDF, Markdown, CSV, and HTML.",
   alternates: {
     canonical: "https://eleviewer.vercel.app/download",
   },
@@ -31,7 +31,7 @@ export default function DownloadPage() {
               Download EleViewer for Windows
             </h1>
             <p className="mt-3 text-pretty text-[15px] text-muted-foreground">
-              Download the current portable build, double-click it, and start with a course file without an account or installation process. The executable is about 135 MB.
+              Download the current setup installer and start with a course file. No account is needed, and the installer is about 132 MB.
             </p>
 
             <div className="mt-8 flex flex-col items-center justify-center gap-4">
@@ -40,7 +40,7 @@ export default function DownloadPage() {
                 className="flex h-11 items-center justify-center gap-2 rounded-lg bg-primary px-6 text-sm font-medium text-primary-foreground transition-opacity hover:opacity-90 shadow-sm"
               >
                 <WindowsIcon className="h-4 w-4" />
-                Download EleViewer.exe (v{LATEST_RELEASE_VERSION})
+                Download EleViewer Setup (v{LATEST_RELEASE_VERSION})
               </a>
 
               <div className="rounded-lg border border-border bg-panel p-4 max-w-md w-full text-left">

@@ -37,6 +37,38 @@ export interface Release {
 
 export const RELEASES: Release[] = [
   {
+    version: "1.3.6",
+    date: "2026-10-07",
+    tagline: "Packaging and release version references aligned",
+    highlights: [
+      {
+        title: "Installer and app versions aligned",
+        body: "Updated the installer metadata and app version so they match the 1.3.6 release.",
+      },
+      {
+        title: "WinGet release metadata updated",
+        body: "Synced the WinGet manifests and packaging fallback version with the release.",
+      },
+    ],
+    sections: [
+      {
+        title: "Changed",
+        emoji: "🔧",
+        items: [
+          "Synced the app version, installer metadata, and WinGet manifests for the 1.3.6 release.",
+          "Updated the local release fallback version used by the packaging tools.",
+        ],
+      },
+      {
+        title: "Fixed",
+        emoji: "✅",
+        items: [
+          "Corrected packaging version references so installers and manifests stay aligned with the app release number.",
+        ],
+      },
+    ],
+  },
+  {
     version: "1.3.5",
     date: "2026-09-15",
     tagline: "UI polish, splitter improvements, and documentation",
