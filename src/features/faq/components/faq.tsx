@@ -12,7 +12,7 @@ const faqs = [
   {
     question: "How do I open a DOCX file without Microsoft Word?",
     answer:
-      "Download EleViewer, then drag the Word document onto the app or press Ctrl+O to open it. It is a single portable .exe, so you do not need Microsoft Office, an installation, or a sign-up.",
+      "Download EleViewer, open the installer, then drag the Word document onto the app or press Ctrl+O to open it. You do not need Microsoft Office, an account, or administrator permissions.",
   },
   {
     question: "How do I open an XLSX spreadsheet without Excel?",
@@ -32,7 +32,7 @@ const faqs = [
   {
     question: "What is the best free alternative to Microsoft Word Viewer?",
     answer:
-      "EleViewer replaces the discontinued Microsoft Word Viewer, Excel Viewer, and PowerPoint Viewer in one portable app. It opens DOCX, XLSX, PPTX, PDF, Markdown, CSV, HTML, and TXT — no install required.",
+      "EleViewer replaces the discontinued Microsoft Word Viewer, Excel Viewer, and PowerPoint Viewer in one local app. It opens DOCX, XLSX, PPTX, PDF, Markdown, CSV, HTML, and TXT without an Office subscription.",
   },
   {
     question: "Can I browse the web inside EleViewer?",
@@ -42,7 +42,7 @@ const faqs = [
   {
     question: "Is EleViewer truly free and open source?",
     answer:
-      "Yes. EleViewer is free of charge, GPLv3 licensed, runs as a single portable .exe, and requires no account or installation.",
+      "Yes. EleViewer is free of charge, GPLv3 licensed, requires no account or subscription, and can be installed per Windows user without administrator permissions. A portable ZIP is also available.",
   },
   {
     question: "What file types can EleViewer open?",
@@ -62,12 +62,12 @@ const faqs = [
   {
     question: "Is there a free portable PDF reader for Windows with no install?",
     answer:
-      "Yes — EleViewer is a portable .exe that opens PDFs, DOCX, XLSX, PPTX, Markdown, and more with no installation. Run it directly from a USB drive or a shared lab computer.",
+      "Yes — download EleViewer's portable ZIP to open PDFs, DOCX, XLSX, PPTX, Markdown, and more without a traditional installation. The regular download is a per-user installer for Windows 10 and 11.",
   },
   {
     question: "Can EleViewer run on a school or university computer without admin rights?",
     answer:
-      "Yes. EleViewer is a single portable .exe that requires no installation and no admin privileges. Just download and double-click.",
+      "Yes. The Windows installer uses per-user installation and does not require administrator privileges. If the computer blocks installers, use the portable ZIP instead, subject to your institution's policies.",
   },
   {
     question: "Does EleViewer work without an internet connection?",

@@ -1,6 +1,8 @@
 import type { Metadata } from "next"
 import { SiteHeader } from "@/components/site-header"
 import { SiteFooter } from "@/components/site-footer"
+import { EditorialProof } from "@/components/editorial-proof"
+import { createArticleJsonLd } from "@/lib/editorial"
 import { GITHUB_URL, ISSUES_URL, LICENSE_URL } from "@/lib/links"
 
 export const metadata: Metadata = {
@@ -10,11 +12,18 @@ export const metadata: Metadata = {
 }
 
 export default function PrivacyPage() {
+  const jsonLd = createArticleJsonLd({
+    headline: "EleViewer Privacy Policy",
+    description: "EleViewer privacy policy: 100% local processing, zero telemetry, zero analytics.",
+    url: "https://eleviewer.vercel.app/privacy",
+  })
+
   return (
     <div className="flex min-h-screen flex-col bg-background text-foreground">
       <SiteHeader />
       <main className="flex-1">
         <article className="mx-auto max-w-3xl px-5 py-16 sm:py-24 prose prose-invert">
+          <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }} />
           <h1 className="text-3xl font-bold tracking-tight text-foreground sm:text-4xl">
             EleViewer Privacy Policy
           </h1>
@@ -94,6 +103,8 @@ export default function PrivacyPage() {
               </p>
             </div>
           </section>
+
+          <EditorialProof />
         </article>
       </main>
       <SiteFooter />

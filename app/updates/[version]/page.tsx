@@ -3,6 +3,8 @@ import { notFound } from "next/navigation"
 import Link from "next/link"
 import { SiteHeader } from "@/components/site-header"
 import { SiteFooter } from "@/components/site-footer"
+import { EditorialProof } from "@/components/editorial-proof"
+import { createArticleJsonLd } from "@/lib/editorial"
 import { RELEASES, getReleaseByVersion } from "@/lib/releases-data"
 import { GITHUB_URL } from "@/lib/links"
 import { BreadcrumbJsonLd } from "@/components/breadcrumb-json-ld"
@@ -46,10 +48,17 @@ export default async function ReleasePage({ params }: Props) {
   const newer = idx > 0 ? RELEASES[idx - 1] : null
   const older = idx < RELEASES.length - 1 ? RELEASES[idx + 1] : null
 
+  const jsonLd = createArticleJsonLd({
+    headline: `EleViewer v${release.version} Release Notes — What's New`,
+    description: `${release.tagline}. Full release notes for EleViewer v${release.version} released on ${release.date}.`,
+    url: `https://eleviewer.vercel.app/updates/${release.version}`,
+  })
+
   return (
     <div className="flex min-h-screen flex-col bg-background text-foreground">
       <SiteHeader />
       <div className="mx-auto flex w-full max-w-6xl flex-1 flex-col md:flex-row px-5">
+        <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }} />
         {/* ── Left Sidebar: Version Timeline ───────────────────────────── */}
         <aside
           aria-label="Version history"
@@ -240,6 +249,8 @@ export default async function ReleasePage({ params }: Props) {
           </div>
         </main>
       </div>
+
+      <EditorialProof />
       <SiteFooter />
     </div>
   )

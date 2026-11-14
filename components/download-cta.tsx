@@ -12,7 +12,7 @@ export function DownloadCta() {
           Download it. Open a course file. Press F9 when you want to listen.
         </h2>
         <p className="mx-auto mt-4 max-w-md text-pretty text-[15px] leading-relaxed text-muted-foreground">
-          One portable .exe for Windows 10/11. Download, double-click, press Ctrl+O to open a file, and use Alt+V later when you want a local course folder.
+          A per-user Windows installer for Windows 10/11. Open a course file with Ctrl+O, then use Alt+V later when you want a local course folder.
         </p>
         <div className="mt-8 flex flex-col items-center justify-center">
           <a
@@ -25,7 +25,7 @@ export function DownloadCta() {
           </a>
           <div className="mt-6 mx-auto max-w-md rounded-lg border border-border bg-panel/50 p-4 text-left font-mono text-xs text-muted-foreground leading-relaxed">
             <p className="leading-relaxed">
-              <span className="font-semibold text-foreground">ℹ️ SmartScreen Notice:</span> Windows may show an "Unknown Publisher" warning because this portable binary is open source and not digitally signed with a code-signing certificate. Click <strong>"More info"</strong> and then <strong>"Run anyway"</strong>.{" "}
+              <span className="font-semibold text-foreground">ℹ️ SmartScreen Notice:</span> Windows may show an "Unknown Publisher" warning because this open-source binary is not digitally signed with a code-signing certificate. Click <strong>"More info"</strong> and then <strong>"Run anyway"</strong>.{" "}
               <a
                 href="https://github.com/karefined-eng/eleviewer"
                 className="underline hover:text-foreground transition-colors"

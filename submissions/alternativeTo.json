@@ -1,0 +1,43 @@
+{
+  "platform": "AlternativeTo",
+  "url": "https://alternativeto.net/software/eleviewer/",
+  "fields": {
+    "name": "EleViewer",
+    "description": "EleViewer is a free, open-source portable Windows study workspace. It opens DOCX, XLSX, PPTX, PDF, Markdown, CSV, HTML, and TXT files in one ~135MB executable — no Microsoft Office, no installer, no admin rights, no account. Built-in PDF text-to-speech uses native Windows voices (SAPI) for hands-free reading. Features include a vault sidebar for course folders, session restore, split-screen web browser, quick switcher (Ctrl+Q), and persistent bookmarks. Zero telemetry, fully offline, GPLv3 licensed. Ideal for students, researchers, and anyone on locked-down or shared computers.",
+    "website": "https://eleviewer.vercel.app",
+    "license": "GPL-3.0",
+    "platforms": [
+      "Windows"
+    ],
+    "tags": [
+      "portable",
+      "offline",
+      "text-to-speech",
+      "student",
+      "no-telemetry",
+      "open-source",
+      "no-admin",
+      "windows",
+      "pdf-reader",
+      "docx-viewer"
+    ],
+    "alternatives": [
+      "Sumatra PDF",
+      "Microsoft Word Viewer",
+      "FreeFileViewer",
+      "Adobe Reader"
+    ],
+    "features": [
+      "Portable single .exe — no installer, no admin rights required",
+      "Opens DOCX, XLSX, PPTX, PDF, Markdown, CSV, HTML, TXT",
+      "PDF text-to-speech with native Windows SAPI voices (offline)",
+      "Vault sidebar for organizing course folders",
+      "Session restore — reopens tabs and reading positions",
+      "Split-screen web browser panel (Ctrl+T)",
+      "Quick switcher — fuzzy search recent files (Ctrl+Q)",
+      "Persistent bookmarks across sessions",
+      "Zero telemetry, fully offline, no account needed",
+      "GPLv3 open source — auditable, modifiable, redistributable"
+    ]
+  }
+}

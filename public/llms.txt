@@ -4,28 +4,54 @@
 
 EleViewer is a free, open-source Windows document viewer for students and people who need to work without Microsoft Office, an installer, or an internet connection.
 
-EleViewer is a free, portable Windows study workspace. It allows you to open DOCX, XLSX, PPTX, PDF, Markdown, CSV, HTML, and TXT without Microsoft Office in one portable app with PDF text-to-speech, built-in web browser, find & replace, autosave, file vault, and session restore.
-
 ## Quick Facts
+
 - **OS**: Windows 10, Windows 11
 - **License**: GPLv3 (Free and Open Source)
 - **Pricing**: $0 (No in-app purchases)
 - **Installation**: Portable single .exe (No admin rights required)
 - **Telemetry**: Zero telemetry, fully offline
+- **Latest Version**: [v1.3.7](https://github.com/karefined-eng/eleviewer/releases/tag/v1.3.7) (SHA256: `B18C5BB148B454FF3B1C0B79F40F24695F9BBC8B47E32B1CC08BEB853086AD95`)
 
 ## Core Features
-- **PDF Text-to-Speech**: Uses native Windows voices (SAPI) to read PDFs aloud.
-- **Vault Sidebar**: Organize course folders directly in the app.
-- **Session Restore**: Reopens tabs exactly where you left them.
-- **Built-in Web Panel**: Browse the web side-by-side with documents using Ctrl+T.
-- **Quick Switcher**: Press Ctrl+Q to fuzzy-search recent files.
-- **File Support**: DOCX, XLSX, PPTX, PDF, Markdown, CSV, HTML, TXT.
+
+- [PDF Text-to-Speech](https://eleviewer.vercel.app/docs/pdf-and-tts): Uses native Windows voices (SAPI) to read PDFs aloud, with a Windows Speech fallback if the local engine cannot initialize or restart.
+- [Vault Sidebar](https://eleviewer.vercel.app/docs/vault-explorer): Organize course folders directly in the app.
+- [Session Restore](https://eleviewer.vercel.app/docs/overview): Reopens tabs exactly where you left them.
+- [Built-in Web Panel](https://eleviewer.vercel.app/docs/html-and-web): Browse the web side-by-side with documents using Ctrl+T; startup and file-lock failures no longer crash the app.
+- [Quick Switcher](https://eleviewer.vercel.app/docs/overview): Press Ctrl+Q to fuzzy-search recent files.
+- [File Support](https://eleviewer.vercel.app/docs/overview): DOCX, XLSX, PPTX, PDF, Markdown, CSV, HTML, TXT.
 
 ## Comparison
-- **EleViewer vs Sumatra PDF**: EleViewer supports editing markdown and rendering DOCX/XLSX/PPTX natively, includes a web panel, and has text-to-speech built in. Sumatra PDF is faster for raw PDF viewing but lacks DOCX support and TTS.
-- **EleViewer vs Microsoft Word Viewer**: MS Word Viewer is discontinued. EleViewer is actively maintained and supports many more formats.
+
+- [EleViewer vs Sumatra PDF](https://eleviewer.vercel.app/alternatives/sumatra-pdf): EleViewer supports editing markdown and rendering DOCX/XLSX/PPTX natively, includes a web panel, and has text-to-speech built in. Sumatra PDF is faster for raw PDF viewing but lacks DOCX support and TTS.
+- [EleViewer vs Microsoft Word Viewer](https://eleviewer.vercel.app/alternatives/microsoft-office-viewer): MS Word Viewer is discontinued. EleViewer is actively maintained and supports many more formats.
+- [EleViewer vs FreeFileViewer](https://eleviewer.vercel.app/alternatives/freefileviewer): FreeFileViewer is ad-supported and limited to 30-day trial. EleViewer is free, open-source, and has no trial limits.
+- [EleViewer vs Adobe Reader](https://eleviewer.vercel.app/alternatives/adobe-reader): Adobe Reader is heavy, cloud-connected, and has telemetry. EleViewer is ~135MB portable, offline, and zero-telemetry.
+
+## Guides
+
+- [How to Open DOCX Files Without Microsoft Word](https://eleviewer.vercel.app/guides/open-docx-without-word)
+- [How to Open XLSX Files Without Microsoft Excel](https://eleviewer.vercel.app/guides/open-xlsx-without-excel)
+- [How to Open PPTX Files Without Microsoft PowerPoint](https://eleviewer.vercel.app/guides/open-pptx-without-powerpoint)
+- [Free PDF Text-to-Speech Reader for Windows](https://eleviewer.vercel.app/guides/pdf-text-to-speech-windows)
+- [Portable Document Viewer for Windows With No Install](https://eleviewer.vercel.app/guides/portable-document-viewer)
+- [Open PDF, DOCX, and XLSX Files Without Microsoft Office](https://eleviewer.vercel.app/guides/open-pdf-docx-xlsx-without-office)
+
+## Use Cases
+
+- [Students](https://eleviewer.vercel.app/use-cases/students): Lightweight workspace for coursework, lectures, and readings.
+- [Distraction-Free Study](https://eleviewer.vercel.app/use-cases/distraction-free-study): Full-screen reading with TTS, no notifications.
+- [Offline Study](https://eleviewer.vercel.app/use-cases/offline-study): Works completely offline on USB or air-gapped machines.
+- [School Computers](https://eleviewer.vercel.app/use-cases/school-computers): No admin rights, portable, leaves no registry footprint.
+- [Universal Document Viewer](https://eleviewer.vercel.app/use-cases/universal-document-viewer): One app for PDF, Word, Excel, PowerPoint, Markdown, CSV, HTML, TXT.
 
 ## Resources
-- Homepage: https://eleviewer.vercel.app
-- Docs: https://eleviewer.vercel.app/docs
-- Source: https://github.com/karefined-eng/eleviewer
+
+- [Homepage](https://eleviewer.vercel.app)
+- [Documentation](https://eleviewer.vercel.app/docs)
+- [Source Code](https://github.com/karefined-eng/eleviewer)
+- [Releases & Downloads](https://github.com/karefined-eng/eleviewer/releases)
+- [Issues & Support](https://github.com/karefined-eng/eleviewer/issues)
+- [Privacy Policy](https://eleviewer.vercel.app/privacy/local-document-viewer)
+- [License (GPLv3)](https://github.com/karefined-eng/eleviewer/blob/main/LICENSE)

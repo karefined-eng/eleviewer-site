@@ -1,0 +1,19 @@
+{
+  "platform": "Product Hunt",
+  "url": "https://www.producthunt.com/products/eleviewer",
+  "fields": {
+    "name": "EleViewer",
+    "tagline": "Free portable Windows study workspace — open DOCX, XLSX, PPTX, PDF, MD, CSV, HTML, TXT without Office",
+    "description": "EleViewer is a free, open-source portable Windows study workspace. It opens DOCX, XLSX, PPTX, PDF, Markdown, CSV, HTML, and TXT files in one ~135MB executable — no Microsoft Office, no installer, no admin rights, no account. Built-in PDF text-to-speech uses native Windows voices (SAPI) for hands-free reading. Features include a vault sidebar for course folders, session restore, split-screen web browser, quick switcher (Ctrl+Q), and persistent bookmarks. Zero telemetry, fully offline, GPLv3 licensed. Ideal for students, researchers, and anyone on locked-down or shared computers.",
+    "website": "https://eleviewer.vercel.app",
+    "topics": [
+      "Windows",
+      "Productivity",
+      "Education",
+      "Open Source",
+      "Developer Tools"
+    ],
+    "maker": "karefined-eng",
+    "maker_url": "https://github.com/karefined-eng"
+  }
+}

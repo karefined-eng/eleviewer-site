@@ -1,9 +1,10 @@
 import type { Metadata } from "next"
-import { Download, ShieldCheck, HardDrive, CheckCircle } from "lucide-react"
+import { ShieldCheck, HardDrive, CheckCircle } from "lucide-react"
+import { track } from "@vercel/analytics/react"
 import { SiteHeader } from "@/components/site-header"
 import { SiteFooter } from "@/components/site-footer"
 import { WindowsIcon } from "@/components/windows-icon"
-import { DOWNLOAD_URL, GITHUB_URL, LATEST_RELEASE_VERSION, LATEST_RELEASE_SHA256 } from "@/lib/links"
+import { DOWNLOAD_URL, GITHUB_URL, LATEST_RELEASE_VERSION, LATEST_RELEASE_SHA256, PORTABLE_DOWNLOAD_URL } from "@/lib/links"
 
 export const metadata: Metadata = {
   title: "Download EleViewer — Free Windows Document Viewer & Study Workspace",
@@ -31,16 +32,24 @@ export default function DownloadPage() {
               Download EleViewer for Windows
             </h1>
             <p className="mt-3 text-pretty text-[15px] text-muted-foreground">
-              Download the current setup installer and start with a course file. No account is needed, and the installer is about 132 MB.
+              Download the current Windows installer, open it, and start with a course file. No account is needed, and the download is about 132 MB.
             </p>
 
             <div className="mt-8 flex flex-col items-center justify-center gap-4">
               <a
                 href={DOWNLOAD_URL}
+                onClick={() => track("download_clicked", { location: "download_page" })}
                 className="flex h-11 items-center justify-center gap-2 rounded-lg bg-primary px-6 text-sm font-medium text-primary-foreground transition-opacity hover:opacity-90 shadow-sm"
               >
                 <WindowsIcon className="h-4 w-4" />
-                Download EleViewer Setup (v{LATEST_RELEASE_VERSION})
+                Download the installer (v{LATEST_RELEASE_VERSION})
+              </a>
+              <a
+                href={PORTABLE_DOWNLOAD_URL}
+                onClick={() => track("portable_download_clicked", { location: "download_page" })}
+                className="text-xs font-medium text-foreground underline underline-offset-4 hover:text-accent"
+              >
+                Prefer no install? Download the portable ZIP
               </a>
 
               <div className="rounded-lg border border-border bg-panel p-4 max-w-md w-full text-left">
@@ -55,7 +64,7 @@ export default function DownloadPage() {
 
             <div className="mt-6 mx-auto max-w-md rounded-lg border border-border bg-panel/50 p-4 text-left font-mono text-xs text-muted-foreground leading-relaxed">
               <p className="leading-relaxed">
-                <span className="font-semibold text-foreground">ℹ️ SmartScreen Notice:</span> Windows may show an "Unknown Publisher" warning because this portable binary is open source and not digitally signed with a code-signing certificate. Click <strong>"More info"</strong> and then <strong>"Run anyway"</strong>.{" "}
+                <span className="font-semibold text-foreground">ℹ️ SmartScreen Notice:</span> Windows may show an "Unknown Publisher" warning because this open-source binary is not digitally signed with a code-signing certificate. Click <strong>"More info"</strong> and then <strong>"Run anyway"</strong>.{" "}
                 <a
                   href={GITHUB_URL}
                   target="_blank"
@@ -70,23 +79,23 @@ export default function DownloadPage() {
 
           <div className="mx-auto mt-10 max-w-3xl rounded-xl border border-border bg-panel/40 p-6 text-left">
             <p className="font-mono text-xs font-semibold uppercase tracking-widest text-accent">
-              Your first study session
+              Start in under a minute
             </p>
             <p className="mt-2 text-sm text-muted-foreground">
-              Download, double-click the portable file, then use these three shortcuts to get started.
+              Download the installer, keep the default options, and open EleViewer when setup finishes.
             </p>
             <ol className="mt-4 grid gap-4 sm:grid-cols-3">
               <li>
-                <p className="text-sm font-semibold text-foreground">1. Open a file</p>
+                <p className="text-sm font-semibold text-foreground">1. Install EleViewer</p>
+                <p className="mt-1 text-xs leading-relaxed text-muted-foreground">Open the downloaded <code className="rounded border border-border bg-background px-1 py-0.5 font-mono text-[11px]">.exe</code> and keep the default options.</p>
+              </li>
+              <li>
+                <p className="text-sm font-semibold text-foreground">2. Open a file</p>
                 <p className="mt-1 text-xs leading-relaxed text-muted-foreground">Press <kbd className="rounded border border-border bg-background px-1.5 py-0.5 font-mono text-[11px]">Ctrl+O</kbd> and choose a reading or note.</p>
               </li>
               <li>
-                <p className="text-sm font-semibold text-foreground">2. Try Read Aloud</p>
+                <p className="text-sm font-semibold text-foreground">3. Press F9 to listen</p>
                 <p className="mt-1 text-xs leading-relaxed text-muted-foreground">Select a passage and press <kbd className="rounded border border-border bg-background px-1.5 py-0.5 font-mono text-[11px]">F9</kbd> to listen.</p>
-              </li>
-              <li>
-                <p className="text-sm font-semibold text-foreground">3. Add your folder</p>
-                <p className="mt-1 text-xs leading-relaxed text-muted-foreground">Press <kbd className="rounded border border-border bg-background px-1.5 py-0.5 font-mono text-[11px]">Alt+V</kbd> when you want course files one click away.</p>
               </li>
             </ol>
           </div>
@@ -108,7 +117,7 @@ export default function DownloadPage() {
                 </li>
                 <li className="flex items-center gap-2">
                   <CheckCircle className="h-3.5 w-3.5 text-accent" />
-                  <span>No administrator privileges required and no traditional installation process (no installer, no system-wide changes)</span>
+                  <span>No administrator privileges required; installs for your Windows user</span>
                 </li>
               </ul>
             </div>

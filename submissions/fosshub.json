@@ -1,0 +1,16 @@
+{
+  "platform": "FossHub",
+  "url": "https://www.fosshub.com/EleViewer.html",
+  "fields": {
+    "name": "EleViewer",
+    "version": "1.3.6",
+    "description": "EleViewer is a free, open-source portable Windows study workspace. It opens DOCX, XLSX, PPTX, PDF, Markdown, CSV, HTML, and TXT files in one ~135MB executable — no Microsoft Office, no installer, no admin rights, no account. Built-in PDF text-to-speech uses native Windows voices (SAPI) for hands-free reading. Features include a vault sidebar for course folders, session restore, split-screen web browser, quick switcher (Ctrl+Q), and persistent bookmarks. Zero telemetry, fully offline, GPLv3 licensed. Ideal for students, researchers, and anyone on locked-down or shared computers.",
+    "license": "GPLv3",
+    "homepage": "https://eleviewer.vercel.app",
+    "download_url": "https://eleviewer.vercel.app/download",
+    "file_size": "~135 MB",
+    "sha256": "0FA547D30B6A88C35D7F35A0EDF36145493734A17317D87DB5506ED20544C393",
+    "os": "Windows",
+    "category": "Office / Document Viewer"
+  }
+}

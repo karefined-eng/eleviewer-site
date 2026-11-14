@@ -3,6 +3,8 @@ import Link from "next/link"
 import { SiteHeader } from "@/components/site-header"
 import { SiteFooter } from "@/components/site-footer"
 import { BreadcrumbJsonLd } from "@/components/breadcrumb-json-ld"
+import { EditorialProof } from "@/components/editorial-proof"
+import { createArticleJsonLd } from "@/lib/editorial"
 import { GITHUB_URL, GITHUB_PROFILE_URL, ISSUES_URL, LICENSE_URL } from "@/lib/links"
 import { ArrowRight, ShieldCheck, Cpu, Code2, HeartHandshake, Mail, MessageSquare } from "lucide-react"
 
@@ -14,6 +16,12 @@ export const metadata: Metadata = {
 }
 
 export default function AboutPage() {
+  const jsonLd = createArticleJsonLd({
+    headline: "About EleViewer — Mission, Creator, and Open-Source Story",
+    description: "Learn about EleViewer's origins, open-source principles, creator background, and commitment to free, offline study tools for students worldwide.",
+    url: "https://eleviewer.vercel.app/about",
+  })
+
   return (
     <div className="flex min-h-screen flex-col bg-background text-foreground">
       <SiteHeader />
@@ -25,6 +33,7 @@ export default function AboutPage() {
       />
       <main className="flex-1">
         <article className="mx-auto max-w-3xl px-5 py-16 sm:py-24">
+          <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }} />
           <div className="mb-4 inline-flex items-center gap-2 rounded-full border border-border bg-panel px-3 py-1 font-mono text-xs text-muted-foreground">
             <span className="h-1.5 w-1.5 rounded-full bg-accent" />
             Origin &amp; Mission
@@ -149,6 +158,8 @@ export default function AboutPage() {
               </div>
             </section>
           </div>
+
+          <EditorialProof />
         </article>
       </main>
       <SiteFooter />

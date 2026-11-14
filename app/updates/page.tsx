@@ -2,6 +2,8 @@ import type { Metadata } from "next"
 import Link from "next/link"
 import { SiteHeader } from "@/components/site-header"
 import { SiteFooter } from "@/components/site-footer"
+import { EditorialProof } from "@/components/editorial-proof"
+import { createArticleJsonLd } from "@/lib/editorial"
 import { RELEASES } from "@/lib/releases-data"
 import { GITHUB_URL } from "@/lib/links"
 import { ArrowRight, Calendar, Tag } from "lucide-react"
@@ -27,10 +29,17 @@ export default function UpdatesPage() {
   const latest = RELEASES[0]
   const older = RELEASES.slice(1)
 
+  const jsonLd = createArticleJsonLd({
+    headline: "What's New in EleViewer — Release Notes & Updates",
+    description: "Browse all EleViewer release notes. See what's new, what's fixed, and what changed in every version of EleViewer for Windows.",
+    url: "https://eleviewer.vercel.app/updates",
+  })
+
   return (
     <div className="flex min-h-screen flex-col bg-background text-foreground">
       <SiteHeader />
       <div className="mx-auto flex w-full max-w-6xl flex-1 flex-col md:flex-row px-5">
+        <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }} />
         {/* ── Left Sidebar: Version Timeline ───────────────────────────── */}
         <aside
           aria-label="Version history"
@@ -175,6 +184,8 @@ export default function UpdatesPage() {
           </section>
         </main>
       </div>
+
+      <EditorialProof />
       <SiteFooter />
     </div>
   )

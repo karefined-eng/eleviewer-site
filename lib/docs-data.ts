@@ -187,7 +187,8 @@ export const DOCS_TOPICS: DocTopic[] = [
         paragraphs: [
           "Press F9 or click the little Speaker icon when you're looking at a document.",
           "Highlight a paragraph and press F9 to only read that specific part. If you don't highlight anything, it just starts reading from where you're looking.",
-          "You can adjust the speed too—speed it up if you're cramming, or slow it down to actually absorb the information."
+          "You can adjust the speed too—speed it up if you're cramming, or slow it down to actually absorb the information.",
+          "If the local speech engine cannot initialize or restart, EleViewer falls back to Windows Speech so Read Aloud can recover."
         ],
         notice: {
           type: "important",
@@ -315,7 +316,8 @@ export const DOCS_TOPICS: DocTopic[] = [
         title: "The Web Panel (`Ctrl + T`)",
         paragraphs: [
           "Press Ctrl+T to pop open a mini web browser right next to your study notes. You don't have to constantly Alt+Tab back and forth between your essay and Wikipedia.",
-          "It remembers what page you were on if you close the app, and you can set your default homepage in Settings (Alt+S) to your school's portal."
+          "It remembers what page you were on if you close the app, and you can set your default homepage in Settings (Alt+S) to your school's portal.",
+          "Web Panel startup and file-lock failures are handled without crashing the app."
         ]
       },
       {

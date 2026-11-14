@@ -2,6 +2,8 @@ import type { Metadata } from "next"
 import { SiteHeader } from "@/components/site-header"
 import { SiteFooter } from "@/components/site-footer"
 import { BreadcrumbJsonLd } from "@/components/breadcrumb-json-ld"
+import { EditorialProof } from "@/components/editorial-proof"
+import { createArticleJsonLd } from "@/lib/editorial"
 import { GITHUB_URL, LICENSE_URL, ISSUES_URL } from "@/lib/links"
 
 export const metadata: Metadata = {
@@ -12,6 +14,12 @@ export const metadata: Metadata = {
 }
 
 export default function TermsPage() {
+  const jsonLd = createArticleJsonLd({
+    headline: "Terms of Use & License — EleViewer",
+    description: "EleViewer terms of use, GNU General Public License v3 terms, disclaimer of warranties, and permitted use guidelines.",
+    url: "https://eleviewer.vercel.app/terms",
+  })
+
   return (
     <div className="flex min-h-screen flex-col bg-background text-foreground">
       <SiteHeader />
@@ -23,6 +31,7 @@ export default function TermsPage() {
       />
       <main className="flex-1">
         <article className="mx-auto max-w-3xl px-5 py-16 sm:py-24">
+          <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }} />
           <div className="mb-4 inline-flex items-center gap-2 rounded-full border border-border bg-panel px-3 py-1 font-mono text-xs text-muted-foreground">
             <span className="h-1.5 w-1.5 rounded-full bg-accent" />
             Legal &amp; Licensing
@@ -114,7 +123,9 @@ export default function TermsPage() {
                 .
               </p>
             </div>
-          </section>
+</section>
+
+          <EditorialProof />
         </article>
       </main>
       <SiteFooter />

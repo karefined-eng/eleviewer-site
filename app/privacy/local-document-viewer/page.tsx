@@ -1,6 +1,8 @@
 import type { Metadata } from "next"
 import { SiteHeader } from "@/components/site-header"
 import { SiteFooter } from "@/components/site-footer"
+import { EditorialProof } from "@/components/editorial-proof"
+import { createArticleJsonLd } from "@/lib/editorial"
 import { DOWNLOAD_URL } from "@/lib/links"
 import Link from "next/link"
 
@@ -11,11 +13,18 @@ export const metadata: Metadata = {
 }
 
 export default function LocalDocumentViewerPrivacyPage() {
+  const jsonLd = createArticleJsonLd({
+    headline: "A True Local Document Viewer — EleViewer Privacy Focus",
+    description: "EleViewer is a true local document viewer for Windows. No cloud uploads, no account, and zero usage telemetry in the desktop app.",
+    url: "https://eleviewer.vercel.app/privacy/local-document-viewer",
+  })
+
   return (
     <div className="flex min-h-screen flex-col bg-background text-foreground">
       <SiteHeader />
       <main className="flex-1">
         <article className="mx-auto max-w-4xl px-5 py-16 sm:py-24">
+          <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }} />
           <p className="inline-flex items-center rounded-full border border-border bg-panel px-3 py-1 font-mono text-xs font-medium uppercase tracking-wider text-muted-foreground">
             Privacy focus
           </p>
@@ -71,6 +80,8 @@ export default function LocalDocumentViewerPrivacyPage() {
               Read the full privacy policy
             </Link>
           </div>
+
+          <EditorialProof />
         </article>
       </main>
       <SiteFooter />

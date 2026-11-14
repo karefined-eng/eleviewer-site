@@ -59,19 +59,19 @@ export function MobileReminder() {
             className="flex h-11 w-full items-center justify-center gap-2 rounded-lg bg-primary px-6 text-sm font-medium text-primary-foreground transition-opacity hover:opacity-90"
           >
             <Share className="h-4 w-4" />
-            Push to my Laptop / Devices
+            Send to my laptop
           </button>
         )}
 
         <a
-          href="mailto:?subject=⚡️ Download EleViewer on your PC/Laptop&body=Hey! You opened this link while on mobile to download EleViewer later on your computer.%0A%0A📥 Desktop Download Link: https://eleviewer.vercel.app%0A%0A🛸 Core Workspace Features:%0A- 100% Free & Open-Source under GNU GPLv3%0A- Read PDF, Word, Excel, and Markdown side-by-side%0A- Portable .exe (No installation or system admin permissions required)"
+          href="mailto:?subject=Download EleViewer on your Windows PC&body=You opened EleViewer on your phone. Download it later on your Windows computer:%0A%0Ahttps://eleviewer.vercel.app/download%0A%0AFree and open source. The per-user installer does not require administrator permissions."
           className={`flex h-11 w-full items-center justify-center gap-2 rounded-lg text-sm font-medium transition-colors ${!canShare
               ? 'bg-primary text-primary-foreground hover:opacity-90'
               : 'border border-border bg-transparent text-foreground hover:bg-panel'
             }`}
         >
           <Mail className="h-4 w-4" />
-          Email the Link to Myself
+          Email me the link
         </a>
       </div>
     </div>

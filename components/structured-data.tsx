@@ -13,6 +13,8 @@ export function StructuredData() {
     "@id": "https://eleviewer.vercel.app/#organization",
     name: "Karefined",
     url: GITHUB_PROFILE_URL,
+    logo: "https://eleviewer.vercel.app/icon.png",
+    description: "Karefined builds free, portable, offline-first Windows software for students and researchers. EleViewer is our flagship product: a ~135MB portable study workspace that opens DOCX, XLSX, PPTX, PDF, Markdown, CSV, HTML, and TXT without Microsoft Office, with built-in PDF text-to-speech, vault sidebar, session restore, and zero telemetry.",
     sameAs: [GITHUB_PROFILE_URL, GITHUB_URL],
     founder: {
       "@type": "Person",

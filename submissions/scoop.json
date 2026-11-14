@@ -1,0 +1,33 @@
+{
+  "platform": "Scoop",
+  "url": "https://github.com/ScoopInstaller/Extras/blob/master/bucket/eleviewer.json",
+  "manifest": {
+    "version": "1.3.6",
+    "description": "EleViewer is a ~135MB portable Windows app that opens DOCX, XLSX, PPTX, PDF, Markdown, CSV, HTML, and TXT files without Microsoft Office. Includes built-in PDF text-to-speech, vault sidebar, session restore, and zero telemetry.",
+    "homepage": "https://eleviewer.vercel.app",
+    "license": "GPL-3.0-only",
+    "architecture": {
+      "64bit": {
+        "url": "https://github.com/karefined-eng/eleviewer/releases/download/v1.3.6/EleViewer-1.3.6-portable.exe",
+        "hash": "0FA547D30B6A88C35D7F35A0EDF36145493734A17317D87DB5506ED20544C393"
+      }
+    },
+    "bin": "EleViewer.exe",
+    "shortcuts": [
+      [
+        "EleViewer.exe",
+        "EleViewer"
+      ]
+    ],
+    "checkver": {
+      "github": "karefined-eng/eleviewer"
+    },
+    "autoupdate": {
+      "architecture": {
+        "64bit": {
+          "url": "https://github.com/karefined-eng/eleviewer/releases/download/v1.3.6/EleViewer-1.3.6-portable.exe"
+        }
+      }
+    }
+  }
+}

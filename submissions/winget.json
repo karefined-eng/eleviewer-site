@@ -1,0 +1,35 @@
+{
+  "platform": "WinGet (Microsoft Store / Winget)",
+  "url": "https://github.com/microsoft/winget-pkgs/tree/master/manifests/k/karefined-eng/eleviewer",
+  "manifest": {
+    "PackageIdentifier": "karefined-eng.EleViewer",
+    "PackageVersion": "1.3.6",
+    "PackageName": "EleViewer",
+    "Publisher": "karefined-eng",
+    "License": "GPL-3.0",
+    "LicenseUrl": "https://github.com/karefined-eng/eleviewer/blob/main/LICENSE",
+    "ShortDescription": "EleViewer is a ~135MB portable Windows app that opens DOCX, XLSX, PPTX, PDF, Markdown, CSV, HTML, and TXT files without Microsoft Office. Includes built-in PDF text-to-speech, vault sidebar, session restore, and zero telemetry.",
+    "Description": "EleViewer is a free, open-source portable Windows study workspace. It opens DOCX, XLSX, PPTX, PDF, Markdown, CSV, HTML, and TXT files in one ~135MB executable — no Microsoft Office, no installer, no admin rights, no account. Built-in PDF text-to-speech uses native Windows voices (SAPI) for hands-free reading. Features include a vault sidebar for course folders, session restore, split-screen web browser, quick switcher (Ctrl+Q), and persistent bookmarks. Zero telemetry, fully offline, GPLv3 licensed. Ideal for students, researchers, and anyone on locked-down or shared computers.",
+    "Homepage": "https://eleviewer.vercel.app",
+    "Tags": [
+      "portable",
+      "offline",
+      "text-to-speech",
+      "student",
+      "no-telemetry",
+      "open-source",
+      "no-admin",
+      "windows",
+      "pdf-reader",
+      "docx-viewer"
+    ],
+    "Installers": [
+      {
+        "Architecture": "x64",
+        "InstallerType": "portable",
+        "InstallerUrl": "https://github.com/karefined-eng/eleviewer/releases/download/v1.3.6/EleViewer-1.3.6-portable.exe",
+        "InstallerSha256": "0FA547D30B6A88C35D7F35A0EDF36145493734A17317D87DB5506ED20544C393"
+      }
+    ]
+  }
+}

@@ -37,6 +37,38 @@ export interface Release {
 
 export const RELEASES: Release[] = [
   {
+    version: "1.3.7",
+    date: "2026-11-14",
+    tagline: "Web Panel and Read Aloud reliability fixes",
+    highlights: [
+      {
+        title: "Web Panel startup is more resilient",
+        body: "Startup and file-lock failures in the Web Panel are now handled without crashing the app.",
+      },
+      {
+        title: "Read Aloud has a Windows Speech fallback",
+        body: "If the local speech engine cannot initialize or restart, Read Aloud automatically falls back to Windows Speech.",
+      },
+    ],
+    sections: [
+      {
+        title: "Web Panel",
+        emoji: "🌐",
+        items: [
+          "Handled Web Panel startup and file-lock failures so they no longer terminate the application.",
+        ],
+      },
+      {
+        title: "Read Aloud",
+        emoji: "🔊",
+        items: [
+          "Added a Windows Speech fallback when the local speech engine cannot initialize or restart.",
+          "Read Aloud can now recover more gracefully from local speech-engine failures.",
+        ],
+      },
+    ],
+  },
+  {
     version: "1.3.6",
     date: "2026-10-07",
     tagline: "Packaging and release version references aligned",

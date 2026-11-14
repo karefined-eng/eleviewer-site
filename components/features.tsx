@@ -20,8 +20,14 @@ const features = [
   {
     icon: Globe,
     title: "Split-Screen Web Browser",
-    body: "Press Ctrl+T to open a split-screen web browser with built-in downloads and smooth page zoom, so you can research without losing your place.",
+    body: "Press Ctrl+T to open a split-screen web browser with built-in downloads and smooth page zoom. Startup and file-lock failures are handled without crashing the app.",
     docSlug: "html-and-web",
+  },
+  {
+    icon: Volume2,
+    title: "Read Aloud",
+    body: "Press F9 to read PDFs aloud with native Windows voices. If the local speech engine cannot initialize or restart, EleViewer falls back to Windows Speech.",
+    docSlug: "pdf-and-tts",
   },
   {
     icon: FolderTree,

@@ -4,6 +4,9 @@ import { useState } from "react"
 import { SiteHeader } from "@/components/site-header"
 import { SiteFooter } from "@/components/site-footer"
 import { Check, Send, AlertCircle, MessageSquare, Terminal } from "lucide-react"
+import { EDITORIAL_UPDATED_AT, EDITORIAL_UPDATED_LABEL } from "@/lib/editorial"
+import { GITHUB_PROFILE_URL, GITHUB_URL, LATEST_RELEASE_VERSION } from "@/lib/links"
+import { getReleaseByVersion } from "@/lib/releases-data"
 
 type Category = "Bug Report" | "Feature Request" | "General Feedback"
 
@@ -95,6 +98,26 @@ export default function ReviewPage() {
     <div className="flex min-h-screen flex-col bg-background text-foreground selection:bg-accent/30 selection:text-accent">
       <SiteHeader />
       <main id="main-content" className="flex-1 mx-auto max-w-3xl px-5 py-16 sm:py-24 w-full">
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify({
+              "@context": "https://schema.org",
+              "@type": "Article",
+              headline: "How can we improve your study flow? — EleViewer Feedback Hub",
+              description: "Send feedback directly to the EleViewer developer. Bug reports, feature requests, and general feedback for the portable Windows study workspace.",
+              url: "https://eleviewer.vercel.app/review",
+              dateModified: EDITORIAL_UPDATED_AT,
+              author: {
+                "@type": "Person",
+                name: "karefined-eng",
+                url: GITHUB_PROFILE_URL,
+                worksFor: { "@id": "https://eleviewer.vercel.app/#organization" },
+              },
+              publisher: { "@id": "https://eleviewer.vercel.app/#organization" },
+            }),
+          }}
+        />
         <div className="text-center max-w-2xl mx-auto mb-12">
           <p className="mb-4 inline-flex items-center gap-2 rounded-full border border-border bg-panel px-3 py-1 font-mono text-xs font-medium text-muted-foreground uppercase tracking-wider shadow-sm">
             Direct Developer Inbox
@@ -290,6 +313,72 @@ export default function ReviewPage() {
           </div>
         </div>
       </main>
+
+      <section className="mx-auto max-w-3xl px-5 pb-16">
+        <aside
+          aria-label="Author, update date, and product sources"
+          className="mt-12 rounded-lg border border-border bg-panel/50 p-5 text-sm leading-6 text-muted-foreground"
+        >
+          <div className="flex flex-wrap gap-x-4 gap-y-1 font-mono text-xs">
+            <span>
+              By{" "}
+              <a
+                href={GITHUB_PROFILE_URL}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="font-semibold text-foreground underline underline-offset-4 hover:text-accent"
+              >
+                Karefined
+              </a>
+              , EleViewer maintainer
+            </span>
+            <time dateTime={EDITORIAL_UPDATED_AT}>
+              Updated {EDITORIAL_UPDATED_LABEL}
+            </time>
+          </div>
+          <p className="mt-3">
+            EleViewer is a portable app for Windows 10 and 11. It opens PDF, DOCX,
+            XLSX, PPTX, Markdown, CSV, HTML, and TXT files. The portable download is
+            about 135 MB. These facts describe the desktop app; this website uses
+            separate analytics.
+          </p>
+          <p className="mt-3">
+            Sources:{" "}
+            <a
+              href={`${GITHUB_URL}`}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="underline underline-offset-4 hover:text-foreground"
+            >
+              GitHub project and source
+            </a>
+            {" · "}
+            <a
+              href="/docs"
+              className="underline underline-offset-4 hover:text-foreground"
+            >
+              product documentation
+            </a>
+            {" · "}
+            <a
+              href={`${GITHUB_URL}/releases/tag/v${LATEST_RELEASE_VERSION}`}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="underline underline-offset-4 hover:text-foreground"
+            >
+              v{LATEST_RELEASE_VERSION} release
+            </a>
+            {" · "}
+            <a
+              href="/privacy/local-document-viewer"
+              className="underline underline-offset-4 hover:text-foreground"
+            >
+              desktop privacy details
+            </a>
+          </p>
+        </aside>
+      </section>
+
       <SiteFooter />
     </div>
   )

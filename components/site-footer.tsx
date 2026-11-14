@@ -1,6 +1,6 @@
 import Link from "next/link"
 import { Logo } from "./logo"
-import { GITHUB_URL, RELEASES_URL, LICENSE_URL, ISSUES_URL } from "@/lib/links"
+import { GITHUB_URL, RELEASES_URL, LICENSE_URL, ISSUES_URL, LATEST_RELEASE_VERSION, LATEST_RELEASE_SHA256 } from "@/lib/links"
 
 export function SiteFooter() {
   return (
@@ -19,6 +19,17 @@ export function SiteFooter() {
               karefined-eng
             </a>
             . Free forever.
+          </p>
+          <p className="font-mono text-xs text-muted-foreground">
+            v{LATEST_RELEASE_VERSION} · SHA256: {LATEST_RELEASE_SHA256.slice(0, 16)}… ·
+            <a
+              href={RELEASES_URL}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="underline hover:text-foreground transition-colors"
+            >
+              Verify on GitHub
+            </a>
           </p>
         </div>
         <nav

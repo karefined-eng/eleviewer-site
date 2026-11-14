@@ -67,14 +67,14 @@ const guides: Record<string, Guide> = {
     title: "Free PDF Text-to-Speech Reader for Windows",
     description: "Read PDFs aloud on Windows 10 and 11 with a free offline document reader that uses native Windows speech voices.",
     question: "How can you read a PDF aloud on Windows for free?",
-    answer: "EleViewer reads PDF text aloud with the native Windows speech engine. Open a PDF, select a passage if needed, and press F9 to start hands-free reading. Supported voices can work completely offline.",
+    answer: "EleViewer reads PDF text aloud with the native Windows speech engine. Open a PDF, select a passage if needed, and press F9 to start hands-free reading. If the local engine cannot initialize or restart, EleViewer falls back to Windows Speech.",
     steps: [
       "Open a text-based PDF in EleViewer.", 
       "Select a passage, or leave the document unselected to start from the current reading position.", 
       "Press F9 to show Read Aloud controls.", 
       "Adjust the reading rate and voice, and continue studying while your eyes rest."
     ],
-    limitations: "Text-to-speech requires a text-based PDF. Scanned or image-only PDFs without OCR text layers cannot be read aloud. Reading order may vary for multi-column layouts, tables, complex math equations, or non-standard footnotes. Offline voice availability depends on the voices installed in your Windows settings.",
+    limitations: "Text-to-speech requires a text-based PDF. Scanned or image-only PDFs without OCR text layers cannot be read aloud. Reading order may vary for multi-column layouts, tables, complex math equations, or non-standard footnotes. Offline voice availability depends on the voices installed in your Windows settings; the fallback uses Windows Speech when the local engine is unavailable.",
     related: [["Read PDFs and listen aloud", "/docs/pdf-and-tts"], ["Offline study workspace", "/use-cases/offline-study"], ["Download EleViewer", "/download"]],
   },
   "portable-document-viewer": {

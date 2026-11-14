@@ -23,6 +23,7 @@ export const metadata: Metadata = {
     canonical: "https://eleviewer.vercel.app/",
     types: {
       "text/markdown": [{ url: "/llms.txt", title: "LLM Content" }],
+      "application/rss+xml": [{ url: "/feed", title: "EleViewer Updates" }],
     },
   },
   robots: {

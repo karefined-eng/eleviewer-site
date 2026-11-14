@@ -1,12 +1,10 @@
 "use client"
 
 import { track } from "@vercel/analytics/react"
-import { Download } from "lucide-react"
-import { GitHubIcon } from "./github-icon"
 import { WindowsIcon } from "./windows-icon"
 import { InteractiveDemo } from "~features/demo-browser/components/interactive-demo"
 import { MobileReminder } from "./mobile-reminder"
-import { GITHUB_URL, DOWNLOAD_URL } from "@/lib/links"
+import { GITHUB_URL, LATEST_RELEASE_VERSION, LATEST_RELEASE_SHA256 } from "@/lib/links"
 import { MorphingLogo } from "./morphing-logo"
 
 export function Hero() {
@@ -27,6 +25,12 @@ export function Hero() {
           Open PDFs, Word files, slides, spreadsheets, Markdown, and notes without Microsoft Office. Listen to supported readings aloud, keep a course folder in one local vault, and return to the same session tomorrow. No account. No cloud upload. Completely free.
         </p>
 
+        <div className="mt-4 flex flex-wrap items-center justify-center gap-x-4 gap-y-2 font-mono text-xs text-muted-foreground">
+          <code className="bg-muted px-1.5 py-0.5 rounded border border-border">v{LATEST_RELEASE_VERSION}</code>
+          <code className="bg-muted px-1.5 py-0.5 rounded border border-border">~135 MB</code>
+          <code className="bg-muted px-1.5 py-0.5 rounded border border-border">SHA256: {LATEST_RELEASE_SHA256.slice(0, 16)}…</code>
+        </div>
+
         <MobileReminder />
 
         <div className="mt-8 flex flex-col items-center justify-center gap-3 sm:flex-row">
@@ -36,26 +40,29 @@ export function Hero() {
             className="flex h-11 items-center justify-center gap-2 rounded-lg bg-primary px-6 text-sm font-medium text-primary-foreground transition-opacity hover:opacity-90"
           >
             <WindowsIcon className="h-4 w-4" />
-            Download for Windows
+            Download free for Windows
           </a>
+          <a
+            href="/demo"
+            onClick={() => track("demo_clicked", { location: "hero" })}
+            className="flex h-11 items-center justify-center gap-2 rounded-lg border border-border bg-transparent px-6 text-sm font-medium text-foreground transition-colors hover:bg-panel"
+          >
+            Preview the app
+          </a>
+        </div>
+
+        <p className="mt-4 text-xs text-muted-foreground">
+          No account or subscription. Your files stay on your PC.{" "}
           <a
             href={GITHUB_URL}
             target="_blank"
             rel="noopener noreferrer"
             onClick={() => track("github_clicked", { location: "hero" })}
-            className="flex h-11 items-center justify-center gap-2 rounded-lg border border-border bg-transparent px-6 text-sm font-medium text-foreground transition-colors hover:bg-panel"
+            className="text-foreground underline underline-offset-4 hover:text-accent"
           >
-            <GitHubIcon className="h-4 w-4" />
-            View on GitHub
+            View the source
           </a>
-          <a
-            href="/demo"
-            onClick={() => track("demo_clicked", { location: "hero" })}
-            className="flex h-11 items-center justify-center gap-2 rounded-lg border border-accent/50 bg-transparent px-6 text-sm font-medium text-accent transition-colors hover:bg-accent/10"
-          >
-            Preview the app
-          </a>
-        </div>
+        </p>
 
         <div className="mt-5 flex flex-wrap items-center justify-center gap-x-4 gap-y-2 text-xs text-muted-foreground">
           <span><strong className="text-foreground">1.</strong> Download</span>
@@ -66,7 +73,7 @@ export function Hero() {
         </div>
 
         <p className="mt-3 font-mono text-xs text-muted-foreground">
-          GPLv3 licensed · portable .exe · no account · no telemetry
+          GPLv3 licensed · per-user installer · no account · no telemetry
         </p>
       </div>
 
