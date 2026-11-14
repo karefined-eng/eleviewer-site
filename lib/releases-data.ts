@@ -39,31 +39,37 @@ export const RELEASES: Release[] = [
   {
     version: "1.3.7",
     date: "2026-11-14",
-    tagline: "Web Panel and Read Aloud reliability fixes",
+    tagline: "Faster document loading and safer study sessions",
     highlights: [
       {
-        title: "Web Panel startup is more resilient",
-        body: "Startup and file-lock failures in the Web Panel are now handled without crashing the app.",
+        title: "Responsive document opening",
+        body: "DOCX, PPTX, and XLSX files now load in the background so the workspace stays usable while larger documents open.",
       },
       {
-        title: "Read Aloud has a Windows Speech fallback",
-        body: "If the local speech engine cannot initialize or restart, Read Aloud automatically falls back to Windows Speech.",
+        title: "Faster vault search",
+        body: "A persistent local filename index makes repeated course-folder searches faster and removes stale files automatically.",
+      },
+      {
+        title: "Safer study sessions",
+        body: "Web Panel startup and Read Aloud now recover more gracefully when Windows services or files are temporarily unavailable.",
       },
     ],
     sections: [
       {
-        title: "Web Panel",
-        emoji: "🌐",
+        title: "Added",
+        emoji: "\u2728",
         items: [
-          "Handled Web Panel startup and file-lock failures so they no longer terminate the application.",
+          "Added a persistent local vault filename index for faster repeated searches.",
+          "Added asynchronous loading for DOCX, PPTX, and XLSX documents.",
+          "Added an application-level workspace service boundary and CI validation for pull requests and main.",
         ],
       },
       {
-        title: "Read Aloud",
-        emoji: "🔊",
+        title: "Fixed",
+        emoji: "\u2705",
         items: [
-          "Added a Windows Speech fallback when the local speech engine cannot initialize or restart.",
-          "Read Aloud can now recover more gracefully from local speech-engine failures.",
+          "Prevented temporary QtWebEngine file-lock and startup failures from crashing the Web Panel.",
+          "Added Windows Speech fallback handling when the offline read-aloud engine cannot initialize or restart.",
         ],
       },
     ],
