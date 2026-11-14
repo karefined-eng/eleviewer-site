@@ -31,7 +31,7 @@ export default function AboutPage() {
           { name: "About", url: "https://eleviewer.vercel.app/about" },
         ]}
       />
-      <main className="flex-1">
+      <main id="main-content" className="flex-1">
         <article className="mx-auto max-w-3xl px-5 py-16 sm:py-24">
           <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }} />
           <div className="mb-4 inline-flex items-center gap-2 rounded-full border border-border bg-panel px-3 py-1 font-mono text-xs text-muted-foreground">

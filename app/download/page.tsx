@@ -1,17 +1,21 @@
 import type { Metadata } from "next"
 import { ShieldCheck, HardDrive, CheckCircle } from "lucide-react"
-import { track } from "@vercel/analytics/react"
 import { SiteHeader } from "@/components/site-header"
 import { SiteFooter } from "@/components/site-footer"
 import { WindowsIcon } from "@/components/windows-icon"
+import { TrackedDownloadLink } from "@/components/tracked-download-link"
 import { DOWNLOAD_URL, GITHUB_URL, LATEST_RELEASE_VERSION, LATEST_RELEASE_SHA256, PORTABLE_DOWNLOAD_URL } from "@/lib/links"
 
 export const metadata: Metadata = {
-  title: "Download EleViewer — Free Windows Document Viewer & Study Workspace",
+  title: "Download EleViewer for Windows | Free Viewer",
   description:
-    "Download EleViewer for Windows 10 and 11: a free app for DOCX, XLSX, PPTX, PDF, Markdown, CSV, and HTML.",
+    "Download EleViewer for Windows 10 and 11: a free offline app for DOCX, XLSX, PPTX, PDF, Markdown, CSV, and HTML files for easy study.",
   alternates: {
     canonical: "https://eleviewer.vercel.app/download",
+  },
+  openGraph: {
+    url: "https://eleviewer.vercel.app/download",
+    images: [{ url: "/opengraph-image", width: 1200, height: 630 }],
   },
 }
 
@@ -36,21 +40,21 @@ export default function DownloadPage() {
             </p>
 
             <div className="mt-8 flex flex-col items-center justify-center gap-4">
-              <a
+              <TrackedDownloadLink
                 href={DOWNLOAD_URL}
-                onClick={() => track("download_clicked", { location: "download_page" })}
+                eventName="download_clicked"
                 className="flex h-11 items-center justify-center gap-2 rounded-lg bg-primary px-6 text-sm font-medium text-primary-foreground transition-opacity hover:opacity-90 shadow-sm"
               >
                 <WindowsIcon className="h-4 w-4" />
                 Download the installer (v{LATEST_RELEASE_VERSION})
-              </a>
-              <a
+              </TrackedDownloadLink>
+              <TrackedDownloadLink
                 href={PORTABLE_DOWNLOAD_URL}
-                onClick={() => track("portable_download_clicked", { location: "download_page" })}
+                eventName="portable_download_clicked"
                 className="text-xs font-medium text-foreground underline underline-offset-4 hover:text-accent"
               >
                 Prefer no install? Download the portable ZIP
-              </a>
+              </TrackedDownloadLink>
 
               <div className="rounded-lg border border-border bg-panel p-4 max-w-md w-full text-left">
                 <p className="text-xs text-muted-foreground font-mono mb-1">

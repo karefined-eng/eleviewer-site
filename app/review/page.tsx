@@ -107,14 +107,18 @@ export default function ReviewPage() {
               headline: "How can we improve your study flow? — EleViewer Feedback Hub",
               description: "Send feedback directly to the EleViewer developer. Bug reports, feature requests, and general feedback for the portable Windows study workspace.",
               url: "https://eleviewer.vercel.app/review",
+              datePublished: EDITORIAL_UPDATED_AT,
               dateModified: EDITORIAL_UPDATED_AT,
+              image: "https://eleviewer.vercel.app/opengraph-image",
               author: {
                 "@type": "Person",
+                "@id": `${GITHUB_PROFILE_URL}#person`,
                 name: "karefined-eng",
                 url: GITHUB_PROFILE_URL,
                 worksFor: { "@id": "https://eleviewer.vercel.app/#organization" },
               },
               publisher: { "@id": "https://eleviewer.vercel.app/#organization" },
+              mainEntityOfPage: { "@id": "https://eleviewer.vercel.app/review" },
             }),
           }}
         />
@@ -131,6 +135,14 @@ export default function ReviewPage() {
         </div>
 
         <div className="rounded-xl border border-border bg-panel/50 backdrop-blur-sm p-6 sm:p-8 shadow-[0_4px_24px_-8px_rgba(0,0,0,0.5)] max-w-xl mx-auto">
+          <div className="mb-6 border-b border-border pb-5">
+            <h2 className="text-lg font-semibold text-foreground">What can you share?</h2>
+            <ul className="mt-3 list-disc space-y-1 pl-5 text-sm text-muted-foreground">
+              <li>Report a bug that blocks your study session.</li>
+              <li>Suggest a feature for reading or organizing course files.</li>
+              <li>Share a workflow that could be easier or clearer.</li>
+            </ul>
+          </div>
           {status === "success" ? (
             <div className="py-10 text-center space-y-5 animate-in fade-in zoom-in duration-500">
               <div className="mx-auto flex h-14 w-14 items-center justify-center rounded-full border-2 border-accent/20 bg-accent/10 text-accent shadow-inner">
@@ -148,8 +160,9 @@ export default function ReviewPage() {
               </button>
             </div>
           ) : (
-            <form onSubmit={handleSubmit} className="space-y-8 animate-in fade-in duration-300">
-              <input name="website" type="text" tabIndex={-1} autoComplete="off" aria-hidden="true" className="absolute -left-[9999px] h-px w-px opacity-0" />
+            <form method="post" onSubmit={handleSubmit} className="space-y-8 animate-in fade-in duration-300">
+              <label htmlFor="website" className="sr-only">Website</label>
+              <input id="website" name="website" type="text" tabIndex={-1} autoComplete="off" aria-hidden="true" className="absolute -left-[9999px] h-px w-px opacity-0" />
               <div className="space-y-3">
                 <label className="block text-xs font-mono font-medium text-muted-foreground uppercase tracking-wider">
                   1. What kind of feedback?
@@ -221,8 +234,9 @@ export default function ReviewPage() {
                 {category === "Feature Request" && (
                   <div className="space-y-4">
                     <div>
-                      <p className="text-[13px] font-medium mb-1.5 text-foreground/80">What's missing in EleViewer for your studies?</p>
+                      <label htmlFor="feature-problem" className="block text-[13px] font-medium mb-1.5 text-foreground/80">What's missing in EleViewer for your studies?</label>
                       <textarea
+                        id="feature-problem"
                         value={featureProblem}
                         onChange={(e) => setFeatureProblem(e.target.value)}
                         rows={3}
@@ -232,8 +246,9 @@ export default function ReviewPage() {
                       />
                     </div>
                     <div>
-                      <p className="text-[13px] font-medium mb-1.5 text-foreground/80">How would you want this feature to work?</p>
+                      <label htmlFor="feature-solution" className="block text-[13px] font-medium mb-1.5 text-foreground/80">How would you want this feature to work?</label>
                       <textarea
+                        id="feature-solution"
                         value={featureSolution}
                         onChange={(e) => setFeatureSolution(e.target.value)}
                         rows={3}
@@ -247,8 +262,9 @@ export default function ReviewPage() {
 
                 {category === "General Feedback" && (
                   <div className="space-y-4">
-                    <p className="text-[13px] font-medium mb-1.5 text-foreground/80">Tell us what you think...</p>
+                    <label htmlFor="general-feedback" className="block text-[13px] font-medium mb-1.5 text-foreground/80">Tell us what you think...</label>
                     <textarea
+                      id="general-feedback"
                       value={generalFeedback}
                       onChange={(e) => setGeneralFeedback(e.target.value)}
                       rows={5}

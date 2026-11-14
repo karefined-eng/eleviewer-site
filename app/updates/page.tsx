@@ -15,6 +15,10 @@ export const metadata: Metadata = {
   alternates: {
     canonical: "https://eleviewer.vercel.app/updates",
   },
+  openGraph: {
+    url: "https://eleviewer.vercel.app/updates",
+    images: [{ url: "/opengraph-image", width: 1200, height: 630 }],
+  },
 }
 
 function formatDate(iso: string) {
@@ -80,7 +84,7 @@ export default function UpdatesPage() {
         </aside>
 
         {/* ── Main Content ──────────────────────────────────────────────── */}
-        <main className="flex-1 min-w-0 py-10 md:pl-12">
+        <main id="main-content" className="flex-1 min-w-0 py-10 md:pl-12">
           {/* Header */}
           <div className="mb-10">
             <p className="mb-2 font-mono text-xs font-semibold uppercase tracking-widest text-accent">

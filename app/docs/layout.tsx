@@ -136,7 +136,7 @@ export default function DocsLayout({
       </aside>
 
       {/* Main Content Area */}
-      <main className="flex-1 min-w-0 py-8 md:pl-10">{children}</main>
+      <main id="main-content" className="flex-1 min-w-0 py-8 md:pl-10">{children}</main>
     </div>
   );
 }

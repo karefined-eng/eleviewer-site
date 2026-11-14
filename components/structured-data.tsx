@@ -18,6 +18,7 @@ export function StructuredData() {
     sameAs: [GITHUB_PROFILE_URL, GITHUB_URL],
     founder: {
       "@type": "Person",
+      "@id": "https://github.com/karefined-eng#person",
       name: "karefined-eng",
       url: GITHUB_PROFILE_URL,
     },
@@ -53,10 +54,16 @@ export function StructuredData() {
   const websiteSchema = {
     "@context": "https://schema.org",
     "@type": "WebSite",
+    "@id": "https://eleviewer.vercel.app/#website",
     "url": "https://eleviewer.vercel.app",
     "name": "EleViewer",
     "description": "Free, portable Windows document viewer and study workspace for students and researchers.",
     "publisher": { "@id": "https://eleviewer.vercel.app/#organization" },
+    "potentialAction": {
+      "@type": "SearchAction",
+      "target": "https://eleviewer.vercel.app/docs?query={search_term_string}",
+      "query-input": "required name=search_term_string",
+    },
   }
 
   return (

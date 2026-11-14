@@ -17,24 +17,35 @@ export function createArticleJsonLd({
   headline,
   description,
   url,
+  datePublished = EDITORIAL_UPDATED_AT,
+  dateModified = EDITORIAL_UPDATED_AT,
+  image = "https://eleviewer.vercel.app/opengraph-image",
 }: {
   headline: string
   description: string
   url: string
+  datePublished?: string
+  dateModified?: string
+  image?: string
 }) {
   return {
     "@context": "https://schema.org",
     "@type": "Article",
+    "@id": `${url}#article`,
     headline,
     description,
     url,
-    dateModified: EDITORIAL_UPDATED_AT,
+    image,
+    datePublished,
+    dateModified,
     author: {
       "@type": "Person",
+      "@id": `${GITHUB_PROFILE_URL}#person`,
       name: "karefined-eng",
       url: GITHUB_PROFILE_URL,
       worksFor: { "@id": publisherId },
     },
     publisher: { "@id": publisherId },
+    mainEntityOfPage: { "@id": url },
   }
 }

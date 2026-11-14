@@ -14,7 +14,7 @@ export const metadata: Metadata = {
   metadataBase: new URL("https://eleviewer.vercel.app"),
   title: "EleViewer — Portable Offline Study Workspace for Windows",
   description:
-    "EleViewer is a free portable Windows study workspace for opening DOCX, XLSX, PPTX, PDF, Markdown, CSV, HTML, and TXT without Microsoft Office.",
+    "Free portable Windows app for students: open PDF, DOCX, XLSX, PPTX, Markdown, CSV, HTML, and TXT without Microsoft Office.",
   applicationName: "EleViewer",
   authors: [{ name: "karefined-eng", url: "https://github.com/karefined-eng" }],
   creator: "karefined-eng",
@@ -34,7 +34,6 @@ export const metadata: Metadata = {
       follow: true,
       "max-video-preview": -1,
       "max-image-preview": "large",
-      "max-snippet": -1,
     },
   },
   icons: {
@@ -135,6 +134,7 @@ export default function RootLayout({
       suppressHydrationWarning
     >
       <body className="font-sans" suppressHydrationWarning>
+        <link rel="llms" href="/llms.txt" />
         <ThemeProvider
           attribute="class"
           defaultTheme="system"

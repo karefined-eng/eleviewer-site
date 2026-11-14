@@ -21,7 +21,7 @@ export default function PrivacyPage() {
   return (
     <div className="flex min-h-screen flex-col bg-background text-foreground">
       <SiteHeader />
-      <main className="flex-1">
+      <main id="main-content" className="flex-1">
         <article className="mx-auto max-w-3xl px-5 py-16 sm:py-24 prose prose-invert">
           <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }} />
           <h1 className="text-3xl font-bold tracking-tight text-foreground sm:text-4xl">

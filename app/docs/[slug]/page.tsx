@@ -29,6 +29,10 @@ export async function generateMetadata({
     alternates: {
       canonical: `/docs/${topic.slug}`,
     },
+    openGraph: {
+      url: `https://eleviewer.vercel.app/docs/${topic.slug}`,
+      images: [{ url: "/opengraph-image", width: 1200, height: 630 }],
+    },
   };
 }
 
@@ -107,6 +111,20 @@ export default async function DocTopicPage({
           <p className="text-base text-muted-foreground leading-relaxed">
             {topic.description}
           </p>
+          <nav aria-label="Guide sections" className="rounded-lg border border-border bg-panel/30 p-4">
+            <h2 className="font-mono text-xs font-semibold uppercase tracking-wider text-muted-foreground">
+              In this guide
+            </h2>
+            <ul className="mt-3 flex flex-wrap gap-x-5 gap-y-2 text-sm text-foreground">
+              {topic.sections.map((section) => (
+                <li key={section.id}>
+                  <a className="underline-offset-4 hover:underline" href={`#${section.id}`}>
+                    {section.title}
+                  </a>
+                </li>
+              ))}
+            </ul>
+          </nav>
         </div>
 
         {/* Content Sections */}
@@ -147,11 +165,13 @@ export default async function DocTopicPage({
               {section.table && (
                 <div className="my-2 overflow-x-auto rounded-lg border border-border">
                   <table className="w-full border-collapse text-left text-sm">
+                    <caption className="sr-only">{section.title} comparison table</caption>
                     <thead>
                       <tr className="border-b border-border bg-panel">
                         {section.table.headers.map((h, i) => (
                           <th
                             key={i}
+                            scope="col"
                             className="px-4 py-3 font-mono text-xs font-semibold uppercase tracking-wider text-foreground"
                           >
                             {h}

@@ -7,6 +7,10 @@ export const metadata = {
   title: "How to Start Studying with EleViewer | EleViewer",
   description: "Learn how to open course files, listen to PDFs, set up a local course folder, and return to your study session in EleViewer.",
   alternates: { canonical: "/docs" },
+  openGraph: {
+    url: "https://eleviewer.vercel.app/docs",
+    images: [{ url: "/opengraph-image", width: 1200, height: 630 }],
+  },
 };
 
 export default function DocsOverviewPage() {
@@ -62,8 +66,8 @@ export default function DocsOverviewPage() {
             What are you trying to do?
           </h2>
         </div>
-        <div className="grid grid-cols-1 gap-4 md:grid-cols-3">
-          <Link
+        <ul className="grid grid-cols-1 gap-4 md:grid-cols-3">
+          <li><Link
             href="/docs/overview"
             className="group rounded-lg border border-border bg-panel/30 p-5 transition-colors hover:bg-panel/60"
           >
@@ -75,8 +79,8 @@ export default function DocsOverviewPage() {
             <span className="mt-4 inline-flex items-center gap-1 text-sm font-medium text-accent">
               Show me how <ArrowRight className="h-3.5 w-3.5 transition-transform group-hover:translate-x-0.5" />
             </span>
-          </Link>
-          <Link
+          </Link></li>
+          <li><Link
             href="/docs/pdf-and-tts"
             className="group rounded-lg border border-border bg-panel/30 p-5 transition-colors hover:bg-panel/60"
           >
@@ -88,8 +92,8 @@ export default function DocsOverviewPage() {
             <span className="mt-4 inline-flex items-center gap-1 text-sm font-medium text-accent">
               Open reading help <ArrowRight className="h-3.5 w-3.5 transition-transform group-hover:translate-x-0.5" />
             </span>
-          </Link>
-          <a
+          </Link></li>
+          <li><a
             href="https://github.com/karefined-eng/eleviewer/issues/new"
             target="_blank"
             rel="noopener noreferrer"
@@ -103,8 +107,8 @@ export default function DocsOverviewPage() {
             <span className="mt-4 inline-flex items-center gap-1 text-sm font-medium text-accent">
               Open issue form <ArrowRight className="h-3.5 w-3.5 transition-transform group-hover:translate-x-0.5" />
             </span>
-          </a>
-        </div>
+          </a></li>
+        </ul>
       </section>
 
       {/* Categories Overview Grid */}

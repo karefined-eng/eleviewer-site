@@ -141,7 +141,7 @@ export const DOCS_TOPICS: DocTopic[] = [
     category: "Getting Started",
     categorySlug: "getting-started",
     eyebrow: "Stay Organized",
-    description: "Keep your classes organized, search through them super fast, and pick up right where you left off.",
+    description: "Keep your classes organized, search through them quickly, and pick up right where you left off after a break during busy school weeks.",
     sections: [
       {
         id: "vault-configuration",
@@ -172,7 +172,7 @@ export const DOCS_TOPICS: DocTopic[] = [
     category: "Document Readers & Viewers",
     categorySlug: "workstations",
     eyebrow: "Reading Tools",
-    description: "Open a PDF, save your spot, and make your laptop read the textbook to you while you chill.",
+    description: "Open a PDF, save your place, and use Read Aloud to listen to textbook pages while you study, review, commute, or work at home.",
     sections: [
       {
         id: "pdf-navigation",
@@ -309,7 +309,7 @@ export const DOCS_TOPICS: DocTopic[] = [
     category: "Document Readers & Viewers",
     categorySlug: "workstations",
     eyebrow: "Web Research",
-    description: "Browse the internet right next to your notes without getting distracted.",
+    description: "Browse the internet next to your notes, compare sources, and stay focused without switching between apps during research.",
     sections: [
       {
         id: "obsidian-web-panel",

@@ -1,4 +1,8 @@
+import { useId } from "react"
+
 export function LogoMark({ size = 28 }: { size?: number }) {
+  const gradientId = `glowSweep-${useId().replace(/:/g, "")}`
+
   return (
     <svg
       width={size}
@@ -9,7 +13,7 @@ export function LogoMark({ size = 28 }: { size?: number }) {
       aria-hidden="true"
     >
       <defs>
-        <linearGradient id="glowSweep" x1="0" y1="0" x2="20" y2="20" gradientUnits="userSpaceOnUse">
+        <linearGradient id={gradientId} x1="0" y1="0" x2="20" y2="20" gradientUnits="userSpaceOnUse">
           <stop offset="0%" stopColor="white" stopOpacity="0" />
           <stop offset="50%" stopColor="white" stopOpacity="0.7" />
           <stop offset="100%" stopColor="white" stopOpacity="0" />
@@ -40,9 +44,9 @@ export function LogoMark({ size = 28 }: { size?: number }) {
       </g>
       {/* Glow sweep layer */}
       <g style={{ mixBlendMode: 'plus-lighter' }}>
-        <rect x="9" y="9" width="14" height="3" rx="1.5" fill="url(#glowSweep)" />
-        <rect x="11" y="14.5" width="10" height="3" rx="1.5" fill="url(#glowSweep)" />
-        <rect x="9" y="20" width="14" height="3" rx="1.5" fill="url(#glowSweep)" />
+        <rect x="9" y="9" width="14" height="3" rx="1.5" fill={`url(#${gradientId})`} />
+        <rect x="11" y="14.5" width="10" height="3" rx="1.5" fill={`url(#${gradientId})`} />
+        <rect x="9" y="20" width="14" height="3" rx="1.5" fill={`url(#${gradientId})`} />
       </g>
     </svg>
   )
