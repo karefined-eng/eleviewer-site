@@ -10,11 +10,15 @@
 - Shortened and expanded metadata where the audit found poor search-result fit.
 - Added truthful sitemap modification dates and the `/llms.txt` AI-readable route.
 - Disabled the Next.js `X-Powered-By` response header.
+- Added semantic guide-section navigation, table captions, and clearer documentation metadata.
+- Added a structured feedback summary and a second heading to improve AI extraction.
 
 ## Validation
 
 - `npm run build` passes and generates all 62 routes.
 - Final local SEOmator crawl scored **92/A** (`2995` passes, `304` warnings, `91` failures).
+- Latest crawl scored **92/A** with `3002` passes, `297` warnings, and `91` failures.
+- The mobile audit also scored **92/A** and completed without mobile-parity failures.
 - The remaining local failures are expected localhost/HTTP checks; the remaining warnings are mostly content-depth and metadata recommendations.
 - `robots.txt`, `sitemap.xml`, and `/llms.txt` return successfully.
 
