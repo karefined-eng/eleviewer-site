@@ -37,6 +37,44 @@ export interface Release {
 
 export const RELEASES: Release[] = [
   {
+    version: "1.3.7",
+    date: "2026-11-14",
+    tagline: "Faster document loading and safer study sessions",
+    highlights: [
+      {
+        title: "Responsive document opening",
+        body: "DOCX, PPTX, and XLSX files now load in the background so the workspace stays usable while larger documents open.",
+      },
+      {
+        title: "Faster vault search",
+        body: "A persistent local filename index makes repeated course-folder searches faster and removes stale files automatically.",
+      },
+      {
+        title: "Safer study sessions",
+        body: "Web Panel startup and Read Aloud now recover more gracefully when Windows services or files are temporarily unavailable.",
+      },
+    ],
+    sections: [
+      {
+        title: "Added",
+        emoji: "\u2728",
+        items: [
+          "Added a persistent local vault filename index for faster repeated searches.",
+          "Added asynchronous loading for DOCX, PPTX, and XLSX documents.",
+          "Added an application-level workspace service boundary and CI validation for pull requests and main.",
+        ],
+      },
+      {
+        title: "Fixed",
+        emoji: "\u2705",
+        items: [
+          "Prevented temporary QtWebEngine file-lock and startup failures from crashing the Web Panel.",
+          "Added Windows Speech fallback handling when the offline read-aloud engine cannot initialize or restart.",
+        ],
+      },
+    ],
+  },
+  {
     version: "1.3.6",
     date: "2026-10-07",
     tagline: "Packaging and release version references aligned",
