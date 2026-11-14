@@ -24,10 +24,12 @@
     "react-dom": "^19.0.0"
   },
   "devDependencies": {
+    "@playwright/test": "^1.65.1",
     "@tailwindcss/postcss": "^4.0.0",
     "@types/node": "^26.1.1",
     "@types/react": "^19.2.17",
     "@types/react-dom": "^19.2.3",
+    "playwright": "^1.65.1",
     "tailwindcss": "^4.0.0",
     "tsx": "^4.23.13",
     "typescript": "^5.9.3"

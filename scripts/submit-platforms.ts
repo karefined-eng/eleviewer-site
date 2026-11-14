@@ -107,7 +107,7 @@ async function fillForm(page: any, selectors: Record<string, string>, data: Reco
     if (tagName === 'select') {
       await element.selectOption(value)
     } else if (type === 'checkbox' || type === 'radio') {
-      if (value === 'true' || value === true) await element.check()
+      if (value === 'true') await element.check()
     } else {
       await element.fill(value)
     }
